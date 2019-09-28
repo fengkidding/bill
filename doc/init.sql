@@ -72,3 +72,31 @@ alter TABLE `f`.`product_bill` CHANGE `debit_money` `assets_money` BIGINT(20) DE
   CHANGE `debit_remark` `assets_remark` VARCHAR(100) DEFAULT '' COMMENT '资产简介' ,
   CHANGE `credit_money` `rights_money` BIGINT(20) DEFAULT 0 COMMENT '权益金额' ,
 CHANGE `credit_remark` `rights_remark` VARCHAR(100) DEFAULT '' COMMENT '权益简介' ;
+
+-- 分类表
+CREATE TABLE `f`.`classification`(
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `classification` CHAR(50) NOT NULL DEFAULT '' COMMENT '分类',
+  `classification_name` CHAR(50) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `create_time` DATETIME NOT NULL DEFAULT current_timestamp COMMENT '创建时间',
+  `update_time` DATETIME NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_create_time` (`create_time`) ,
+  KEY `idx_update_time` (`update_time`)
+)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COMMENT '分类表';
+
+-- 账单表减少订单新增分类
+ALTER TABLE `f`.`product_bill` DROP COLUMN `product_order_id`,
+  DROP COLUMN `product_type`;
+ALTER TABLE `f`.`product_bill` ADD COLUMN `classification_id` INT(11) NOT NULL DEFAULT 0 COMMENT '分类id';
+
+-- 删除订单和产品上的分类，加上分类id
+ALTER TABLE `f`.`product_order` DROP COLUMN `product_type`;
+ALTER TABLE `f`.`product` DROP COLUMN `product_type`;
+ALTER TABLE `f`.`product` ADD COLUMN `classification_id` INT(11) NOT NULL DEFAULT 0 COMMENT '分类id';
+
+
+
+
+
+
