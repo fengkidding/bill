@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.ext.ProductOrderExtMapper">
+  <resultMap id="ListOrderMap" type="com.bill.model.entity.auto.ProductOrder">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="order_user" jdbcType="CHAR" property="orderUser" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="product_type" jdbcType="CHAR" property="productType" />
+    <result column="total" jdbcType="INTEGER" property="total" />
+    <result column="price" jdbcType="BIGINT" property="price" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="product_name" jdbcType="CHAR" property="productName" />
+    <result column="remark" jdbcType="CHAR" property="remark" />
+  </resultMap>
+  <sql id="BaseColumnList">
+    id, order_user, product_id, product_type, total, price, status, create_time, update_time, product_name ,remark
+  </sql>
+  <insert id="saveSelective" parameterType="com.bill.model.entity.auto.ProductOrder" useGeneratedKeys="true" keyProperty="id">
+    insert into product_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="orderUser != null">
+        order_user,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="productType != null">
+        product_type,
+      </if>
+      <if test="total != null">
+        total,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderUser != null">
+        #{orderUser,jdbcType=CHAR},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=CHAR},
+      </if>
+      <if test="total != null">
+        #{total,jdbcType=INTEGER},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=CHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="listOrder" parameterType="java.lang.String" resultMap="ListOrderMap">
+    SELECT <include refid="BaseColumnList"></include>
+    FROM product_order
+    WHERE order_user = #{userName}
+    ORDER BY create_time DESC
+  </select>
+
+  <select id="listOrderAndDate" resultMap="ListOrderMap">
+    SELECT <include refid="BaseColumnList"></include>
+    FROM product_order
+    WHERE order_user = #{userName}
+    AND create_time BETWEEN #{startTime} AND #{endTime}
+    <if test="productType != null">
+      AND product_type = #{productType}
+    </if>
+  </select>
+  
+  <select id="getProductOrder" resultType="com.bill.model.entity.auto.ProductOrder" parameterType="java.lang.Integer">
+    SELECT <include refid="BaseColumnList"></include>
+    FROM product_order
+    WHERE id = #{id}
+  </select>
+</mapper>

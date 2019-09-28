@@ -1,0 +1,62 @@
+#====================================================
+# 测试环境配置
+#
+# 完整文档：
+#====================================================
+
+#读写分离数据库
+druid:
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+        name: mysql
+        url: jdbc:mysql://39.98.50.149:3306/f?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: aliyunm1!
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+    slave:
+        name: mysql
+        url: jdbc:mysql://39.98.50.149:3306/f?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: aliyunm1!
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+#redis
+redis:
+    ADDR: 39.98.50.149
+    AUTH: aliyunr1!
+    PORT: 6379
+    MAXACTIVE: -1
+    MAXIDLE: 200
+    MAXWAIT: 500
+    TIMEOUT: 500
+    TESTON_BORROW: true

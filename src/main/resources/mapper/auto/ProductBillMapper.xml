@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.auto.ProductBillMapper">
+  <resultMap id="BaseResultMap" type="com.bill.model.entity.auto.ProductBill">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bill_user" jdbcType="CHAR" property="billUser" />
+    <result column="product_order_id" jdbcType="INTEGER" property="productOrderId" />
+    <result column="assets_money" jdbcType="BIGINT" property="assetsMoney" />
+    <result column="assets_remark" jdbcType="VARCHAR" property="assetsRemark" />
+    <result column="rights_money" jdbcType="BIGINT" property="rightsMoney" />
+    <result column="rights_remark" jdbcType="VARCHAR" property="rightsRemark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="product_type" jdbcType="CHAR" property="productType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bill_user, product_order_id, assets_money, assets_remark, rights_money, rights_remark, 
+    create_time, update_time, product_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from product_bill
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from product_bill
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bill.model.entity.auto.ProductBill">
+    insert into product_bill (id, bill_user, product_order_id, 
+      assets_money, assets_remark, rights_money, 
+      rights_remark, create_time, update_time, 
+      product_type)
+    values (#{id,jdbcType=INTEGER}, #{billUser,jdbcType=CHAR}, #{productOrderId,jdbcType=INTEGER}, 
+      #{assetsMoney,jdbcType=BIGINT}, #{assetsRemark,jdbcType=VARCHAR}, #{rightsMoney,jdbcType=BIGINT}, 
+      #{rightsRemark,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{productType,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bill.model.entity.auto.ProductBill">
+    insert into product_bill
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="billUser != null">
+        bill_user,
+      </if>
+      <if test="productOrderId != null">
+        product_order_id,
+      </if>
+      <if test="assetsMoney != null">
+        assets_money,
+      </if>
+      <if test="assetsRemark != null">
+        assets_remark,
+      </if>
+      <if test="rightsMoney != null">
+        rights_money,
+      </if>
+      <if test="rightsRemark != null">
+        rights_remark,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="productType != null">
+        product_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="billUser != null">
+        #{billUser,jdbcType=CHAR},
+      </if>
+      <if test="productOrderId != null">
+        #{productOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="assetsMoney != null">
+        #{assetsMoney,jdbcType=BIGINT},
+      </if>
+      <if test="assetsRemark != null">
+        #{assetsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="rightsMoney != null">
+        #{rightsMoney,jdbcType=BIGINT},
+      </if>
+      <if test="rightsRemark != null">
+        #{rightsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.entity.auto.ProductBill">
+    update product_bill
+    <set>
+      <if test="billUser != null">
+        bill_user = #{billUser,jdbcType=CHAR},
+      </if>
+      <if test="productOrderId != null">
+        product_order_id = #{productOrderId,jdbcType=INTEGER},
+      </if>
+      <if test="assetsMoney != null">
+        assets_money = #{assetsMoney,jdbcType=BIGINT},
+      </if>
+      <if test="assetsRemark != null">
+        assets_remark = #{assetsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="rightsMoney != null">
+        rights_money = #{rightsMoney,jdbcType=BIGINT},
+      </if>
+      <if test="rightsRemark != null">
+        rights_remark = #{rightsRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productType != null">
+        product_type = #{productType,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bill.model.entity.auto.ProductBill">
+    update product_bill
+    set bill_user = #{billUser,jdbcType=CHAR},
+      product_order_id = #{productOrderId,jdbcType=INTEGER},
+      assets_money = #{assetsMoney,jdbcType=BIGINT},
+      assets_remark = #{assetsRemark,jdbcType=VARCHAR},
+      rights_money = #{rightsMoney,jdbcType=BIGINT},
+      rights_remark = #{rightsRemark,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      product_type = #{productType,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

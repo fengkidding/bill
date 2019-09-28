@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.ext.ProductExtMapper">
+    <sql id="BaseColumnList">
+        id, product_name, product_type, total, total_sold, price, create_time, update_time
+    </sql>
+
+    <update id="soldProduct">
+        UPDATE product
+        SET total = total - #{total} , total_sold = total_sold + #{total}
+        WHERE id = #{id}
+    </update>
+    
+    <select id="listProduct" resultType="com.bill.model.entity.auto.Product">
+      SELECT <include refid="BaseColumnList"></include>
+      FROM product
+      ORDER BY create_time DESC
+    </select>
+</mapper>
