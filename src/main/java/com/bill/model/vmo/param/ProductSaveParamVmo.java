@@ -2,7 +2,6 @@ package com.bill.model.vmo.param;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -32,6 +31,10 @@ public class ProductSaveParamVmo {
     @ApiModelProperty(value = "商品价格")
     @NotNull(message = "商品价格不能为null！")
     private BigDecimal price;
+
+    @ApiModelProperty(value = "商品分类id")
+    @NotNull(message = "商品分类id不能为null！")
+    private Integer classificationId;
 
     public Integer getId() {
         return id;
@@ -71,5 +74,13 @@ public class ProductSaveParamVmo {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getClassificationId() {
+        return classificationId;
+    }
+
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 }

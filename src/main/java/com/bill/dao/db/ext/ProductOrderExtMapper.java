@@ -36,7 +36,7 @@ public interface ProductOrderExtMapper {
      * @param userName
      * @return
      */
-    List<ProductOrder> listOrderAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("productType") String productType);
+    List<ProductOrder> listOrderAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 
     /**
      * 根据id查询订单

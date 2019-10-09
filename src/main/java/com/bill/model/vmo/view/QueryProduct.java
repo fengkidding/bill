@@ -32,6 +32,9 @@ public class QueryProduct {
     @ApiModelProperty(value = "价格")
     private BigDecimal price;
 
+    @ApiModelProperty(value = "商品分类id")
+    private Integer classificationId;
+
     public Integer getId() {
         return id;
     }
@@ -78,5 +81,13 @@ public class QueryProduct {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getClassificationId() {
+        return classificationId;
+    }
+
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 }

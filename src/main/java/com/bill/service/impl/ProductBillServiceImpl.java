@@ -88,9 +88,7 @@ public class ProductBillServiceImpl implements ProductBillService {
         //添加账单信息
         ProductBill productBill = new ProductBill();
         productBill.setBillUser(billParamVmo.getBillUser());
-        productBill.setProductOrderId(billParamVmo.getProductOrderId());
         productBill.setAssetsMoney(assetsMoney);
-        productBill.setProductType(productOrder.getProductType());
         productBill.setAssetsRemark(billParamVmo.getRemark() + BillConstant.MONEY_CHANGE + billParamVmo.getAssetsMoney());
         productBill.setRightsMoney(rightsMoney);
         productBill.setRightsRemark(billParamVmo.getRemark() + BillConstant.INCREASE_CHANGE + billParamVmo.getRightsMoney());
@@ -110,81 +108,81 @@ public class ProductBillServiceImpl implements ProductBillService {
         }
         List<StatisticsBillVmo> result = new LinkedList<>();
         List<ProductBill> bills = productBillExtMapper.listProductBillAndDate(statisticsBillParamVmo.getUserName(), statisticsBillParamVmo.getStartTime(), statisticsBillParamVmo.getEndTime(), statisticsBillParamVmo.getOrderId());
-        if (!CollectionUtils.isEmpty(bills)) {
-            Long assetsMoney = 0L;
-            Long rightsMoney = 0L;
-            Long billMoney = 0L;
-
-            Map<String, List<ProductBill>> map = bills.stream().collect(Collectors.groupingBy(ProductBill::getProductType));
-            for (Map.Entry<String, List<ProductBill>> entry : map.entrySet()) {
-                StatisticsBillVmo statisticsBillVmo1 = new StatisticsBillVmo();
-                statisticsBillVmo1.setType(entry.getKey());
-                Long typeAssetsMoney = 0L;
-                Long typeRightsMoney = 0L;
-                Long typeBillMoney = 0L;
-                for (ProductBill productBill : entry.getValue()) {
-                    assetsMoney += productBill.getAssetsMoney();
-                    rightsMoney += productBill.getRightsMoney();
-                    billMoney += productBill.getAssetsMoney() + productBill.getRightsMoney();
-
-                    typeAssetsMoney += productBill.getAssetsMoney();
-                    typeRightsMoney += productBill.getRightsMoney();
-                    typeBillMoney += productBill.getAssetsMoney() + productBill.getRightsMoney();
-                }
-                statisticsBillVmo1.setBillMoney(RemainingSumUtils.getYuan(typeBillMoney));
-                statisticsBillVmo1.setAssetsMoney(RemainingSumUtils.getYuan(typeAssetsMoney));
-                statisticsBillVmo1.setRightsMoney(RemainingSumUtils.getYuan(typeRightsMoney));
-                result.add(statisticsBillVmo1);
-            }
-
-            StatisticsBillVmo statisticsBillVmo = new StatisticsBillVmo();
-            statisticsBillVmo.setType(TypeEnum.ALL.getType());
-            statisticsBillVmo.setAssetsMoney(RemainingSumUtils.getYuan(assetsMoney));
-            statisticsBillVmo.setRightsMoney(RemainingSumUtils.getYuan(rightsMoney));
-            statisticsBillVmo.setBillMoney(RemainingSumUtils.getYuan(billMoney));
-            result.add(statisticsBillVmo);
-        }
+//        if (!CollectionUtils.isEmpty(bills)) {
+//            Long assetsMoney = 0L;
+//            Long rightsMoney = 0L;
+//            Long billMoney = 0L;
+//
+//            Map<String, List<ProductBill>> map = bills.stream().collect(Collectors.groupingBy(ProductBill::getProductType));
+//            for (Map.Entry<String, List<ProductBill>> entry : map.entrySet()) {
+//                StatisticsBillVmo statisticsBillVmo1 = new StatisticsBillVmo();
+//                statisticsBillVmo1.setType(entry.getKey());
+//                Long typeAssetsMoney = 0L;
+//                Long typeRightsMoney = 0L;
+//                Long typeBillMoney = 0L;
+//                for (ProductBill productBill : entry.getValue()) {
+//                    assetsMoney += productBill.getAssetsMoney();
+//                    rightsMoney += productBill.getRightsMoney();
+//                    billMoney += productBill.getAssetsMoney() + productBill.getRightsMoney();
+//
+//                    typeAssetsMoney += productBill.getAssetsMoney();
+//                    typeRightsMoney += productBill.getRightsMoney();
+//                    typeBillMoney += productBill.getAssetsMoney() + productBill.getRightsMoney();
+//                }
+//                statisticsBillVmo1.setBillMoney(RemainingSumUtils.getYuan(typeBillMoney));
+//                statisticsBillVmo1.setAssetsMoney(RemainingSumUtils.getYuan(typeAssetsMoney));
+//                statisticsBillVmo1.setRightsMoney(RemainingSumUtils.getYuan(typeRightsMoney));
+//                result.add(statisticsBillVmo1);
+//            }
+//
+//            StatisticsBillVmo statisticsBillVmo = new StatisticsBillVmo();
+//            statisticsBillVmo.setType(TypeEnum.ALL.getType());
+//            statisticsBillVmo.setAssetsMoney(RemainingSumUtils.getYuan(assetsMoney));
+//            statisticsBillVmo.setRightsMoney(RemainingSumUtils.getYuan(rightsMoney));
+//            statisticsBillVmo.setBillMoney(RemainingSumUtils.getYuan(billMoney));
+//            result.add(statisticsBillVmo);
+//        }
 
         return result;
     }
 
-    /**
-     * 订单收入入账
-     *
-     * @param productOrder
-     */
-    @Override
-    public void saveProductBill(ProductOrder productOrder) {
-        ProductBill productBill = new ProductBill();
-        productBill.setBillUser(productOrder.getOrderUser());
-        productBill.setProductOrderId(productOrder.getId());
-        productBill.setProductType(productOrder.getProductType());
-        productBill.setAssetsMoney(-productOrder.getPrice());
-        productBill.setAssetsRemark(BillConstant.BUY_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.MONEY_REDUCE + RemainingSumUtils.getYuan(productOrder.getPrice()));
-        productBill.setRightsMoney(-productOrder.getPrice());
-        productBill.setRightsRemark(BillConstant.RIGHTS_DOWN + RemainingSumUtils.getYuan(productOrder.getPrice()));
-
-        ProductBill productBill1 = new ProductBill();
-        productBill1.setBillUser(productOrder.getOrderUser());
-        productBill1.setProductOrderId(productOrder.getId());
-        productBill1.setProductType(productOrder.getProductType());
-        productBill1.setAssetsMoney(productOrder.getPrice());
-        productBill1.setAssetsRemark(BillConstant.GET_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.INCREASE_IN_KIND + RemainingSumUtils.getYuan(productOrder.getPrice()));
-        productBill1.setRightsMoney(productOrder.getPrice());
-        productBill1.setRightsRemark(BillConstant.RIGHTS_UP + RemainingSumUtils.getYuan(productOrder.getPrice()));
-
-        ProductBill productBill2 = new ProductBill();
-        productBill2.setBillUser(productOrder.getOrderUser());
-        productBill2.setProductOrderId(productOrder.getId());
-        productBill2.setProductType(productOrder.getProductType());
-        productBill2.setAssetsMoney(-productOrder.getPrice());
-        productBill2.setAssetsRemark(BillConstant.USE_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.INCREASE_REDUCE + RemainingSumUtils.getYuan(productOrder.getPrice()));
-        productBill2.setRightsMoney(-productOrder.getPrice());
-        productBill2.setRightsRemark(BillConstant.RIGHTS_DOWN + RemainingSumUtils.getYuan(productOrder.getPrice()));
-
-        this.saveProductBill(productBill);
-        this.saveProductBill(productBill1);
-        this.saveProductBill(productBill2);
-    }
+//    /**
+//     * 订单收入入账
+//     *
+//     * @param productOrder
+//     */
+//    @Override
+//    public void saveProductBill(ProductOrder productOrder) {
+//        ProductBill productBill = new ProductBill();
+//        productBill.setBillUser(productOrder.getOrderUser());
+//        productBill.setProductOrderId(productOrder.getId());
+//        productBill.setProductType(productOrder.getProductType());
+//        productBill.setAssetsMoney(-productOrder.getPrice());
+//        productBill.setAssetsRemark(BillConstant.BUY_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.MONEY_REDUCE + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//        productBill.setRightsMoney(-productOrder.getPrice());
+//        productBill.setRightsRemark(BillConstant.RIGHTS_DOWN + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//
+//        ProductBill productBill1 = new ProductBill();
+//        productBill1.setBillUser(productOrder.getOrderUser());
+//        productBill1.setProductOrderId(productOrder.getId());
+//        productBill1.setProductType(productOrder.getProductType());
+//        productBill1.setAssetsMoney(productOrder.getPrice());
+//        productBill1.setAssetsRemark(BillConstant.GET_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.INCREASE_IN_KIND + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//        productBill1.setRightsMoney(productOrder.getPrice());
+//        productBill1.setRightsRemark(BillConstant.RIGHTS_UP + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//
+//        ProductBill productBill2 = new ProductBill();
+//        productBill2.setBillUser(productOrder.getOrderUser());
+//        productBill2.setProductOrderId(productOrder.getId());
+//        productBill2.setProductType(productOrder.getProductType());
+//        productBill2.setAssetsMoney(-productOrder.getPrice());
+//        productBill2.setAssetsRemark(BillConstant.USE_PRODUCT + productOrder.getProductName() + productOrder.getRemark() + BillConstant.INCREASE_REDUCE + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//        productBill2.setRightsMoney(-productOrder.getPrice());
+//        productBill2.setRightsRemark(BillConstant.RIGHTS_DOWN + RemainingSumUtils.getYuan(productOrder.getPrice()));
+//
+//        this.saveProductBill(productBill);
+//        this.saveProductBill(productBill1);
+//        this.saveProductBill(productBill2);
+//    }
 
 }

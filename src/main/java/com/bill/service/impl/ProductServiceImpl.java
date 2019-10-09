@@ -56,6 +56,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void updateProduct(Product product) {
         productExtMapper.updateByPrimaryKeySelective(product);
+        productDao.deleteProductList();
     }
 
     /**

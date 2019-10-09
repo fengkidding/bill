@@ -4,8 +4,6 @@ package com.bill.service;
 import com.bill.model.entity.auto.ProductOrder;
 import com.bill.model.vmo.common.PageVmo;
 import com.bill.model.vmo.param.OrderParamVmo;
-import com.bill.model.vmo.param.StatisticsOrderMoney;
-import com.bill.model.vmo.view.OrderMoneyVmo;
 import com.bill.model.vmo.view.QueryOrder;
 
 import java.time.LocalDateTime;
@@ -40,15 +38,7 @@ public interface OrderService {
      * @param userName
      * @return
      */
-    List<ProductOrder> listProductOrder(String userName, LocalDateTime startTime, LocalDateTime endTime, String productType);
-
-    /**
-     * 统计订单金额
-     *
-     * @param statisticsOrderMoney
-     * @return
-     */
-    List<OrderMoneyVmo> getOrderMoney(StatisticsOrderMoney statisticsOrderMoney);
+    List<ProductOrder> listProductOrder(String userName, LocalDateTime startTime, LocalDateTime endTime);
 
     /**
      * 根据id查询订单

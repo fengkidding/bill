@@ -49,10 +49,10 @@ public interface ProductBillService {
      */
     List<StatisticsBillVmo> statisticsBill(StatisticsBillParamVmo statisticsBillParamVmo);
 
-    /**
-     * 订单收入入账
-     *
-     * @param productOrder
-     */
-    void saveProductBill(ProductOrder productOrder);
+//    /**
+//     * 订单收入入账
+//     *
+//     * @param productOrder
+//     */
+//    void saveProductBill(ProductOrder productOrder);
 }

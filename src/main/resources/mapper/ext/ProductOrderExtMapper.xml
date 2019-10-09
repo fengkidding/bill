@@ -5,7 +5,6 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="order_user" jdbcType="CHAR" property="orderUser" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
-    <result column="product_type" jdbcType="CHAR" property="productType" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="price" jdbcType="BIGINT" property="price" />
     <result column="status" jdbcType="TINYINT" property="status" />
@@ -103,9 +102,6 @@
     FROM product_order
     WHERE order_user = #{userName}
     AND create_time BETWEEN #{startTime} AND #{endTime}
-    <if test="productType != null">
-      AND product_type = #{productType}
-    </if>
   </select>
   
   <select id="getProductOrder" resultType="com.bill.model.entity.auto.ProductOrder" parameterType="java.lang.Integer">

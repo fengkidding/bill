@@ -3,7 +3,6 @@ package com.bill.controller;
 import com.alibaba.fastjson.JSON;
 import com.bill.common.util.CheckBeanUtil;
 import com.bill.common.util.RemainingSumUtils;
-import com.bill.dao.redis.ProductDao;
 import com.bill.model.conversion.ProductConversion;
 import com.bill.model.entity.auto.Product;
 import com.bill.model.vmo.common.PageParamVmo;
@@ -39,9 +38,6 @@ public class ProductController extends BaseController {
     @Autowired
     private ProductService productService;
 
-    @Autowired
-    private ProductDao productDao;
-
     /**
      * 保存商品
      *
@@ -60,7 +56,6 @@ public class ProductController extends BaseController {
         } else {
             productService.saveProduct(product);
         }
-        productDao.deleteProductList();
         return super.resultSuccess();
     }
 

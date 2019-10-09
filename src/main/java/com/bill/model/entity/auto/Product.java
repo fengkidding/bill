@@ -7,8 +7,6 @@ public class Product {
 
     private String productName;
 
-    private String productType;
-
     private Integer total;
 
     private Integer totalSold;
@@ -18,6 +16,8 @@ public class Product {
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
+
+    private Integer classificationId;
 
     public Integer getId() {
         return id;
@@ -33,14 +33,6 @@ public class Product {
 
     public void setProductName(String productName) {
         this.productName = productName == null ? null : productName.trim();
-    }
-
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
     }
 
     public Integer getTotal() {
@@ -81,5 +73,13 @@ public class Product {
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Integer getClassificationId() {
+        return classificationId;
+    }
+
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 }

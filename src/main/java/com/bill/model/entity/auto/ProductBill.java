@@ -7,8 +7,6 @@ public class ProductBill {
 
     private String billUser;
 
-    private Integer productOrderId;
-
     private Long assetsMoney;
 
     private String assetsRemark;
@@ -21,7 +19,7 @@ public class ProductBill {
 
     private LocalDateTime updateTime;
 
-    private String productType;
+    private Integer classificationId;
 
     public Integer getId() {
         return id;
@@ -37,14 +35,6 @@ public class ProductBill {
 
     public void setBillUser(String billUser) {
         this.billUser = billUser == null ? null : billUser.trim();
-    }
-
-    public Integer getProductOrderId() {
-        return productOrderId;
-    }
-
-    public void setProductOrderId(Integer productOrderId) {
-        this.productOrderId = productOrderId;
     }
 
     public Long getAssetsMoney() {
@@ -95,11 +85,11 @@ public class ProductBill {
         this.updateTime = updateTime;
     }
 
-    public String getProductType() {
-        return productType;
+    public Integer getClassificationId() {
+        return classificationId;
     }
 
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 }

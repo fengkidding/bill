@@ -64,15 +64,4 @@ public class ProductOrderController extends BaseController {
         return super.resultSuccess(pageVmo);
     }
 
-    /**
-     * 统计订单金额接口
-     *
-     * @param statisticsOrderMoney
-     * @return
-     */
-    @ApiOperation(value = "统计订单金额接口")
-    @PostMapping(value = "/get_order_money")
-    public ResultVmo<List<OrderMoneyVmo>> getOrderMoney(@RequestBody @Valid StatisticsOrderMoney statisticsOrderMoney) {
-        return super.resultSuccess(orderService.getOrderMoney(statisticsOrderMoney));
-    }
 }

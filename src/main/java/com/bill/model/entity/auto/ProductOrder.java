@@ -9,8 +9,6 @@ public class ProductOrder {
 
     private Integer productId;
 
-    private String productType;
-
     private Integer total;
 
     private Long price;
@@ -47,14 +45,6 @@ public class ProductOrder {
 
     public void setProductId(Integer productId) {
         this.productId = productId;
-    }
-
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
     }
 
     public Integer getTotal() {

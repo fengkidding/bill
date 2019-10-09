@@ -5,7 +5,6 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="order_user" jdbcType="CHAR" property="orderUser" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
-    <result column="product_type" jdbcType="CHAR" property="productType" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="price" jdbcType="BIGINT" property="price" />
     <result column="status" jdbcType="TINYINT" property="status" />
@@ -15,8 +14,8 @@
     <result column="remark" jdbcType="VARCHAR" property="remark" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, order_user, product_id, product_type, total, price, status, create_time, update_time, 
-    product_name, remark
+    id, order_user, product_id, total, price, status, create_time, update_time, product_name, 
+    remark
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -30,13 +29,13 @@
   </delete>
   <insert id="insert" parameterType="com.bill.model.entity.auto.ProductOrder">
     insert into product_order (id, order_user, product_id, 
-      product_type, total, price, 
-      status, create_time, update_time, 
-      product_name, remark)
+      total, price, status, 
+      create_time, update_time, product_name, 
+      remark)
     values (#{id,jdbcType=INTEGER}, #{orderUser,jdbcType=CHAR}, #{productId,jdbcType=INTEGER}, 
-      #{productType,jdbcType=CHAR}, #{total,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, 
-      #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{productName,jdbcType=CHAR}, #{remark,jdbcType=VARCHAR})
+      #{total,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{productName,jdbcType=CHAR}, 
+      #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.bill.model.entity.auto.ProductOrder">
     insert into product_order
@@ -49,9 +48,6 @@
       </if>
       <if test="productId != null">
         product_id,
-      </if>
-      <if test="productType != null">
-        product_type,
       </if>
       <if test="total != null">
         total,
@@ -85,9 +81,6 @@
       <if test="productId != null">
         #{productId,jdbcType=INTEGER},
       </if>
-      <if test="productType != null">
-        #{productType,jdbcType=CHAR},
-      </if>
       <if test="total != null">
         #{total,jdbcType=INTEGER},
       </if>
@@ -120,9 +113,6 @@
       <if test="productId != null">
         product_id = #{productId,jdbcType=INTEGER},
       </if>
-      <if test="productType != null">
-        product_type = #{productType,jdbcType=CHAR},
-      </if>
       <if test="total != null">
         total = #{total,jdbcType=INTEGER},
       </if>
@@ -151,7 +141,6 @@
     update product_order
     set order_user = #{orderUser,jdbcType=CHAR},
       product_id = #{productId,jdbcType=INTEGER},
-      product_type = #{productType,jdbcType=CHAR},
       total = #{total,jdbcType=INTEGER},
       price = #{price,jdbcType=BIGINT},
       status = #{status,jdbcType=TINYINT},

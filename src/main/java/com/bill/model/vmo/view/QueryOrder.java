@@ -25,9 +25,6 @@ public class QueryOrder {
     @ApiModelProperty(value = "产品id")
     private Integer productId;
 
-    @ApiModelProperty(value = "产品类型")
-    private String productType;
-
     @ApiModelProperty(value = "数量")
     private Integer total;
 
@@ -73,14 +70,6 @@ public class QueryOrder {
 
     public void setProductId(Integer productId) {
         this.productId = productId;
-    }
-
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
     }
 
     public Integer getTotal() {

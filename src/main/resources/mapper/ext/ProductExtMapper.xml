@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bill.dao.db.ext.ProductExtMapper">
     <sql id="BaseColumnList">
-        id, product_name, product_type, total, total_sold, price, create_time, update_time
+        id, product_name, product_type, total, total_sold, price, create_time, update_time, classification_id
     </sql>
 
     <update id="soldProduct">
