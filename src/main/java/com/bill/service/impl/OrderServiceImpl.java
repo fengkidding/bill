@@ -1,19 +1,16 @@
 package com.bill.service.impl;
 
-import com.alibaba.fastjson.JSON;
 import com.bill.common.util.RemainingSumUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
-import com.bill.model.bmo.ConsumerUserSumParamVmo;
+import com.bill.manager.UserClient;
 import com.bill.model.conversion.ProductOrderConversion;
 import com.bill.model.entity.auto.Product;
 import com.bill.model.entity.auto.ProductOrder;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.common.ResultVmo;
-import com.bill.model.vmo.param.OrderParamVmo;
-import com.bill.model.vmo.view.QueryOrder;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
 import com.bill.service.ProductService;
-import com.bill.service.client.UserFeign;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.slf4j.Logger;
@@ -44,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     private ProductService productService;
 
     @Autowired
-    private UserFeign userFeign;
+    private UserClient userClient;
 
     /**
      * 用户下单
@@ -53,7 +50,7 @@ public class OrderServiceImpl implements OrderService {
      */
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public Integer createOrder(OrderParamVmo orderParamVmo) {
+    public Integer createOrder(OrderParamVO orderParamVmo) {
         //更新商品
         Product product = productService.getProduct(orderParamVmo.getProductId());
         productService.soldProduct(orderParamVmo.getProductId(), orderParamVmo.getTotal());
@@ -71,11 +68,10 @@ public class OrderServiceImpl implements OrderService {
         productOrderExtMapper.saveSelective(productOrder);
 
         //扣除用户余额
-        ConsumerUserSumParamVmo consumerUserSumParamVmo = new ConsumerUserSumParamVmo();
-        consumerUserSumParamVmo.setUserName(orderParamVmo.getOrderUser());
-        consumerUserSumParamVmo.setRemainingSum(-price);
-        ResultVmo resultVmo = userFeign.updateRemainingSum(consumerUserSumParamVmo);
-        logger.info("createOrder-扣除用户余额：resultVmo=" + JSON.toJSONString(resultVmo));
+        boolean result = userClient.updateRemainingSum(orderParamVmo.getOrderUser(), -price);
+        if (!result) {
+            throw new RuntimeException("扣除用户余额失败");
+        }
 
         return productOrder.getId();
     }
@@ -87,13 +83,13 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
-    public PageVmo<List<QueryOrder>> listOrder(Integer pageNum, Integer pageSize, String userName) {
-        PageVmo<List<QueryOrder>> pageVmo = new PageVmo<>();
+    public PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, String userName) {
+        PageVO<List<QueryOrderVO>> pageVmo = new PageVO<>();
         Page page = PageHelper.startPage(pageNum, pageSize);
         List<ProductOrder> list = productOrderExtMapper.listOrder(userName);
         pageVmo.setTotal(page.getTotal());
         if (!CollectionUtils.isEmpty(list)) {
-            List<QueryOrder> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);
+            List<QueryOrderVO> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);
             for (int i = 0; i < vmoList.size(); i++) {
                 vmoList.get(i).setPrice(RemainingSumUtils.getYuan(list.get(i).getPrice()));
             }

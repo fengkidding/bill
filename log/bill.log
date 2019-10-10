@@ -1,74 +1,532 @@
-2019-08-28 14:58:05 [main] INFO  com.bill.BillApplication : 
+2019-10-10 10:31:21 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-08-28 14:58:26 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 24.4 seconds (JVM running for 26.61) 
-2019-08-28 15:07:36 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=aaa709cd-b1af-4c35-a507-9d82b7b0009a,logTime=1566976056754 
-2019-08-28 15:07:38 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=aaa709cd-b1af-4c35-a507-9d82b7b0009a,logTime=1566976058024 
-2019-08-28 15:07:38 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=76df9165-337f-4ca8-bc16-5d2f222ba2e4,logTime=1566976058295 
-2019-08-28 15:07:39 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=76df9165-337f-4ca8-bc16-5d2f222ba2e4,logTime=1566976059328 
-2019-08-28 15:08:26 [main] INFO  com.bill.BillApplication : 
+2019-10-10 10:31:27 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 7.103 seconds (JVM running for 7.559) 
+2019-10-10 11:50:21 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-08-28 15:08:42 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 18.834 seconds (JVM running for 20.268) 
-2019-08-28 15:09:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/statistics_bill,traceId=87a378ea-c292-49e2-8834-3f9e024df517,logTime=1566976157159 
-2019-08-28 15:09:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/statistics_bill,traceId=87a378ea-c292-49e2-8834-3f9e024df517,logTime=1566976157298 
-2019-08-28 15:09:37 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9a5c7ac8-8d49-454c-858a-30287d6ba826,logTime=1566976177778 
-2019-08-28 15:09:42 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9a5c7ac8-8d49-454c-858a-30287d6ba826,logTime=1566976182843 
-2019-08-28 15:09:42 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=aa682eac-ff06-4e2b-8f44-71ba69829b19,logTime=1566976182862 
-2019-08-28 15:09:47 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=aa682eac-ff06-4e2b-8f44-71ba69829b19,logTime=1566976187936 
-2019-08-28 15:10:51 [main] INFO  com.bill.BillApplication : 
+2019-10-10 11:50:28 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 7.121 seconds (JVM running for 7.713) 
+2019-10-10 11:51:11 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-08-28 15:11:05 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 16.1 seconds (JVM running for 17.422) 
-2019-08-28 15:11:12 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=5776ecba-2d91-4146-a1bb-b298ff9add90,logTime=1566976272249 
-2019-08-28 15:11:18 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=5776ecba-2d91-4146-a1bb-b298ff9add90,logTime=1566976278327 
-2019-08-28 15:11:18 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fca2d586-356d-4703-a923-690255537ce9,logTime=1566976278361 
-2019-08-28 15:11:24 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fca2d586-356d-4703-a923-690255537ce9,logTime=1566976284425 
-2019-08-28 15:12:41 [main] INFO  com.bill.BillApplication : 
+2019-10-10 11:51:17 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 7.167 seconds (JVM running for 7.666) 
+2019-10-10 11:51:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/classification/listClassification,traceId=e64327d7-2564-4593-ae42-90521d4824cc,logTime=1570679477705 
+2019-10-10 11:51:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/classification/listClassification,traceId=e64327d7-2564-4593-ae42-90521d4824cc,logTime=1570679477748 
+2019-10-10 11:52:58 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/classification/save_classification,traceId=e4fb891d-ac6f-4794-b471-12172353dc54,logTime=1570679578434 
+2019-10-10 11:52:58 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/classification/save_classification,traceId=e4fb891d-ac6f-4794-b471-12172353dc54,logTime=1570679578606 
+2019-10-10 11:53:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/classification/listClassification,traceId=ffb0251d-b38f-441c-b43b-e16c863a539e,logTime=1570679582542 
+2019-10-10 11:53:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/classification/listClassification,traceId=ffb0251d-b38f-441c-b43b-e16c863a539e,logTime=1570679582564 
+2019-10-10 14:27:17 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-08-28 15:12:56 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 17.393 seconds (JVM running for 18.83) 
-2019-08-28 15:13:04 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f47f091e-ee1e-4bd4-8d59-03b98ec09e1d,logTime=1566976384518 
-2019-08-28 15:13:05 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f47f091e-ee1e-4bd4-8d59-03b98ec09e1d,logTime=1566976385600 
-2019-08-28 15:13:06 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c5d05639-361b-4d1f-92fc-568579636045,logTime=1566976386198 
-2019-08-28 15:13:10 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c5d05639-361b-4d1f-92fc-568579636045,logTime=1566976390741 
-2019-08-28 15:13:10 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f87a7486-360d-46ab-931f-a35f311126a0,logTime=1566976390751 
-2019-08-28 15:13:15 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f87a7486-360d-46ab-931f-a35f311126a0,logTime=1566976395981 
-2019-08-28 15:17:52 [main] INFO  com.bill.BillApplication : 
+2019-10-10 14:27:24 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.514 seconds (JVM running for 9.424) 
+2019-10-10 14:28:15 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=24b057bd-4686-4a62-9e96-b5cbb213013e,logTime=1570688895588 
+2019-10-10 14:28:15 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=24b057bd-4686-4a62-9e96-b5cbb213013e,logTime=1570688895703 
+2019-10-10 14:28:43 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=63b29844-9907-44e4-90ae-6a9e965349b6,logTime=1570688923230 
+2019-10-10 14:28:43 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=63b29844-9907-44e4-90ae-6a9e965349b6,logTime=1570688923248 
+2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/save_product_bill,traceId=b6c6dd3a-af69-455a-b14c-130da12644e9,logTime=1570688940294 
+2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  c.b.c.ProductBillController : 
+ saveProductBill-保存入账信息:billParamVmo={"billUser":"f","classificationId":1,"money":10,"remark":"string"} 
+2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/save_product_bill,traceId=b6c6dd3a-af69-455a-b14c-130da12644e9,logTime=1570688940366 
+2019-10-10 14:29:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=94295721-9c2a-4fdb-9d34-21dd710b278c,logTime=1570688944490 
+2019-10-10 14:29:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=94295721-9c2a-4fdb-9d34-21dd710b278c,logTime=1570688944528 
+2019-10-10 14:29:40 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-08-28 15:18:07 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 19.174 seconds (JVM running for 22.189) 
-2019-08-28 15:18:32 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fd38b03b-9b27-43fd-b251-3aa8a1da5ddc,logTime=1566976712063 
-2019-08-28 15:18:50 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fd38b03b-9b27-43fd-b251-3aa8a1da5ddc,logTime=1566976730720 
-2019-08-28 15:18:50 [http-nio-10003-exec-1] ERROR c.b.common.handle.ExceptionHandle : 
+2019-10-10 14:29:48 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.249 seconds (JVM running for 9.194) 
+2019-10-10 14:30:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=2440bf53-a008-4cbe-8947-93566033e92b,logTime=1570689005056 
+2019-10-10 14:30:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=2440bf53-a008-4cbe-8947-93566033e92b,logTime=1570689005149 
+2019-10-10 14:30:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=f21679f8-1508-4a36-b0fd-8596f007eb0e,logTime=1570689013183 
+2019-10-10 14:30:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=f21679f8-1508-4a36-b0fd-8596f007eb0e,logTime=1570689013220 
+2019-10-10 14:30:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_bill/statistics_bill,traceId=7b14121e-becc-46cc-8457-0894245b33da,logTime=1570689053706 
+2019-10-10 14:30:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_bill/statistics_bill,traceId=7b14121e-becc-46cc-8457-0894245b33da,logTime=1570689053756 
+2019-10-10 15:42:06 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:42:14 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.515 seconds (JVM running for 9.278) 
+2019-10-10 15:42:44 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=68715e9b-3a8f-4174-9477-9b30cf13cb84,logTime=1570693364049 
+2019-10-10 15:42:44 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=68715e9b-3a8f-4174-9477-9b30cf13cb84,logTime=1570693364322 
+2019-10-10 15:42:44 [http-nio-10003-exec-5] ERROR c.b.common.handle.ExceptionHandle : 
+ 统一异常处理: 
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+### The error may exist in file [C:\Users\fengchangteng\Desktop\project\bill\target\classes\mapper\ext\ProductExtMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT           id, product_name, product_type, total, total_sold, price, create_time, update_time, classification_id             FROM product       ORDER BY create_time DESC LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy132.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy135.listProduct(Unknown Source)
+	at com.bill.service.impl.ProductServiceImpl.listProduct(ProductServiceImpl.java:102)
+	at com.bill.controller.ProductController.listProduct(ProductController.java:71)
+	at com.bill.controller.ProductController$$FastClassBySpringCGLIB$$ac433f53.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductController$$EnhancerBySpringCGLIB$$9eb1fa63.listProduct(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.bill.config.db.DynamicPlugin.intercept(DynamicPlugin.java:78)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy192.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy192.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 89 common frames omitted
+2019-10-10 15:43:22 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:43:35 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:43:43 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.321 seconds (JVM running for 9.193) 
+2019-10-10 15:43:55 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=33ab19c7-9303-4f62-bee8-b5c48f0f4e16,logTime=1570693435082 
+2019-10-10 15:43:55 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=33ab19c7-9303-4f62-bee8-b5c48f0f4e16,logTime=1570693435339 
+2019-10-10 15:44:44 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:44:52 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.403 seconds (JVM running for 8.966) 
+2019-10-10 15:45:42 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a7f17f2f-cca8-49ce-b54f-2f8058bc442c,logTime=1570693542298 
+2019-10-10 15:45:42 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a7f17f2f-cca8-49ce-b54f-2f8058bc442c,logTime=1570693542324 
+2019-10-10 15:46:45 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:46:52 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.22 seconds (JVM running for 8.772) 
+2019-10-10 15:47:09 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/save_product,traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,logTime=1570693629916 
+2019-10-10 15:47:09 [http-nio-10003-exec-7] INFO  c.bill.controller.ProductController : 
+ 更新用户余额: traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,productSaveParamVmo={"classificationId":0,"id":0,"price":10,"productName":"str2134ing","total":10} 
+2019-10-10 15:47:10 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/save_product,traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,logTime=1570693630002 
+2019-10-10 15:47:16 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3f87cb90-707d-4618-9233-fb6dc9d46421,logTime=1570693636153 
+2019-10-10 15:47:16 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3f87cb90-707d-4618-9233-fb6dc9d46421,logTime=1570693636398 
+2019-10-10 15:47:30 [http-nio-10003-exec-9] ERROR c.b.common.handle.ExceptionHandle : 
+ 统一异常处理: 
+org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'pageParamVO' on field 'pageSize': rejected value [100]; codes [Max.pageParamVO.pageSize,Max.pageSize,Max.java.lang.Integer,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pageParamVO.pageSize,pageSize]; arguments []; default message [pageSize],50]; default message [每页条数超出上线！]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:118)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:160)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:129)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-10-10 15:47:39 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8ee8d825-7a2b-420a-b80f-e4baa01897dd,logTime=1570693659053 
+2019-10-10 15:47:39 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8ee8d825-7a2b-420a-b80f-e4baa01897dd,logTime=1570693659071 
+2019-10-10 15:48:59 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:49:07 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 9.453 seconds (JVM running for 10.008) 
+2019-10-10 15:49:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=74af131c-ce98-4e08-8da1-e341e138342b,logTime=1570693751123 
+2019-10-10 15:49:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=74af131c-ce98-4e08-8da1-e341e138342b,logTime=1570693751148 
+2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/save_product,traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,logTime=1570693761375 
+2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  c.bill.controller.ProductController : 
+ 更新用户余额: traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,productSaveParamVmo={"classificationId":0,"id":0,"price":10,"productName":"str2134ing","total":10} 
+2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/save_product,traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,logTime=1570693761492 
+2019-10-10 15:49:24 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=dc497860-2481-48c3-a2ec-64927202a898,logTime=1570693764882 
+2019-10-10 15:49:25 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=dc497860-2481-48c3-a2ec-64927202a898,logTime=1570693765347 
+2019-10-10 15:49:39 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/list_order,traceId=23113a25-7bd6-4e0d-951b-54762093a97b,logTime=1570693779860 
+2019-10-10 15:49:39 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/list_order,traceId=23113a25-7bd6-4e0d-951b-54762093a97b,logTime=1570693779926 
+2019-10-10 15:49:39 [http-nio-10003-exec-4] ERROR c.b.common.handle.ExceptionHandle : 
+ 统一异常处理: 
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+### The error may exist in file [C:\Users\fengchangteng\Desktop\project\bill\target\classes\mapper\ext\ProductOrderExtMapper.xml]
+### The error may involve com.bill.dao.db.ext.ProductOrderExtMapper.listOrder-Inline
+### The error occurred while setting parameters
+### SQL: SELECT       id, order_user, product_id, product_type, total, price, status, create_time, update_time, product_name ,remark         FROM product_order     WHERE order_user = ?     ORDER BY create_time DESC LIMIT ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy132.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy137.listOrder(Unknown Source)
+	at com.bill.service.impl.OrderServiceImpl.listOrder(OrderServiceImpl.java:89)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:652)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$3147cc10.listOrder(<generated>)
+	at com.bill.controller.ProductOrderController.listOrder(ProductOrderController.java:61)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$f76bc80f.listOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
+	at com.bill.config.db.DynamicPlugin.intercept(DynamicPlugin.java:78)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy182.query(Unknown Source)
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at com.sun.proxy.$Proxy182.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 93 common frames omitted
+2019-10-10 15:50:42 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-10-10 15:50:49 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 8.145 seconds (JVM running for 8.775) 
+2019-10-10 15:50:52 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/list_order,traceId=ad90bfe6-9719-4df7-bdd7-fedf75195b51,logTime=1570693852709 
+2019-10-10 15:50:52 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/list_order,traceId=ad90bfe6-9719-4df7-bdd7-fedf75195b51,logTime=1570693852789 
+2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,logTime=1570693875585 
+2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,productSaveParamVmo={"orderUser":"f","productId":78,"remark":"string","total":1} 
+2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,logTime=1570693875929 
+2019-10-10 15:51:15 [http-nio-10003-exec-2] ERROR c.b.common.handle.ExceptionHandle : 
  统一异常处理: 
 java.lang.NullPointerException: null
-	at com.bill.dao.redis.RedisUtils.releaseLock(RedisUtils.java:92)
-	at com.bill.service.impl.ProductServiceImpl.listProduct(ProductServiceImpl.java:115)
-	at com.bill.controller.ProductController.listProduct(ProductController.java:76)
-	at com.bill.controller.ProductController$$FastClassBySpringCGLIB$$ac433f53.invoke(<generated>)
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:63)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$3537d018.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:48)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
@@ -79,7 +537,7 @@ java.lang.NullPointerException: null
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.controller.ProductController$$EnhancerBySpringCGLIB$$438a3f3e.listProduct(<generated>)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$ce43903f.createOrder(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -93,8 +551,8 @@ java.lang.NullPointerException: null
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
@@ -149,1080 +607,13 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2019-08-28 15:22:42 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:23:01 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 21.42 seconds (JVM running for 23.325) 
-2019-08-28 15:23:29 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=2d594eac-e64f-44ac-ab59-c151e37404a1,logTime=1566977009908 
-2019-08-28 15:24:09 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=2d594eac-e64f-44ac-ab59-c151e37404a1,logTime=1566977049179 
-2019-08-28 15:24:18 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:24:37 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 21.608 seconds (JVM running for 23.524) 
-2019-08-28 15:24:44 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=bbb18183-b104-4ddc-ab7b-921b6ca25bff,logTime=1566977084930 
-2019-08-28 15:25:25 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=bbb18183-b104-4ddc-ab7b-921b6ca25bff,logTime=1566977125285 
-2019-08-28 15:25:27 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4cb91695-ebbc-4fd5-a46a-abb38eb53d7a,logTime=1566977127834 
-2019-08-28 15:26:19 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4cb91695-ebbc-4fd5-a46a-abb38eb53d7a,logTime=1566977179367 
-2019-08-28 15:26:21 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6ac87dde-d5c0-49de-8e12-a7871fe221f0,logTime=1566977181564 
-2019-08-28 15:26:59 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6ac87dde-d5c0-49de-8e12-a7871fe221f0,logTime=1566977219255 
-2019-08-28 15:28:15 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d71ace0a-e6b0-4d7d-8a94-9e034c7069b4,logTime=1566977295440 
-2019-08-28 15:28:56 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d71ace0a-e6b0-4d7d-8a94-9e034c7069b4,logTime=1566977336527 
-2019-08-28 15:33:23 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:33:40 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 19.907 seconds (JVM running for 21.924) 
-2019-08-28 15:33:44 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7fb93fa3-b0de-4e47-8963-ad839cdc1bf2,logTime=1566977624711 
-2019-08-28 15:34:13 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7fb93fa3-b0de-4e47-8963-ad839cdc1bf2,logTime=1566977653682 
-2019-08-28 15:34:54 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:35:12 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 21.009 seconds (JVM running for 23.384) 
-2019-08-28 15:35:23 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=890faa15-5342-47e1-b7e3-d863c919b430,logTime=1566977723577 
-2019-08-28 15:35:24 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=890faa15-5342-47e1-b7e3-d863c919b430,logTime=1566977724674 
-2019-08-28 15:36:50 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f2ffae9d-a8f9-40d3-a81a-73318eadbebf,logTime=1566977810064 
-2019-08-28 15:37:00 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f2ffae9d-a8f9-40d3-a81a-73318eadbebf,logTime=1566977820048 
-2019-08-28 15:38:10 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:38:41 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 34.14 seconds (JVM running for 36.205) 
-2019-08-28 15:38:56 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a4827e47-8ed2-4772-b495-5f934fa0088c,logTime=1566977936354 
-2019-08-28 15:38:57 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a4827e47-8ed2-4772-b495-5f934fa0088c,logTime=1566977937476 
-2019-08-28 15:38:57 [http-nio-10003-exec-1] ERROR c.b.common.handle.ExceptionHandle : 
- 统一异常处理: 
-java.lang.ClassCastException: redis.clients.jedis.Jedis cannot be cast to redis.clients.jedis.JedisCluster
-	at com.bill.dao.redis.RedisUtils.lambda$releaseLock$2(RedisUtils.java:119)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:204)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:166)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:154)
-	at com.bill.dao.redis.RedisUtils.releaseLock(RedisUtils.java:117)
-	at com.bill.service.impl.ProductServiceImpl.listProduct(ProductServiceImpl.java:115)
-	at com.bill.controller.ProductController.listProduct(ProductController.java:76)
-	at com.bill.controller.ProductController$$FastClassBySpringCGLIB$$ac433f53.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.controller.ProductController$$EnhancerBySpringCGLIB$$8b2517a0.listProduct(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-08-28 15:41:18 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:41:33 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 18.744 seconds (JVM running for 20.456) 
-2019-08-28 15:41:44 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=85d087d9-654d-4b69-b253-9d9223b86696,logTime=1566978104895 
-2019-08-28 15:41:46 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=85d087d9-654d-4b69-b253-9d9223b86696,logTime=1566978106025 
-2019-08-28 15:41:47 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a5ce1456-d5b0-4e18-b0a9-eb06c078aecb,logTime=1566978107403 
-2019-08-28 15:41:48 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a5ce1456-d5b0-4e18-b0a9-eb06c078aecb,logTime=1566978108476 
-2019-08-28 15:59:36 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 15:59:52 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 19.132 seconds (JVM running for 20.773) 
-2019-08-28 16:00:39 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6767ed68-eb54-409a-b4d1-fe2e4222c001,logTime=1566979239400 
-2019-08-28 16:00:39 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6767ed68-eb54-409a-b4d1-fe2e4222c001,logTime=1566979239451 
-2019-08-28 16:02:12 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/save_product,traceId=8798360d-5640-455c-bd49-14967d2ae549,logTime=1566979332085 
-2019-08-28 16:02:12 [http-nio-10003-exec-3] INFO  c.bill.controller.ProductController : 
- 更新用户余额: traceId=8798360d-5640-455c-bd49-14967d2ae549,productSaveParamVmo={"id":12,"price":200} 
-2019-08-28 16:02:12 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/save_product,traceId=8798360d-5640-455c-bd49-14967d2ae549,logTime=1566979332361 
-2019-08-28 16:02:19 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=771d3b9b-f6c9-4ee4-940b-f49737d20785,logTime=1566979339068 
-2019-08-28 16:02:46 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=771d3b9b-f6c9-4ee4-940b-f49737d20785,logTime=1566979366023 
-2019-08-28 16:02:52 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d947f539-c882-4014-8c39-392eb3f73202,logTime=1566979372910 
-2019-08-28 16:03:00 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d947f539-c882-4014-8c39-392eb3f73202,logTime=1566979380399 
-2019-08-28 16:03:08 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cc7f6412-f595-49cc-899c-bfa1948805f3,logTime=1566979388171 
-2019-08-28 16:03:08 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cc7f6412-f595-49cc-899c-bfa1948805f3,logTime=1566979388186 
-2019-08-28 16:03:18 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=93ab37e8-f766-46e6-b10e-31b93e74df10,logTime=1566979398063 
-2019-08-28 16:03:32 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=93ab37e8-f766-46e6-b10e-31b93e74df10,logTime=1566979412823 
-2019-08-28 16:03:37 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3e24aa26-1303-4f64-bc90-8b1922c10756,logTime=1566979417324 
-2019-08-28 16:03:44 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3e24aa26-1303-4f64-bc90-8b1922c10756,logTime=1566979424593 
-2019-08-28 16:03:52 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fc260e57-b391-46a7-9534-1ed70e1880eb,logTime=1566979432069 
-2019-08-28 16:04:22 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fc260e57-b391-46a7-9534-1ed70e1880eb,logTime=1566979462019 
-2019-08-28 16:23:11 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:23:35 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 27.719 seconds (JVM running for 29.401) 
-2019-08-28 16:24:41 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=abbb361c-78a2-47f4-a431-37b474a58081,logTime=1566980681373 
-2019-08-28 16:24:41 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=abbb361c-78a2-47f4-a431-37b474a58081,logTime=1566980681420 
-2019-08-28 16:24:44 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a25603eb-b82a-4060-9fac-d2f7f8ca2bc6,logTime=1566980684059 
-2019-08-28 16:24:44 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a25603eb-b82a-4060-9fac-d2f7f8ca2bc6,logTime=1566980684086 
-2019-08-28 16:24:44 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=626dab0c-5a54-439e-80af-2098b321b26d,logTime=1566980684645 
-2019-08-28 16:24:44 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=626dab0c-5a54-439e-80af-2098b321b26d,logTime=1566980684658 
-2019-08-28 16:24:45 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=dd1c469a-a955-46bd-846e-20ded15016bc,logTime=1566980685063 
-2019-08-28 16:24:45 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=dd1c469a-a955-46bd-846e-20ded15016bc,logTime=1566980685076 
-2019-08-28 16:25:18 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:25:32 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 17.41 seconds (JVM running for 18.854) 
-2019-08-28 16:25:57 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0d6e9019-9837-48f2-bcf3-6dc03a2f6a05,logTime=1566980757795 
-2019-08-28 16:25:57 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0d6e9019-9837-48f2-bcf3-6dc03a2f6a05,logTime=1566980757823 
-2019-08-28 16:25:58 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3a8ff02d-e812-492b-83f1-d5e9bd065a9a,logTime=1566980758530 
-2019-08-28 16:25:58 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3a8ff02d-e812-492b-83f1-d5e9bd065a9a,logTime=1566980758544 
-2019-08-28 16:25:59 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3ad15c3a-96a7-4a9f-b645-6e7e46f0ea47,logTime=1566980759088 
-2019-08-28 16:25:59 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3ad15c3a-96a7-4a9f-b645-6e7e46f0ea47,logTime=1566980759105 
-2019-08-28 16:25:59 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ae5a8d37-8c1a-4a25-b2f9-f3a1d26e2dc5,logTime=1566980759419 
-2019-08-28 16:25:59 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ae5a8d37-8c1a-4a25-b2f9-f3a1d26e2dc5,logTime=1566980759468 
-2019-08-28 16:25:59 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=2737bcc4-0a02-4870-9018-c05213a9abf5,logTime=1566980759568 
-2019-08-28 16:25:59 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=2737bcc4-0a02-4870-9018-c05213a9abf5,logTime=1566980759581 
-2019-08-28 16:25:59 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c3e71ff9-7625-4005-a01c-e0725fc3f7da,logTime=1566980759732 
-2019-08-28 16:25:59 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c3e71ff9-7625-4005-a01c-e0725fc3f7da,logTime=1566980759751 
-2019-08-28 16:25:59 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=1b757307-5d8e-479d-8ddc-e7327295b699,logTime=1566980759883 
-2019-08-28 16:25:59 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=1b757307-5d8e-479d-8ddc-e7327295b699,logTime=1566980759910 
-2019-08-28 16:26:00 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e07d9ef3-e5bf-4c5d-9c77-e87911bcd289,logTime=1566980760012 
-2019-08-28 16:26:00 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e07d9ef3-e5bf-4c5d-9c77-e87911bcd289,logTime=1566980760049 
-2019-08-28 16:26:00 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8d72ad9f-80b5-4354-93c1-98cdcee7908b,logTime=1566980760181 
-2019-08-28 16:26:00 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8d72ad9f-80b5-4354-93c1-98cdcee7908b,logTime=1566980760196 
-2019-08-28 16:26:00 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a2a316d1-033c-4aca-ade1-52199246253e,logTime=1566980760322 
-2019-08-28 16:26:00 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a2a316d1-033c-4aca-ade1-52199246253e,logTime=1566980760367 
-2019-08-28 16:26:00 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cb2f3794-43b5-48a4-8367-b5efe1186aae,logTime=1566980760459 
-2019-08-28 16:26:00 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cb2f3794-43b5-48a4-8367-b5efe1186aae,logTime=1566980760482 
-2019-08-28 16:26:00 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cac995bc-3ce9-48d5-a28c-9e47873f156c,logTime=1566980760613 
-2019-08-28 16:26:00 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cac995bc-3ce9-48d5-a28c-9e47873f156c,logTime=1566980760631 
-2019-08-28 16:26:00 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b3e89cef-4bfe-4016-b4f7-3bfe3e490f07,logTime=1566980760766 
-2019-08-28 16:26:00 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b3e89cef-4bfe-4016-b4f7-3bfe3e490f07,logTime=1566980760783 
-2019-08-28 16:26:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b252b231-3155-4837-939f-4f2653c8a189,logTime=1566980760888 
-2019-08-28 16:26:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b252b231-3155-4837-939f-4f2653c8a189,logTime=1566980760917 
-2019-08-28 16:26:01 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=210ef162-e5eb-4d78-8cb6-52864abdbbdd,logTime=1566980761035 
-2019-08-28 16:26:01 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=210ef162-e5eb-4d78-8cb6-52864abdbbdd,logTime=1566980761050 
-2019-08-28 16:26:01 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=2ae71b33-a504-4916-91c1-223cfbb117f6,logTime=1566980761187 
-2019-08-28 16:26:01 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=2ae71b33-a504-4916-91c1-223cfbb117f6,logTime=1566980761204 
-2019-08-28 16:26:02 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=63642cee-35ad-4ddb-9582-d4e097dcfe87,logTime=1566980762383 
-2019-08-28 16:26:02 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=63642cee-35ad-4ddb-9582-d4e097dcfe87,logTime=1566980762416 
-2019-08-28 16:26:02 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=383b8416-32b4-4106-bf25-1d0f47434449,logTime=1566980762756 
-2019-08-28 16:26:02 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=383b8416-32b4-4106-bf25-1d0f47434449,logTime=1566980762774 
-2019-08-28 16:26:02 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=46722ee1-d9b1-4232-89d9-6b84ab99820a,logTime=1566980762996 
-2019-08-28 16:26:03 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=46722ee1-d9b1-4232-89d9-6b84ab99820a,logTime=1566980763008 
-2019-08-28 16:26:03 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=745850d1-fb23-41ad-ae0e-b1f6c01e3423,logTime=1566980763389 
-2019-08-28 16:26:03 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=745850d1-fb23-41ad-ae0e-b1f6c01e3423,logTime=1566980763405 
-2019-08-28 16:26:03 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=032b2d28-4b8a-47e0-9b5e-f5e35446aa5b,logTime=1566980763590 
-2019-08-28 16:26:03 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=032b2d28-4b8a-47e0-9b5e-f5e35446aa5b,logTime=1566980763615 
-2019-08-28 16:26:03 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ee0267b3-d60c-4ed0-bb89-ecdbf2ad00bd,logTime=1566980763728 
-2019-08-28 16:26:03 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ee0267b3-d60c-4ed0-bb89-ecdbf2ad00bd,logTime=1566980763741 
-2019-08-28 16:26:04 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d3380035-a5d3-49df-9793-c76dda39416d,logTime=1566980764049 
-2019-08-28 16:26:04 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d3380035-a5d3-49df-9793-c76dda39416d,logTime=1566980764065 
-2019-08-28 16:26:04 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a15296ce-ecdd-4f1d-bc5e-65d714fe39d7,logTime=1566980764183 
-2019-08-28 16:26:04 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a15296ce-ecdd-4f1d-bc5e-65d714fe39d7,logTime=1566980764196 
-2019-08-28 16:26:04 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9ec27d73-0e78-4081-a209-34f2275725bf,logTime=1566980764384 
-2019-08-28 16:26:04 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9ec27d73-0e78-4081-a209-34f2275725bf,logTime=1566980764412 
-2019-08-28 16:26:04 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e2270c5d-713a-45ab-b033-9687a6b384d6,logTime=1566980764585 
-2019-08-28 16:26:04 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e2270c5d-713a-45ab-b033-9687a6b384d6,logTime=1566980764598 
-2019-08-28 16:26:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=13fc79dd-36d3-4c89-9dc4-279ee1afc581,logTime=1566980764732 
-2019-08-28 16:26:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=13fc79dd-36d3-4c89-9dc4-279ee1afc581,logTime=1566980764745 
-2019-08-28 16:26:10 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=40d4c097-d424-4242-becf-654b18192089,logTime=1566980770906 
-2019-08-28 16:26:10 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=40d4c097-d424-4242-becf-654b18192089,logTime=1566980770919 
-2019-08-28 16:26:11 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=34e9651b-f509-42bc-b8d8-e20f0df11b3c,logTime=1566980771414 
-2019-08-28 16:26:11 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=34e9651b-f509-42bc-b8d8-e20f0df11b3c,logTime=1566980771429 
-2019-08-28 16:26:11 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=95ed192e-2288-48e0-a9a5-e5df4e455f19,logTime=1566980771868 
-2019-08-28 16:26:11 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=95ed192e-2288-48e0-a9a5-e5df4e455f19,logTime=1566980771881 
-2019-08-28 16:26:12 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9265fda5-4aef-49bf-b84d-e3270ce323da,logTime=1566980772068 
-2019-08-28 16:26:12 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9265fda5-4aef-49bf-b84d-e3270ce323da,logTime=1566980772082 
-2019-08-28 16:26:12 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=1d34dfdc-eb21-4869-88d2-80bfff3d7b24,logTime=1566980772215 
-2019-08-28 16:26:12 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=1d34dfdc-eb21-4869-88d2-80bfff3d7b24,logTime=1566980772229 
-2019-08-28 16:26:12 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b4ffa973-e6c0-4bdb-8cd9-c0f6e290824e,logTime=1566980772351 
-2019-08-28 16:26:12 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b4ffa973-e6c0-4bdb-8cd9-c0f6e290824e,logTime=1566980772367 
-2019-08-28 16:26:12 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=36834914-e2a4-49ee-9ffe-2a751b48902a,logTime=1566980772481 
-2019-08-28 16:26:12 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=36834914-e2a4-49ee-9ffe-2a751b48902a,logTime=1566980772495 
-2019-08-28 16:26:12 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=16a8c910-380e-413b-ab50-b47d26cb10c9,logTime=1566980772606 
-2019-08-28 16:26:12 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=16a8c910-380e-413b-ab50-b47d26cb10c9,logTime=1566980772619 
-2019-08-28 16:26:12 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fe76fe71-a622-4097-8040-274dec66782c,logTime=1566980772743 
-2019-08-28 16:26:12 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fe76fe71-a622-4097-8040-274dec66782c,logTime=1566980772765 
-2019-08-28 16:26:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=15b7b958-20d7-4748-a294-ae56a5668726,logTime=1566980772887 
-2019-08-28 16:26:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=15b7b958-20d7-4748-a294-ae56a5668726,logTime=1566980772901 
-2019-08-28 16:26:13 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=df865697-019d-4fe3-ac68-ec66e6729177,logTime=1566980773039 
-2019-08-28 16:26:13 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=df865697-019d-4fe3-ac68-ec66e6729177,logTime=1566980773052 
-2019-08-28 16:26:13 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0dd2c530-30c3-4e89-b541-a29871eb3e24,logTime=1566980773184 
-2019-08-28 16:26:13 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0dd2c530-30c3-4e89-b541-a29871eb3e24,logTime=1566980773201 
-2019-08-28 16:26:13 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f8b40b75-f935-4bb9-84bd-210129176ff3,logTime=1566980773314 
-2019-08-28 16:26:13 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f8b40b75-f935-4bb9-84bd-210129176ff3,logTime=1566980773328 
-2019-08-28 16:26:13 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=82e624a0-0fa2-442c-a4f4-3a9c446d279f,logTime=1566980773450 
-2019-08-28 16:26:13 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=82e624a0-0fa2-442c-a4f4-3a9c446d279f,logTime=1566980773463 
-2019-08-28 16:26:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=af550350-9380-4e9d-a819-078e067a9a93,logTime=1566980773641 
-2019-08-28 16:26:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=af550350-9380-4e9d-a819-078e067a9a93,logTime=1566980773657 
-2019-08-28 16:26:13 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7ea5906b-5b64-4f32-bb95-958bf2264002,logTime=1566980773798 
-2019-08-28 16:26:13 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7ea5906b-5b64-4f32-bb95-958bf2264002,logTime=1566980773818 
-2019-08-28 16:26:13 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ac2f0f4b-c425-4c5d-95a4-004ba905d3b8,logTime=1566980773933 
-2019-08-28 16:26:13 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ac2f0f4b-c425-4c5d-95a4-004ba905d3b8,logTime=1566980773948 
-2019-08-28 16:26:14 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c26105d6-841c-4a06-bb84-0c8971046a9d,logTime=1566980774059 
-2019-08-28 16:26:14 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c26105d6-841c-4a06-bb84-0c8971046a9d,logTime=1566980774071 
-2019-08-28 16:26:14 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6e62c40d-6138-4bf1-beb0-f984d0684a26,logTime=1566980774197 
-2019-08-28 16:26:14 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6e62c40d-6138-4bf1-beb0-f984d0684a26,logTime=1566980774210 
-2019-08-28 16:26:14 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=02af9ee9-3f8c-4276-8f9d-8f54620babb6,logTime=1566980774333 
-2019-08-28 16:26:14 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=02af9ee9-3f8c-4276-8f9d-8f54620babb6,logTime=1566980774353 
-2019-08-28 16:26:14 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fdebb180-2eff-4050-9513-065dc4acbb0a,logTime=1566980774491 
-2019-08-28 16:26:14 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fdebb180-2eff-4050-9513-065dc4acbb0a,logTime=1566980774507 
-2019-08-28 16:26:14 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=01fac0a7-a30a-431e-bce5-fb3bd8d76d82,logTime=1566980774646 
-2019-08-28 16:26:14 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=01fac0a7-a30a-431e-bce5-fb3bd8d76d82,logTime=1566980774659 
-2019-08-28 16:26:14 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fe8e99d3-9154-4020-b0fe-69eaa8a3b31c,logTime=1566980774788 
-2019-08-28 16:26:14 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fe8e99d3-9154-4020-b0fe-69eaa8a3b31c,logTime=1566980774801 
-2019-08-28 16:26:14 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=89e48caa-5e28-4581-8368-e5a04eb72600,logTime=1566980774952 
-2019-08-28 16:26:14 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=89e48caa-5e28-4581-8368-e5a04eb72600,logTime=1566980774967 
-2019-08-28 16:26:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=bd23f82a-8aa2-41e2-a8d8-e05478efc323,logTime=1566980775100 
-2019-08-28 16:26:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=bd23f82a-8aa2-41e2-a8d8-e05478efc323,logTime=1566980775113 
-2019-08-28 16:26:15 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3e73d7d3-cc11-4a7d-a0a8-1c765114199d,logTime=1566980775240 
-2019-08-28 16:26:15 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3e73d7d3-cc11-4a7d-a0a8-1c765114199d,logTime=1566980775253 
-2019-08-28 16:26:27 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e5629901-f491-4891-8482-34b46885f7ab,logTime=1566980787922 
-2019-08-28 16:26:27 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e5629901-f491-4891-8482-34b46885f7ab,logTime=1566980787939 
-2019-08-28 16:26:28 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=549be23a-17c5-4176-938a-5c8e08476f94,logTime=1566980788348 
-2019-08-28 16:26:28 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=549be23a-17c5-4176-938a-5c8e08476f94,logTime=1566980788370 
-2019-08-28 16:26:34 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3544f04d-e8f8-4ef7-84f7-38915baa5163,logTime=1566980794326 
-2019-08-28 16:26:34 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3544f04d-e8f8-4ef7-84f7-38915baa5163,logTime=1566980794375 
-2019-08-28 16:26:35 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7a6d66d3-ca63-4ba6-831d-fe92f01a1410,logTime=1566980795255 
-2019-08-28 16:26:35 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7a6d66d3-ca63-4ba6-831d-fe92f01a1410,logTime=1566980795267 
-2019-08-28 16:26:41 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c2c1dab8-e1f9-4c79-994b-e63ee01153c9,logTime=1566980801378 
-2019-08-28 16:26:41 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c2c1dab8-e1f9-4c79-994b-e63ee01153c9,logTime=1566980801397 
-2019-08-28 16:26:42 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=aeffa51a-c662-412d-8c63-7fcaac4c71de,logTime=1566980802028 
-2019-08-28 16:26:42 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=aeffa51a-c662-412d-8c63-7fcaac4c71de,logTime=1566980802041 
-2019-08-28 16:26:42 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b18b18ad-50a4-4434-a7d1-7dfd2a8421a8,logTime=1566980802673 
-2019-08-28 16:26:42 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b18b18ad-50a4-4434-a7d1-7dfd2a8421a8,logTime=1566980802687 
-2019-08-28 16:26:57 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=61d91617-22e2-4a8a-9f33-44037a51d234,logTime=1566980817422 
-2019-08-28 16:26:57 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=61d91617-22e2-4a8a-9f33-44037a51d234,logTime=1566980817438 
-2019-08-28 16:27:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e991b995-29cf-45c4-a04a-89ac509a28f0,logTime=1566980826677 
-2019-08-28 16:27:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e991b995-29cf-45c4-a04a-89ac509a28f0,logTime=1566980826693 
-2019-08-28 16:27:11 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e91e618f-2ef7-424c-ba62-f6f393c2772f,logTime=1566980831608 
-2019-08-28 16:27:11 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e91e618f-2ef7-424c-ba62-f6f393c2772f,logTime=1566980831631 
-2019-08-28 16:27:15 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=39bae078-85bb-4dfd-ab62-13423ab414cc,logTime=1566980835917 
-2019-08-28 16:27:15 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=39bae078-85bb-4dfd-ab62-13423ab414cc,logTime=1566980835945 
-2019-08-28 16:27:51 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:28:05 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 17.033 seconds (JVM running for 18.481) 
-2019-08-28 16:28:28 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e2d01afd-eb94-4eed-9706-939ab0bb0c1a,logTime=1566980908236 
-2019-08-28 16:28:28 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e2d01afd-eb94-4eed-9706-939ab0bb0c1a,logTime=1566980908287 
-2019-08-28 16:28:28 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ef8a8455-461f-4020-abbc-18053dedd17f,logTime=1566980908862 
-2019-08-28 16:28:28 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ef8a8455-461f-4020-abbc-18053dedd17f,logTime=1566980908876 
-2019-08-28 16:28:29 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=1113f97d-1b4f-414e-9b40-c89305c61e41,logTime=1566980909539 
-2019-08-28 16:28:29 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=1113f97d-1b4f-414e-9b40-c89305c61e41,logTime=1566980909557 
-2019-08-28 16:28:30 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cfb782f6-fce3-439d-9cdd-758e48cfa69d,logTime=1566980910301 
-2019-08-28 16:28:30 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cfb782f6-fce3-439d-9cdd-758e48cfa69d,logTime=1566980910327 
-2019-08-28 16:28:37 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=29c91632-b074-4b44-94cc-f29a0f2f5835,logTime=1566980917119 
-2019-08-28 16:28:37 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=29c91632-b074-4b44-94cc-f29a0f2f5835,logTime=1566980917148 
-2019-08-28 16:28:37 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=63fcf178-f010-40e6-bb7b-aa94e35625b5,logTime=1566980917786 
-2019-08-28 16:28:37 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=63fcf178-f010-40e6-bb7b-aa94e35625b5,logTime=1566980917826 
-2019-08-28 16:28:38 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9f38157c-4924-417d-8936-8b47f14bdb99,logTime=1566980918864 
-2019-08-28 16:28:38 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9f38157c-4924-417d-8936-8b47f14bdb99,logTime=1566980918894 
-2019-08-28 16:28:40 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8854500f-ef16-43d6-b97d-68f3ad7fd448,logTime=1566980920123 
-2019-08-28 16:28:40 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8854500f-ef16-43d6-b97d-68f3ad7fd448,logTime=1566980920169 
-2019-08-28 16:28:41 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7a8f7834-b93f-4f5b-ae98-fd1b33c58553,logTime=1566980921439 
-2019-08-28 16:28:41 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7a8f7834-b93f-4f5b-ae98-fd1b33c58553,logTime=1566980921461 
-2019-08-28 16:28:42 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ab52fd40-88ca-4ef1-af21-2761d806e02e,logTime=1566980922598 
-2019-08-28 16:28:42 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ab52fd40-88ca-4ef1-af21-2761d806e02e,logTime=1566980922615 
-2019-08-28 16:28:43 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=613f527f-20c2-4472-868f-a989ab921e49,logTime=1566980923572 
-2019-08-28 16:28:43 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=613f527f-20c2-4472-868f-a989ab921e49,logTime=1566980923597 
-2019-08-28 16:28:44 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4ce6bfd8-49a0-4b7d-9c45-73cc85e37277,logTime=1566980924816 
-2019-08-28 16:28:44 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4ce6bfd8-49a0-4b7d-9c45-73cc85e37277,logTime=1566980924832 
-2019-08-28 16:29:15 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=dadb72dc-475e-4a6d-93cd-3c6edd412997,logTime=1566980955716 
-2019-08-28 16:29:15 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=dadb72dc-475e-4a6d-93cd-3c6edd412997,logTime=1566980955743 
-2019-08-28 16:29:16 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=560909af-e7ec-4ae2-95ae-099b75559c49,logTime=1566980956569 
-2019-08-28 16:29:16 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=560909af-e7ec-4ae2-95ae-099b75559c49,logTime=1566980956618 
-2019-08-28 16:29:17 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=67e22571-2515-493d-ac79-5a7132d09ac2,logTime=1566980957103 
-2019-08-28 16:29:17 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=67e22571-2515-493d-ac79-5a7132d09ac2,logTime=1566980957150 
-2019-08-28 16:29:54 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a896c01b-9f71-4c11-b1b4-1006a5631f13,logTime=1566980994733 
-2019-08-28 16:29:54 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a896c01b-9f71-4c11-b1b4-1006a5631f13,logTime=1566980994751 
-2019-08-28 16:30:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fb1de033-10c9-4f8f-a781-5454384d07a6,logTime=1566981004258 
-2019-08-28 16:30:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fb1de033-10c9-4f8f-a781-5454384d07a6,logTime=1566981004270 
-2019-08-28 16:30:04 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f56d7849-aac9-442b-9364-9d3e1b22c05d,logTime=1566981004710 
-2019-08-28 16:30:04 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f56d7849-aac9-442b-9364-9d3e1b22c05d,logTime=1566981004724 
-2019-08-28 16:30:48 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:31:07 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 21.898 seconds (JVM running for 23.452) 
-2019-08-28 16:36:01 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:36:16 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 18.676 seconds (JVM running for 20.518) 
-2019-08-28 16:36:49 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=5cd35b97-1def-40a2-a46f-2107b3ed720c,logTime=1566981409106 
-2019-08-28 16:36:49 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=5cd35b97-1def-40a2-a46f-2107b3ed720c,logTime=1566981409187 
-2019-08-28 16:36:51 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=db84e506-8208-400c-8bad-b682648bf7f4,logTime=1566981411650 
-2019-08-28 16:36:51 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=db84e506-8208-400c-8bad-b682648bf7f4,logTime=1566981411675 
-2019-08-28 16:36:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e79d0729-a7c0-461b-b013-d53eb0dc8648,logTime=1566981413641 
-2019-08-28 16:36:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e79d0729-a7c0-461b-b013-d53eb0dc8648,logTime=1566981413668 
-2019-08-28 16:36:55 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d16aeabf-3f33-47a5-82b3-b6de123cb83a,logTime=1566981415358 
-2019-08-28 16:36:55 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d16aeabf-3f33-47a5-82b3-b6de123cb83a,logTime=1566981415435 
-2019-08-28 16:37:07 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3171285c-069a-4097-b613-3be57c2376ea,logTime=1566981427260 
-2019-08-28 16:37:17 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3171285c-069a-4097-b613-3be57c2376ea,logTime=1566981437643 
-2019-08-28 16:42:16 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=19c94dd5-00e1-4458-842d-b5b84178af07,logTime=1566981736743 
-2019-08-28 16:42:19 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=19c94dd5-00e1-4458-842d-b5b84178af07,logTime=1566981739406 
-2019-08-28 16:45:18 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:45:38 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 23.679 seconds (JVM running for 25.898) 
-2019-08-28 16:45:45 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=784d91bc-2b2a-4307-9a3f-c7dfecf0fa43,logTime=1566981945042 
-2019-08-28 16:45:45 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=784d91bc-2b2a-4307-9a3f-c7dfecf0fa43,logTime=1566981945292 
-2019-08-28 16:45:51 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c14acfd0-8c77-467c-8154-a7d99f3ef4eb,logTime=1566981951169 
-2019-08-28 16:45:51 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c14acfd0-8c77-467c-8154-a7d99f3ef4eb,logTime=1566981951195 
-2019-08-28 16:46:01 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0b7facde-b4b6-41de-9f5d-c14be30ef425,logTime=1566981961248 
-2019-08-28 16:46:01 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0b7facde-b4b6-41de-9f5d-c14be30ef425,logTime=1566981961427 
-2019-08-28 16:46:08 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d4db093e-8a17-4cfc-a2b9-852acd44ca0d,logTime=1566981968407 
-2019-08-28 16:46:08 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d4db093e-8a17-4cfc-a2b9-852acd44ca0d,logTime=1566981968483 
-2019-08-28 16:46:09 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a1078f30-b3a7-4d8f-b9d3-69dee7f4b958,logTime=1566981969137 
-2019-08-28 16:46:09 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a1078f30-b3a7-4d8f-b9d3-69dee7f4b958,logTime=1566981969154 
-2019-08-28 16:46:09 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=2bcf028a-798a-4483-b3b5-8f8943b4d1c8,logTime=1566981969538 
-2019-08-28 16:46:09 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=2bcf028a-798a-4483-b3b5-8f8943b4d1c8,logTime=1566981969679 
-2019-08-28 16:46:09 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3c1d9143-01e6-4e1f-9e48-9db104b560cb,logTime=1566981969712 
-2019-08-28 16:46:09 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3c1d9143-01e6-4e1f-9e48-9db104b560cb,logTime=1566981969737 
-2019-08-28 16:46:09 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f895b330-f147-4612-9d10-731855d8451a,logTime=1566981969874 
-2019-08-28 16:46:09 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f895b330-f147-4612-9d10-731855d8451a,logTime=1566981969889 
-2019-08-28 16:46:10 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b536ae37-5e5c-4a8f-9b0e-aacaac88a6a9,logTime=1566981970018 
-2019-08-28 16:46:10 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b536ae37-5e5c-4a8f-9b0e-aacaac88a6a9,logTime=1566981970038 
-2019-08-28 16:46:10 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=47e0946e-8cf5-49ca-8c04-c4fa0628b4ca,logTime=1566981970275 
-2019-08-28 16:46:10 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=47e0946e-8cf5-49ca-8c04-c4fa0628b4ca,logTime=1566981970303 
-2019-08-28 16:46:10 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a4b5d51c-a3a6-4371-abeb-e9f5cbc7f761,logTime=1566981970420 
-2019-08-28 16:46:10 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a4b5d51c-a3a6-4371-abeb-e9f5cbc7f761,logTime=1566981970441 
-2019-08-28 16:46:10 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cf3885b8-9395-41a5-895b-66c94841234e,logTime=1566981970550 
-2019-08-28 16:46:10 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cf3885b8-9395-41a5-895b-66c94841234e,logTime=1566981970565 
-2019-08-28 16:46:10 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=13a9fc47-6382-4538-98c3-2dbd1cf55a6f,logTime=1566981970686 
-2019-08-28 16:46:10 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=13a9fc47-6382-4538-98c3-2dbd1cf55a6f,logTime=1566981970703 
-2019-08-28 16:46:10 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fb698600-bce2-47e7-977a-f8ab335bb36a,logTime=1566981970808 
-2019-08-28 16:46:10 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fb698600-bce2-47e7-977a-f8ab335bb36a,logTime=1566981970829 
-2019-08-28 16:46:10 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=c0b4aeac-6b01-4de5-ad9a-c6888120caef,logTime=1566981970937 
-2019-08-28 16:46:10 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=c0b4aeac-6b01-4de5-ad9a-c6888120caef,logTime=1566981970954 
-2019-08-28 16:46:11 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=de97d6df-9a5b-43f3-b449-4422707ab4ac,logTime=1566981971060 
-2019-08-28 16:46:11 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=de97d6df-9a5b-43f3-b449-4422707ab4ac,logTime=1566981971095 
-2019-08-28 16:46:11 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0951b233-8809-4d8b-b61d-b50acb185c36,logTime=1566981971195 
-2019-08-28 16:46:11 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0951b233-8809-4d8b-b61d-b50acb185c36,logTime=1566981971220 
-2019-08-28 16:46:11 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=786630c7-bb36-489d-8b91-83d28dd69367,logTime=1566981971338 
-2019-08-28 16:46:11 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=786630c7-bb36-489d-8b91-83d28dd69367,logTime=1566981971356 
-2019-08-28 16:46:11 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4d9a4f5a-9faf-47bf-ad0d-3707aecb516d,logTime=1566981971460 
-2019-08-28 16:46:11 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4d9a4f5a-9faf-47bf-ad0d-3707aecb516d,logTime=1566981971482 
-2019-08-28 16:46:11 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=08690703-ee62-47dc-ad3e-db99cdaa62c2,logTime=1566981971586 
-2019-08-28 16:46:11 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=08690703-ee62-47dc-ad3e-db99cdaa62c2,logTime=1566981971608 
-2019-08-28 16:46:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7abdb682-f797-491a-83f4-2305429820cf,logTime=1566981971716 
-2019-08-28 16:46:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7abdb682-f797-491a-83f4-2305429820cf,logTime=1566981971730 
-2019-08-28 16:46:11 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=5ba5168c-060e-444a-a313-77e7bd03974d,logTime=1566981971851 
-2019-08-28 16:46:11 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=5ba5168c-060e-444a-a313-77e7bd03974d,logTime=1566981971896 
-2019-08-28 16:46:11 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9d3e8d81-32bd-4533-a4c5-8436a849190b,logTime=1566981971987 
-2019-08-28 16:46:12 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9d3e8d81-32bd-4533-a4c5-8436a849190b,logTime=1566981972002 
-2019-08-28 16:46:12 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7a3dc947-782f-4f63-bab2-56bf3893cf0e,logTime=1566981972117 
-2019-08-28 16:46:12 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7a3dc947-782f-4f63-bab2-56bf3893cf0e,logTime=1566981972147 
-2019-08-28 16:46:12 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d4def23e-4224-495a-881c-5f3c4f4cdbc4,logTime=1566981972251 
-2019-08-28 16:46:12 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d4def23e-4224-495a-881c-5f3c4f4cdbc4,logTime=1566981972265 
-2019-08-28 16:46:12 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=cb93a410-cbd9-485b-a4b4-713349096f5c,logTime=1566981972399 
-2019-08-28 16:46:12 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=cb93a410-cbd9-485b-a4b4-713349096f5c,logTime=1566981972416 
-2019-08-28 16:46:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=70b0862b-0e57-4772-afbb-197b0b46f801,logTime=1566981972541 
-2019-08-28 16:46:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=70b0862b-0e57-4772-afbb-197b0b46f801,logTime=1566981972565 
-2019-08-28 16:46:12 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e5e9d3c8-95f6-4130-836c-42141b0e3745,logTime=1566981972679 
-2019-08-28 16:46:12 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e5e9d3c8-95f6-4130-836c-42141b0e3745,logTime=1566981972711 
-2019-08-28 16:46:12 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=20124db5-e8df-4fd9-bb92-c9f1bf97b259,logTime=1566981972822 
-2019-08-28 16:46:12 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=20124db5-e8df-4fd9-bb92-c9f1bf97b259,logTime=1566981972843 
-2019-08-28 16:46:12 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=18fa0b3d-f34a-47cd-94ab-a579ef3fef8c,logTime=1566981972974 
-2019-08-28 16:46:13 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=18fa0b3d-f34a-47cd-94ab-a579ef3fef8c,logTime=1566981973009 
-2019-08-28 16:46:13 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=10831766-c3cc-45a9-b0ff-4b8db050d810,logTime=1566981973133 
-2019-08-28 16:46:13 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=10831766-c3cc-45a9-b0ff-4b8db050d810,logTime=1566981973192 
-2019-08-28 16:46:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a6d95ba6-4195-4bbf-baa2-9608c481bcc6,logTime=1566981973306 
-2019-08-28 16:46:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a6d95ba6-4195-4bbf-baa2-9608c481bcc6,logTime=1566981973324 
-2019-08-28 16:46:13 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a7785021-b0b5-4914-9859-dae264f0ae74,logTime=1566981973455 
-2019-08-28 16:46:13 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a7785021-b0b5-4914-9859-dae264f0ae74,logTime=1566981973476 
-2019-08-28 16:46:13 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=96086b42-2953-4463-a273-953f4ad15cff,logTime=1566981973608 
-2019-08-28 16:46:13 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=96086b42-2953-4463-a273-953f4ad15cff,logTime=1566981973639 
-2019-08-28 16:46:40 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:46:56 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 17.835 seconds (JVM running for 19.68) 
-2019-08-28 16:46:58 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a13fe07c-0c78-4ed5-9427-ae9af5868bd6,logTime=1566982018925 
-2019-08-28 16:46:59 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a13fe07c-0c78-4ed5-9427-ae9af5868bd6,logTime=1566982019135 
-2019-08-28 16:47:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=85118d31-612e-418f-a37a-a115d304322e,logTime=1566982026222 
-2019-08-28 16:47:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=85118d31-612e-418f-a37a-a115d304322e,logTime=1566982026341 
-2019-08-28 16:47:06 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a86324a6-1aa7-4da5-8d01-16eff12fce27,logTime=1566982026864 
-2019-08-28 16:47:06 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a86324a6-1aa7-4da5-8d01-16eff12fce27,logTime=1566982026880 
-2019-08-28 16:47:07 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a60a1c7e-719c-4246-8db8-fa44ec532fc2,logTime=1566982027460 
-2019-08-28 16:47:07 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a60a1c7e-719c-4246-8db8-fa44ec532fc2,logTime=1566982027474 
-2019-08-28 16:47:08 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7315f7c3-691c-45c7-80c9-d3213227bf2e,logTime=1566982028128 
-2019-08-28 16:47:08 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7315f7c3-691c-45c7-80c9-d3213227bf2e,logTime=1566982028141 
-2019-08-28 16:47:11 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4be00629-5527-46b8-b8f0-e075d79756ae,logTime=1566982031827 
-2019-08-28 16:47:11 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4be00629-5527-46b8-b8f0-e075d79756ae,logTime=1566982031877 
-2019-08-28 16:47:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=912a6a2e-7028-4c57-be94-9c69abbe0670,logTime=1566982032827 
-2019-08-28 16:47:12 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=912a6a2e-7028-4c57-be94-9c69abbe0670,logTime=1566982032918 
-2019-08-28 16:47:13 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3122460e-f086-444f-86f0-19d04904075c,logTime=1566982033949 
-2019-08-28 16:47:13 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3122460e-f086-444f-86f0-19d04904075c,logTime=1566982033963 
-2019-08-28 16:47:17 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8ddb1eb2-4a50-427f-a3ab-62908a954d9f,logTime=1566982037660 
-2019-08-28 16:47:17 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8ddb1eb2-4a50-427f-a3ab-62908a954d9f,logTime=1566982037742 
-2019-08-28 16:47:18 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4d8e5687-2f38-4f70-bf88-1bbc2f2fa0d2,logTime=1566982038428 
-2019-08-28 16:47:18 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4d8e5687-2f38-4f70-bf88-1bbc2f2fa0d2,logTime=1566982038444 
-2019-08-28 16:47:19 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a6b10818-490d-41c3-a5bf-fb8355b20907,logTime=1566982039105 
-2019-08-28 16:47:19 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a6b10818-490d-41c3-a5bf-fb8355b20907,logTime=1566982039119 
-2019-08-28 16:47:29 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=1f801ec3-169f-4d18-88be-fc9f5d530f54,logTime=1566982049163 
-2019-08-28 16:47:29 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=1f801ec3-169f-4d18-88be-fc9f5d530f54,logTime=1566982049260 
-2019-08-28 16:47:29 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6d56738a-cdba-4a17-859e-8ff5f8c46b05,logTime=1566982049864 
-2019-08-28 16:47:29 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6d56738a-cdba-4a17-859e-8ff5f8c46b05,logTime=1566982049876 
-2019-08-28 16:55:35 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-08-28 16:55:51 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 20.078 seconds (JVM running for 21.781) 
-2019-08-28 16:56:02 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=46ee2bdf-6119-4912-84c1-efa9c66462e9,logTime=1566982562310 
-2019-08-28 16:56:02 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=46ee2bdf-6119-4912-84c1-efa9c66462e9,logTime=1566982562686 
-2019-08-28 16:56:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0beec2c4-6cea-4ec0-a2aa-f238d5c7d3e1,logTime=1566982562721 
-2019-08-28 16:56:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0beec2c4-6cea-4ec0-a2aa-f238d5c7d3e1,logTime=1566982562760 
-2019-08-28 16:56:02 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7abddbf6-1911-4902-9609-3083b5c12777,logTime=1566982562784 
-2019-08-28 16:56:02 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7abddbf6-1911-4902-9609-3083b5c12777,logTime=1566982562797 
-2019-08-28 16:56:02 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=03df9fea-8b98-4733-9759-57c0684ad0be,logTime=1566982562808 
-2019-08-28 16:56:02 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=03df9fea-8b98-4733-9759-57c0684ad0be,logTime=1566982562825 
-2019-08-28 16:56:02 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f0d4fe65-4f19-46bc-893c-9bfdf67dfa29,logTime=1566982562845 
-2019-08-28 16:56:02 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f0d4fe65-4f19-46bc-893c-9bfdf67dfa29,logTime=1566982562862 
-2019-08-28 16:56:02 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=89f58cc6-577a-433c-9eda-8a136f8f71bc,logTime=1566982562877 
-2019-08-28 16:56:02 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=89f58cc6-577a-433c-9eda-8a136f8f71bc,logTime=1566982562901 
-2019-08-28 16:56:02 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3f4826aa-3728-4aa6-a955-5e39be14023b,logTime=1566982562977 
-2019-08-28 16:56:02 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3f4826aa-3728-4aa6-a955-5e39be14023b,logTime=1566982562991 
-2019-08-28 16:56:03 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b7207c8a-89c7-4bcf-b22f-7cd4e080c77f,logTime=1566982563100 
-2019-08-28 16:56:03 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b7207c8a-89c7-4bcf-b22f-7cd4e080c77f,logTime=1566982563115 
-2019-08-28 16:56:03 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=13545a56-d5a8-4991-a8ea-7542f3d5a15a,logTime=1566982563238 
-2019-08-28 16:56:03 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=13545a56-d5a8-4991-a8ea-7542f3d5a15a,logTime=1566982563250 
-2019-08-28 16:56:03 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8da3113e-5841-434a-8b02-9116a748b39a,logTime=1566982563421 
-2019-08-28 16:56:03 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8da3113e-5841-434a-8b02-9116a748b39a,logTime=1566982563436 
-2019-08-28 16:56:03 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=62caa42c-bff4-43e8-8f2a-04a8546a23db,logTime=1566982563567 
-2019-08-28 16:56:03 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=62caa42c-bff4-43e8-8f2a-04a8546a23db,logTime=1566982563579 
-2019-08-28 16:56:03 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4874cb67-6c61-42c9-9393-1e49f9ca37f0,logTime=1566982563696 
-2019-08-28 16:56:03 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4874cb67-6c61-42c9-9393-1e49f9ca37f0,logTime=1566982563711 
-2019-08-28 16:56:03 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=2a3282c8-3cbf-4b9f-a845-2cb57c01c740,logTime=1566982563836 
-2019-08-28 16:56:03 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=2a3282c8-3cbf-4b9f-a845-2cb57c01c740,logTime=1566982563849 
-2019-08-28 16:56:03 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=931d6206-75eb-42de-92e8-7a76326cabb2,logTime=1566982563953 
-2019-08-28 16:56:03 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=931d6206-75eb-42de-92e8-7a76326cabb2,logTime=1566982563966 
-2019-08-28 16:56:04 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b76521cc-701a-4c92-94d7-f99576be4ecf,logTime=1566982564082 
-2019-08-28 16:56:04 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b76521cc-701a-4c92-94d7-f99576be4ecf,logTime=1566982564096 
-2019-08-28 16:56:04 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=672aecc4-601d-4afd-9bef-9075ae1e6cd9,logTime=1566982564212 
-2019-08-28 16:56:04 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=672aecc4-601d-4afd-9bef-9075ae1e6cd9,logTime=1566982564226 
-2019-08-28 16:56:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=bade4bf8-0967-4051-903f-b68b068cc675,logTime=1566982564417 
-2019-08-28 16:56:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=bade4bf8-0967-4051-903f-b68b068cc675,logTime=1566982564431 
-2019-08-28 16:56:04 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=81c5809e-0fd1-4192-9242-5332236696bb,logTime=1566982564562 
-2019-08-28 16:56:04 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=81c5809e-0fd1-4192-9242-5332236696bb,logTime=1566982564578 
-2019-08-28 16:56:04 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ea8f526f-33f2-4c7d-ba27-55bc8a1bd6a5,logTime=1566982564704 
-2019-08-28 16:56:04 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ea8f526f-33f2-4c7d-ba27-55bc8a1bd6a5,logTime=1566982564716 
-2019-08-28 16:56:04 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=16ea8a84-3191-4196-94ad-de9038f5d97e,logTime=1566982564882 
-2019-08-28 16:56:04 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=16ea8a84-3191-4196-94ad-de9038f5d97e,logTime=1566982564896 
-2019-08-28 16:56:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=5466cb03-e548-48aa-b482-5f1288dd8767,logTime=1566982565030 
-2019-08-28 16:56:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=5466cb03-e548-48aa-b482-5f1288dd8767,logTime=1566982565045 
-2019-08-28 16:56:05 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=e267d339-44ea-4b9a-a987-07b8e56ec119,logTime=1566982565171 
-2019-08-28 16:56:05 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=e267d339-44ea-4b9a-a987-07b8e56ec119,logTime=1566982565184 
-2019-08-28 16:56:05 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=934e2f33-0777-4c6a-ae8f-ac5620875ea6,logTime=1566982565317 
-2019-08-28 16:56:05 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=934e2f33-0777-4c6a-ae8f-ac5620875ea6,logTime=1566982565332 
-2019-08-28 16:56:05 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4490759e-f2e4-40c2-b13f-004adfb9e730,logTime=1566982565468 
-2019-08-28 16:56:05 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4490759e-f2e4-40c2-b13f-004adfb9e730,logTime=1566982565481 
-2019-08-28 16:56:05 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=9af3e258-996f-4f75-aa6f-c266028398a9,logTime=1566982565620 
-2019-08-28 16:56:05 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=9af3e258-996f-4f75-aa6f-c266028398a9,logTime=1566982565635 
-2019-08-28 16:56:05 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=953757ca-cbbd-4551-bd81-5178cd6ba45a,logTime=1566982565756 
-2019-08-28 16:56:05 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=953757ca-cbbd-4551-bd81-5178cd6ba45a,logTime=1566982565770 
-2019-08-28 16:56:05 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=fbc8e4d9-f059-4f05-b096-27a321095994,logTime=1566982565895 
-2019-08-28 16:56:05 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=fbc8e4d9-f059-4f05-b096-27a321095994,logTime=1566982565910 
-2019-08-28 16:56:06 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=708fa807-7819-48bb-998c-eaaab801e74a,logTime=1566982566043 
-2019-08-28 16:56:06 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=708fa807-7819-48bb-998c-eaaab801e74a,logTime=1566982566056 
-2019-08-28 16:56:06 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3546da4a-3dff-4a61-93d8-e8615a753a56,logTime=1566982566184 
-2019-08-28 16:56:06 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3546da4a-3dff-4a61-93d8-e8615a753a56,logTime=1566982566197 
-2019-08-28 16:56:06 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=01a54475-864c-4440-8d93-fa179e990654,logTime=1566982566332 
-2019-08-28 16:56:06 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=01a54475-864c-4440-8d93-fa179e990654,logTime=1566982566345 
-2019-08-28 16:56:06 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=998360bd-9e21-42cc-9c79-a41b7d124f42,logTime=1566982566465 
-2019-08-28 16:56:06 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=998360bd-9e21-42cc-9c79-a41b7d124f42,logTime=1566982566478 
-2019-08-28 16:56:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0b6fbce1-33ee-484d-b619-b0dbb8abb063,logTime=1566982566614 
-2019-08-28 16:56:06 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0b6fbce1-33ee-484d-b619-b0dbb8abb063,logTime=1566982566627 
-2019-08-28 16:56:06 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ff54b565-8ff5-4816-9eda-e1c579b00223,logTime=1566982566755 
-2019-08-28 16:56:06 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ff54b565-8ff5-4816-9eda-e1c579b00223,logTime=1566982566768 
-2019-08-28 16:56:06 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a743b770-4072-4ba1-ae45-f184b7d80be3,logTime=1566982566898 
-2019-08-28 16:56:06 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a743b770-4072-4ba1-ae45-f184b7d80be3,logTime=1566982566914 
-2019-08-28 16:56:07 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=816abfa7-151a-4567-9523-4cd808ed5a03,logTime=1566982567052 
-2019-08-28 16:56:07 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=816abfa7-151a-4567-9523-4cd808ed5a03,logTime=1566982567065 
-2019-08-28 16:56:07 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=caa75d6b-e3cc-461f-9713-204db5bc0a5e,logTime=1566982567204 
-2019-08-28 16:56:07 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=caa75d6b-e3cc-461f-9713-204db5bc0a5e,logTime=1566982567222 
-2019-08-28 16:56:07 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0be18896-4dfe-44bc-aa1f-a34285f34cd4,logTime=1566982567366 
-2019-08-28 16:56:07 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0be18896-4dfe-44bc-aa1f-a34285f34cd4,logTime=1566982567381 
-2019-08-28 16:56:07 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=31503f9e-b552-48f1-abb7-0d8446e651e0,logTime=1566982567513 
-2019-08-28 16:56:07 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=31503f9e-b552-48f1-abb7-0d8446e651e0,logTime=1566982567526 
-2019-08-28 16:56:07 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=f45b02e9-e83e-46ce-b9ea-fcb35f0bd7b0,logTime=1566982567655 
-2019-08-28 16:56:07 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=f45b02e9-e83e-46ce-b9ea-fcb35f0bd7b0,logTime=1566982567731 
-2019-08-28 16:56:07 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7ecc6da1-f8bd-4f47-88f2-4ff4dd2f2290,logTime=1566982567800 
-2019-08-28 16:56:07 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7ecc6da1-f8bd-4f47-88f2-4ff4dd2f2290,logTime=1566982567826 
-2019-08-28 16:56:07 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=55a0c256-6d8e-4451-800f-7f5ad7e7126c,logTime=1566982567923 
-2019-08-28 16:56:07 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=55a0c256-6d8e-4451-800f-7f5ad7e7126c,logTime=1566982567947 
-2019-08-28 16:56:08 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6f685754-9e6b-49ee-9e9f-e48d788464ec,logTime=1566982568077 
-2019-08-28 16:56:08 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6f685754-9e6b-49ee-9e9f-e48d788464ec,logTime=1566982568090 
-2019-08-28 16:56:08 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=0711ec5c-74ca-4737-abd8-02930adc7b4b,logTime=1566982568232 
-2019-08-28 16:56:08 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=0711ec5c-74ca-4737-abd8-02930adc7b4b,logTime=1566982568244 
-2019-08-28 16:56:08 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8b41c8a8-6484-4b8b-a74f-e1cf5842c1f4,logTime=1566982568364 
-2019-08-28 16:56:08 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8b41c8a8-6484-4b8b-a74f-e1cf5842c1f4,logTime=1566982568394 
-2019-08-28 16:56:08 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d87141f4-ae6b-42d7-894d-3af23c6bd5e2,logTime=1566982568518 
-2019-08-28 16:56:08 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d87141f4-ae6b-42d7-894d-3af23c6bd5e2,logTime=1566982568542 
-2019-08-28 16:56:08 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8b48f686-7444-4879-ab45-6485a0b2878f,logTime=1566982568669 
-2019-08-28 16:56:08 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8b48f686-7444-4879-ab45-6485a0b2878f,logTime=1566982568702 
-2019-08-28 16:56:08 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a58eba85-f7a9-4384-bc86-7d6eaaf8c750,logTime=1566982568816 
-2019-08-28 16:56:08 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a58eba85-f7a9-4384-bc86-7d6eaaf8c750,logTime=1566982568832 
-2019-08-28 16:56:08 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=1abeba6b-7d1c-4389-b752-d4f681e8303f,logTime=1566982568954 
-2019-08-28 16:56:08 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=1abeba6b-7d1c-4389-b752-d4f681e8303f,logTime=1566982568979 
-2019-08-28 16:56:09 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=482fd12e-4f5b-4916-8e52-b2545112a00a,logTime=1566982569100 
-2019-08-28 16:56:09 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=482fd12e-4f5b-4916-8e52-b2545112a00a,logTime=1566982569115 
-2019-08-28 16:56:09 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7ec4dfb8-c436-40b4-8357-5e5e3be0e4d3,logTime=1566982569264 
-2019-08-28 16:56:09 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7ec4dfb8-c436-40b4-8357-5e5e3be0e4d3,logTime=1566982569278 
-2019-08-28 16:56:09 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=dc98ee7a-ab78-45d0-b2c8-6afbe6512dad,logTime=1566982569667 
-2019-08-28 16:56:09 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=dc98ee7a-ab78-45d0-b2c8-6afbe6512dad,logTime=1566982569683 
-2019-08-28 16:56:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=bd5178b8-077b-4b85-a3e9-deba2ac6d287,logTime=1566982575588 
-2019-08-28 16:56:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=bd5178b8-077b-4b85-a3e9-deba2ac6d287,logTime=1566982575647 
-2019-08-28 16:56:16 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7f74c73f-1c0a-493f-bee3-f7d77789e76f,logTime=1566982576534 
-2019-08-28 16:56:16 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7f74c73f-1c0a-493f-bee3-f7d77789e76f,logTime=1566982576552 
-2019-08-28 16:56:16 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b31a4ace-eb5a-4682-9fca-4f8e5fb40b6d,logTime=1566982576668 
-2019-08-28 16:56:16 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b31a4ace-eb5a-4682-9fca-4f8e5fb40b6d,logTime=1566982576680 
-2019-08-28 16:56:16 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=51b1362a-7f32-467f-b70b-5d442e9838c3,logTime=1566982576803 
-2019-08-28 16:56:16 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=51b1362a-7f32-467f-b70b-5d442e9838c3,logTime=1566982576817 
-2019-08-28 16:56:16 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=4d57240d-7236-4760-a800-73ace933898b,logTime=1566982576939 
-2019-08-28 16:56:16 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=4d57240d-7236-4760-a800-73ace933898b,logTime=1566982576953 
-2019-08-28 16:56:17 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b79816d1-fc80-4b45-ba1f-a7611d927576,logTime=1566982577078 
-2019-08-28 16:56:17 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b79816d1-fc80-4b45-ba1f-a7611d927576,logTime=1566982577092 
-2019-08-28 16:56:17 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d2a1bba9-b3c5-47a0-8c04-a259ce6d004c,logTime=1566982577204 
-2019-08-28 16:56:17 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d2a1bba9-b3c5-47a0-8c04-a259ce6d004c,logTime=1566982577217 
-2019-08-28 16:56:17 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=79786874-a761-490d-b875-cc070bccc382,logTime=1566982577335 
-2019-08-28 16:56:17 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=79786874-a761-490d-b875-cc070bccc382,logTime=1566982577348 
-2019-08-28 16:56:17 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3081887d-1897-418d-b123-cf0d2bb09faa,logTime=1566982577463 
-2019-08-28 16:56:17 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3081887d-1897-418d-b123-cf0d2bb09faa,logTime=1566982577477 
-2019-08-28 16:56:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=50338261-3616-4693-9f2e-07833f1705ff,logTime=1566982577590 
-2019-08-28 16:56:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=50338261-3616-4693-9f2e-07833f1705ff,logTime=1566982577605 
-2019-08-28 16:56:17 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=7b5ff393-ef5d-4e84-908a-197beada33ce,logTime=1566982577728 
-2019-08-28 16:56:17 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=7b5ff393-ef5d-4e84-908a-197beada33ce,logTime=1566982577742 
-2019-08-28 16:56:17 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=ab32faa4-ded1-4726-977c-145dfb5668df,logTime=1566982577864 
-2019-08-28 16:56:17 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=ab32faa4-ded1-4726-977c-145dfb5668df,logTime=1566982577879 
-2019-08-28 16:56:47 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=10d5e7c2-4c67-4361-a632-1467efe41c0b,logTime=1566982607233 
-2019-08-28 16:56:47 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=10d5e7c2-4c67-4361-a632-1467efe41c0b,logTime=1566982607445 
-2019-08-28 16:56:47 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=6008718b-617b-4114-a68a-bfb93ef83762,logTime=1566982607460 
-2019-08-28 16:56:47 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=6008718b-617b-4114-a68a-bfb93ef83762,logTime=1566982607486 
-2019-08-28 16:56:47 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=d675b7ec-c1cc-4d08-b64f-5861d254f2e8,logTime=1566982607507 
-2019-08-28 16:56:47 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=d675b7ec-c1cc-4d08-b64f-5861d254f2e8,logTime=1566982607523 
-2019-08-28 16:56:47 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=44a41ae3-d1f3-4e2d-8792-838bdbccb6bc,logTime=1566982607633 
-2019-08-28 16:56:47 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=44a41ae3-d1f3-4e2d-8792-838bdbccb6bc,logTime=1566982607648 
-2019-08-28 16:56:47 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=21a0b712-dc38-4006-af30-51b404405e2b,logTime=1566982607767 
-2019-08-28 16:56:47 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=21a0b712-dc38-4006-af30-51b404405e2b,logTime=1566982607783 
-2019-08-28 16:56:47 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=18b21ee0-d952-4fcd-9b61-d53c47208bf5,logTime=1566982607921 
-2019-08-28 16:56:47 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=18b21ee0-d952-4fcd-9b61-d53c47208bf5,logTime=1566982607938 
-2019-08-28 16:56:48 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8267279f-633b-4500-9748-51821bb33289,logTime=1566982608067 
-2019-08-28 16:56:48 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8267279f-633b-4500-9748-51821bb33289,logTime=1566982608080 
-2019-08-28 16:56:48 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=b13456b7-870e-4a8b-a10a-d3168b0fe97f,logTime=1566982608202 
-2019-08-28 16:56:48 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=b13456b7-870e-4a8b-a10a-d3168b0fe97f,logTime=1566982608215 
-2019-08-28 16:56:48 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=5bc688fd-30ad-4c77-9bce-d8c99be2c37e,logTime=1566982608335 
-2019-08-28 16:56:48 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=5bc688fd-30ad-4c77-9bce-d8c99be2c37e,logTime=1566982608351 
-2019-08-28 16:56:48 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=895642f3-b37e-4fc0-95fd-001cb3aed9ba,logTime=1566982608468 
-2019-08-28 16:56:48 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=895642f3-b37e-4fc0-95fd-001cb3aed9ba,logTime=1566982608482 
+2019-10-10 15:51:58 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,logTime=1570693918934 
+2019-10-10 15:51:58 [http-nio-10003-exec-3] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,productSaveParamVmo={"orderUser":"f","productId":18,"remark":"string","total":1} 
+2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.manager.UserClient : 
+ UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-1000,"userName":"f"} 
+2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.manager.UserClient : 
+ UserClient-扣除用户余额：resultVO={"code":0,"msg":"成功！"} 
+2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,logTime=1570693957931 

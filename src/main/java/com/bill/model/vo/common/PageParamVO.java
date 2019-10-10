@@ -1,4 +1,4 @@
-package com.bill.model.vmo.common;
+package com.bill.model.vo.common;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +12,7 @@ import javax.validation.constraints.Max;
  * @date 2019-03-17
  */
 @ApiModel(value = "分页参数")
-public class PageParamVmo {
+public class PageParamVO {
 
     @ApiModelProperty(value = "页数", example = "1")
     private Integer pageNum = 1;

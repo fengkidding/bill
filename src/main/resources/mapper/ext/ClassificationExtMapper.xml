@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.ext.ClassificationExtMapper">
+  <resultMap id="classificationMap" type="com.bill.model.entity.auto.Classification">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="classification" jdbcType="CHAR" property="classification" />
+    <result column="classification_name" jdbcType="CHAR" property="classificationName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, classification, classification_name, create_time, update_time
+  </sql>
+
+  <select id="listClassification" resultMap="classificationMap">
+    select 
+    <include refid="Base_Column_List" />
+    from classification
+    order by create_time desc
+  </select>
+
+  <select id="listClassificationByIds" resultMap="classificationMap">
+    select
+    <include refid="Base_Column_List" />
+    from classification
+    where id in
+    <foreach collection="ids" item="id" open="(" close=")" separator=",">
+      #{id}
+    </foreach>
+  </select>
+
+</mapper>

@@ -1,13 +1,12 @@
 package com.bill.service;
 
 import com.bill.model.entity.auto.ProductBill;
-import com.bill.model.entity.auto.ProductOrder;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.param.BillParamVmo;
-import com.bill.model.vmo.param.StatisticsBillParamVmo;
-import com.bill.model.vmo.param.UserPageParamVmo;
-import com.bill.model.vmo.view.QueryProductBill;
-import com.bill.model.vmo.view.StatisticsBillVmo;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.param.BillParamVO;
+import com.bill.model.vo.param.StatisticsBillParamVO;
+import com.bill.model.vo.param.UserPageParamVO;
+import com.bill.model.vo.view.QueryProductBillVO;
+import com.bill.model.vo.view.StatisticsBillVO;
 
 import java.util.List;
 
@@ -32,14 +31,14 @@ public interface ProductBillService {
      * @param userPageParamVmo
      * @return
      */
-    PageVmo<List<QueryProductBill>> listProductBill(UserPageParamVmo userPageParamVmo);
+    PageVO<List<QueryProductBillVO>> listProductBill(UserPageParamVO userPageParamVmo);
 
     /**
      * 保存入账信息
      *
      * @param billParamVmo
      */
-    void saveProductBill(BillParamVmo billParamVmo);
+    void saveProductBill(BillParamVO billParamVmo);
 
     /**
      * 统计账单
@@ -47,12 +46,6 @@ public interface ProductBillService {
      * @param statisticsBillParamVmo
      * @return
      */
-    List<StatisticsBillVmo> statisticsBill(StatisticsBillParamVmo statisticsBillParamVmo);
+    List<StatisticsBillVO> statisticsBill(StatisticsBillParamVO statisticsBillParamVmo);
 
-//    /**
-//     * 订单收入入账
-//     *
-//     * @param productOrder
-//     */
-//    void saveProductBill(ProductOrder productOrder);
 }

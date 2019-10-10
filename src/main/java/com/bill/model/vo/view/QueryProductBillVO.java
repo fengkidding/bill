@@ -1,4 +1,4 @@
-package com.bill.model.vmo.view;
+package com.bill.model.vo.view;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
@@ -13,10 +13,10 @@ import java.time.LocalDateTime;
  * @date 2019-03-17
  */
 @ApiModel(value = "查询商品账单")
-public class QueryProductBill {
+public class QueryProductBillVO {
 
-    @ApiModelProperty(value = "订单id")
-    private Integer productOrderId;
+    @ApiModelProperty(value = "分类id")
+    private Integer classificationId;
 
     @ApiModelProperty(value = "资产简介")
     private String assetsRemark;
@@ -28,12 +28,12 @@ public class QueryProductBill {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
-    public Integer getProductOrderId() {
-        return productOrderId;
+    public Integer getClassificationId() {
+        return classificationId;
     }
 
-    public void setProductOrderId(Integer productOrderId) {
-        this.productOrderId = productOrderId;
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 
     public String getAssetsRemark() {

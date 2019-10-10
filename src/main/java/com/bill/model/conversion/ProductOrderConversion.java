@@ -1,7 +1,7 @@
 package com.bill.model.conversion;
 
 import com.bill.model.entity.auto.ProductOrder;
-import com.bill.model.vmo.view.QueryOrder;
+import com.bill.model.vo.view.QueryOrderVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -27,13 +27,13 @@ public interface ProductOrderConversion {
      *
      * @param productOrder
      */
-    QueryOrder entityToVmo(ProductOrder productOrder);
+    QueryOrderVO entityToVmo(ProductOrder productOrder);
 
     /**
      * 保存商品订单数据
      *
      * @param productOrder
      */
-    List<QueryOrder> entityToVmo(List<ProductOrder> productOrder);
+    List<QueryOrderVO> entityToVmo(List<ProductOrder> productOrder);
 
 }

@@ -1,4 +1,4 @@
-package com.bill.model.vmo.view;
+package com.bill.model.vo.view;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,16 +12,13 @@ import java.math.BigDecimal;
  * @date 2019-03-17
  */
 @ApiModel(value = "查询商品信息vmo")
-public class QueryProduct {
+public class QueryProductVO {
 
     @ApiModelProperty(value = "主键id")
     private Integer id;
 
     @ApiModelProperty(value = "商品名称")
     private String productName;
-
-    @ApiModelProperty(value = "商品类型")
-    private String productType;
 
     @ApiModelProperty(value = "库存")
     private Integer total;
@@ -49,14 +46,6 @@ public class QueryProduct {
 
     public void setProductName(String productName) {
         this.productName = productName == null ? null : productName.trim();
-    }
-
-    public String getProductType() {
-        return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
     }
 
     public Integer getTotal() {

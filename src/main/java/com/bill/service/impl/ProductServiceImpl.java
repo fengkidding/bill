@@ -9,8 +9,8 @@ import com.bill.model.constant.RedisCatchConstant;
 import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.conversion.ProductConversion;
 import com.bill.model.entity.auto.Product;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.view.QueryProduct;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -46,6 +46,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void saveProduct(Product product) {
         productExtMapper.insertSelective(product);
+        productDao.deleteProductList();
     }
 
     /**
@@ -89,20 +90,20 @@ public class ProductServiceImpl implements ProductService {
      * @return
      */
     @Override
-    public PageVmo<List<QueryProduct>> listProduct(Integer pageNum, Integer pageSize) {
-        PageVmo<List<QueryProduct>> pageVmo = productDao.getProductList();
+    public PageVO<List<QueryProductVO>> listProduct(Integer pageNum, Integer pageSize) {
+        PageVO<List<QueryProductVO>> pageVmo = productDao.getProductList();
         if (null == pageVmo) {
             try {
                 boolean getLock = redisUtils.lock(RedisKeyConstant.PRODUCT_LIST_LOCK_KEY, RedisCatchConstant.PRODUCT_LIST_LOCK_CATCH, RedisCatchConstant.PRODUCT_LIST_LOCK_SLEEP);
                 if (getLock) {
                     pageVmo = productDao.getProductList();
                     if (null == pageVmo) {
-                        pageVmo = new PageVmo<>();
+                        pageVmo = new PageVO<>();
                         Page page = PageHelper.startPage(pageNum, pageSize);
                         List<Product> list = productExtMapper.listProduct();
                         pageVmo.setTotal(page.getTotal());
                         if (!CollectionUtils.isEmpty(list)) {
-                            List<QueryProduct> vmoList = ProductConversion.PRODUCT_CONVERSION.entityToVmo(list);
+                            List<QueryProductVO> vmoList = ProductConversion.PRODUCT_CONVERSION.entityToVmo(list);
                             for (int i = 0; i < vmoList.size(); i++) {
                                 vmoList.get(i).setPrice(RemainingSumUtils.getYuan(list.get(i).getPrice()));
                             }

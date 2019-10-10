@@ -1,4 +1,4 @@
-package com.bill.model.vmo.param;
+package com.bill.model.vo.param;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * @date 2019-04-29
  */
 @ApiModel(value = "统计订单金额参数")
-public class StatisticsOrderMoney {
+public class StatisticsOrderMoneyVO {
 
     @ApiModelProperty(value = "用户名称", example = "f")
     @NotBlank(message = "用户不能为空！")

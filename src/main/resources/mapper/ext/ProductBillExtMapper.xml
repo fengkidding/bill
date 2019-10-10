@@ -3,22 +3,19 @@
 <mapper namespace="com.bill.dao.db.ext.ProductBillExtMapper">
 
   <select id="listProductBill" resultType="com.bill.model.entity.auto.ProductBill">
-    SELECT product_order_id, assets_remark, rights_remark, create_time ,product_type
+    SELECT assets_remark, rights_remark, create_time ,classification_id
     FROM product_bill
     WHERE bill_user = #{userName} AND create_time BETWEEN #{startTime} AND #{endTime}
-    <if test="productOrderId != null">
-      AND product_order_id = #{productOrderId}
+    <if test="classificationId != null">
+      AND classification_id = #{classificationId}
     </if>
     ORDER BY create_time DESC
   </select>
 
   <select id="listProductBillAndDate" resultType="com.bill.model.entity.auto.ProductBill">
-    SELECT product_order_id, assets_money, rights_money ,product_type
+    SELECT classification_id, assets_money, rights_money
     FROM product_bill
     WHERE bill_user = #{userName}
     AND create_time BETWEEN #{startTime} AND #{endTime}
-    <if test="productOrderId != null">
-      AND product_order_id = #{productOrderId}
-    </if>
   </select>
 </mapper>

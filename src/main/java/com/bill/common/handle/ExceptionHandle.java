@@ -1,7 +1,7 @@
 package com.bill.common.handle;
 
 import com.bill.model.enums.ResultEnum;
-import com.bill.model.vmo.common.ResultVmo;
+import com.bill.model.vo.common.ResultVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -21,9 +21,9 @@ public class ExceptionHandle {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public ResultVmo handle(Exception e) {
+    public ResultVO handle(Exception e) {
         logger.error("统一异常处理:", e);
-        ResultVmo resultDto = new ResultVmo();
+        ResultVO resultDto = new ResultVO();
         resultDto.setCode(ResultEnum.ERROR.getCode());
         resultDto.setMsg(ResultEnum.ERROR.getMsg());
         return resultDto;

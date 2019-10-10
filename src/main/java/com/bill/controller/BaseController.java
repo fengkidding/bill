@@ -2,7 +2,7 @@ package com.bill.controller;
 
 
 import com.bill.model.enums.ResultEnum;
-import com.bill.model.vmo.common.ResultVmo;
+import com.bill.model.vo.common.ResultVO;
 
 /**
  * Controller 父类
@@ -17,8 +17,8 @@ public class BaseController {
      *
      * @return
      */
-    protected ResultVmo resultSuccess() {
-        ResultVmo resultVmo = new ResultVmo();
+    protected ResultVO resultSuccess() {
+        ResultVO resultVmo = new ResultVO();
         resultVmo.setMsg(ResultEnum.SUCCESS.getMsg());
         return resultVmo;
     }
@@ -29,8 +29,8 @@ public class BaseController {
      * @param object
      * @return
      */
-    protected ResultVmo resultSuccess(Object object) {
-        ResultVmo resultVmo = new ResultVmo();
+    protected ResultVO resultSuccess(Object object) {
+        ResultVO resultVmo = new ResultVO();
         resultVmo.setMsg(ResultEnum.SUCCESS.getMsg());
         resultVmo.setData(object);
         return resultVmo;
@@ -41,8 +41,8 @@ public class BaseController {
      *
      * @return
      */
-    protected ResultVmo resultFailed() {
-        ResultVmo resultVmo = new ResultVmo();
+    protected ResultVO resultFailed() {
+        ResultVO resultVmo = new ResultVO();
         resultVmo.setCode(ResultEnum.ERROR.getCode());
         resultVmo.setMsg(ResultEnum.ERROR.getMsg());
         return resultVmo;
@@ -55,8 +55,8 @@ public class BaseController {
      * @param msg
      * @return
      */
-    protected ResultVmo resultFailed(Integer code, String msg) {
-        ResultVmo resultVmo = new ResultVmo();
+    protected ResultVO resultFailed(Integer code, String msg) {
+        ResultVO resultVmo = new ResultVO();
         resultVmo.setCode(code);
         resultVmo.setMsg(msg);
         return resultVmo;

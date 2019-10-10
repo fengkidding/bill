@@ -1,4 +1,4 @@
-package com.bill.model.vmo.common;
+package com.bill.model.vo.common;
 
 
 import com.bill.model.enums.ResultEnum;
@@ -9,7 +9,7 @@ import com.bill.model.enums.ResultEnum;
  * @author f
  * @date 2018-04-23
  */
-public class ResultVmo<T> {
+public class ResultVO<T> {
 
     private Integer code = ResultEnum.SUCCESS.getCode();
 

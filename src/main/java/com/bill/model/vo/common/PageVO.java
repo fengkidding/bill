@@ -1,4 +1,4 @@
-package com.bill.model.vmo.common;
+package com.bill.model.vo.common;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @date 2019-03-17
  */
 @ApiModel(value = "分页vmo")
-public class PageVmo<T> {
+public class PageVO<T> {
 
     @ApiModelProperty(value = "总条数")
     private Long total;

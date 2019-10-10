@@ -1,4 +1,4 @@
-package com.bill.model.bmo;
+package com.bill.model.bo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
  * @date 2019-03-03
  */
 @ApiModel(value = "用户余额参数vmo")
-public class ConsumerUserSumParamVmo {
+public class ConsumerUserSumBO {
 
     @ApiModelProperty(value = "用户名称")
     @NotBlank(message = "用户名称不能为空！")

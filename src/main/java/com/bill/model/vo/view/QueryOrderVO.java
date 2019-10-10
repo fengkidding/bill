@@ -1,4 +1,4 @@
-package com.bill.model.vmo.view;
+package com.bill.model.vo.view;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  * @date 2019-03-17
  */
 @ApiModel(value = "查询订单数据")
-public class QueryOrder {
+public class QueryOrderVO {
 
     @ApiModelProperty(value = "主键id")
     private Integer id;

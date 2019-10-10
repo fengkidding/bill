@@ -1,7 +1,7 @@
-package com.bill.service.client;
+package com.bill.manager.client;
 
-import com.bill.model.bmo.ConsumerUserSumParamVmo;
-import com.bill.model.vmo.common.ResultVmo;
+import com.bill.model.bo.ConsumerUserSumBO;
+import com.bill.model.vo.common.ResultVO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +19,9 @@ public interface UserFeign {
     /**
      * 更新用户余额
      *
-     * @param consumerUserSumParamVmo
+     * @param consumerUserSumBO
      * @return
      */
     @RequestMapping(value = "/consumer_user/update_remaining_sum", method = RequestMethod.POST)
-    ResultVmo updateRemainingSum(@RequestBody ConsumerUserSumParamVmo consumerUserSumParamVmo);
+    ResultVO updateRemainingSum(@RequestBody ConsumerUserSumBO consumerUserSumBO);
 }

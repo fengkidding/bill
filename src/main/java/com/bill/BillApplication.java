@@ -17,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com.bill.service.client")
+@EnableFeignClients(basePackages = "com.bill.manager.client")
 @EnableAsync
 @MapperScan("com.bill.dao.db")
 public class BillApplication {

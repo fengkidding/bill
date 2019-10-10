@@ -1,8 +1,8 @@
 package com.bill.model.conversion;
 
 import com.bill.model.entity.auto.Product;
-import com.bill.model.vmo.param.ProductSaveParamVmo;
-import com.bill.model.vmo.view.QueryProduct;
+import com.bill.model.vo.param.ProductSaveParamVO;
+import com.bill.model.vo.view.QueryProductVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
@@ -29,7 +29,7 @@ public interface ProductConversion {
      *
      * @param product
      */
-    void vmoToEntity(ProductSaveParamVmo productSaveParamVmo, @MappingTarget Product product);
+    void vmoToEntity(ProductSaveParamVO productSaveParamVmo, @MappingTarget Product product);
 
     /**
      * 查询商品数据
@@ -37,7 +37,7 @@ public interface ProductConversion {
      * @param product
      * @return
      */
-    QueryProduct entityToVmo(Product product);
+    QueryProductVO entityToVmo(Product product);
 
     /**
      * 查询商品数据
@@ -45,5 +45,5 @@ public interface ProductConversion {
      * @param products
      * @return
      */
-    List<QueryProduct> entityToVmo(List<Product> products);
+    List<QueryProductVO> entityToVmo(List<Product> products);
 }

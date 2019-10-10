@@ -1,13 +1,11 @@
 package com.bill.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.common.ResultVmo;
-import com.bill.model.vmo.param.OrderParamVmo;
-import com.bill.model.vmo.param.StatisticsOrderMoney;
-import com.bill.model.vmo.param.UserPageParamVmo;
-import com.bill.model.vmo.view.OrderMoneyVmo;
-import com.bill.model.vmo.view.QueryOrder;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.common.ResultVO;
+import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.UserPageParamVO;
+import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -45,7 +43,7 @@ public class ProductOrderController extends BaseController {
      */
     @ApiOperation(value = "用户下单")
     @PostMapping(value = "/create_order")
-    public ResultVmo createOrder(@RequestBody @Valid OrderParamVmo orderParamVmo, HttpServletRequest request) {
+    public ResultVO createOrder(@RequestBody @Valid OrderParamVO orderParamVmo, HttpServletRequest request) {
         logger.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
         Integer id = orderService.createOrder(orderParamVmo);
         return super.resultSuccess(id);
@@ -59,8 +57,8 @@ public class ProductOrderController extends BaseController {
      */
     @ApiOperation(value = "分页查询订单列表")
     @PostMapping(value = "/list_order")
-    public ResultVmo<PageVmo<List<QueryOrder>>> listOrder(@Valid @RequestBody UserPageParamVmo orderPageParamVmo) {
-        PageVmo<List<QueryOrder>> pageVmo = orderService.listOrder(orderPageParamVmo.getPageNum(), orderPageParamVmo.getPageSize(), orderPageParamVmo.getUserName());
+    public ResultVO<PageVO<List<QueryOrderVO>>> listOrder(@Valid @RequestBody UserPageParamVO orderPageParamVmo) {
+        PageVO<List<QueryOrderVO>> pageVmo = orderService.listOrder(orderPageParamVmo.getPageNum(), orderPageParamVmo.getPageSize(), orderPageParamVmo.getUserName());
         return super.resultSuccess(pageVmo);
     }
 

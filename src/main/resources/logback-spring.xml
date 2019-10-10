@@ -13,7 +13,7 @@
 
 	<!-- 记录到文件 (每天一个文件) -->
 	<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>/Users/f/Desktop/ideaProject/bill/log/bill.log</File>
+		<File>log/bill.log</File>
 		<!-- 最新的log文件名 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>/Users/f/Desktop/ideaProject/bill/log/bill.%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->

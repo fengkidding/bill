@@ -21,7 +21,7 @@ public interface ProductBillExtMapper extends ProductBillMapper {
      * @param userName
      * @return
      */
-    List<ProductBill> listProductBill(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("productOrderId") Integer productOrderId);
+    List<ProductBill> listProductBill(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("classificationId") Integer classificationId);
 
     /**
      * 根据用户,时间查询账单
@@ -29,6 +29,6 @@ public interface ProductBillExtMapper extends ProductBillMapper {
      * @param userName
      * @return
      */
-    List<ProductBill> listProductBillAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("productOrderId") Integer productOrderId);
+    List<ProductBill> listProductBillAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 
 }

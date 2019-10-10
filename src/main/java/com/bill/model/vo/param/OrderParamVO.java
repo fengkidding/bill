@@ -1,4 +1,4 @@
-package com.bill.model.vmo.param;
+package com.bill.model.vo.param;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
  * @date 2019-03-10
  */
 @ApiModel(value = "用户下单参数")
-public class OrderParamVmo {
+public class OrderParamVO {
 
     @ApiModelProperty(value = "下单用户", example = "f")
     @NotBlank(message = "下单用户不能为空！")

@@ -2,9 +2,9 @@ package com.bill.service;
 
 
 import com.bill.model.entity.auto.ProductOrder;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.param.OrderParamVmo;
-import com.bill.model.vmo.view.QueryOrder;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.view.QueryOrderVO;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,7 +22,7 @@ public interface OrderService {
      *
      * @param orderParamVmo
      */
-    Integer createOrder(OrderParamVmo orderParamVmo);
+    Integer createOrder(OrderParamVO orderParamVmo);
 
     /**
      * 分页根据用户查询订单
@@ -30,7 +30,7 @@ public interface OrderService {
      * @param userName
      * @return
      */
-    PageVmo<List<QueryOrder>> listOrder(Integer pageNum, Integer pageSize, String userName);
+    PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, String userName);
 
     /**
      * 根据用户查询订单

@@ -1,8 +1,8 @@
 package com.bill.service;
 
 import com.bill.model.entity.auto.Product;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.view.QueryProduct;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.view.QueryProductVO;
 
 import java.util.List;
 
@@ -51,5 +51,5 @@ public interface ProductService {
      * @param pageSize
      * @return
      */
-    PageVmo<List<QueryProduct>> listProduct(Integer pageNum, Integer pageSize);
+    PageVO<List<QueryProductVO>> listProduct(Integer pageNum, Integer pageSize);
 }

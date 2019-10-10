@@ -1,4 +1,4 @@
-package com.bill.model.vmo.view;
+package com.bill.model.vo.view;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  * @date 2019-07-02
  */
 @ApiModel(value = "订单统计金额")
-public class OrderMoneyVmo {
+public class OrderMoneyVO {
 
     @ApiModelProperty(value = "订单类型")
     private String type;

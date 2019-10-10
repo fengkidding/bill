@@ -26,17 +26,21 @@ public enum ResultEnum {
     /**
      * redis key null
      */
-    KEY_NONE(3, "key 不能为空");
+    KEY_NONE(3, "key 不能为空！"),
+    /**
+     * 熔断
+     */
+    FALL_BACK(4, "服务异常，触发熔断！");
 
-    private int code;
+    private Integer code;
     private String msg;
 
-    ResultEnum(int code, String msg) {
+    ResultEnum(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
 
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 

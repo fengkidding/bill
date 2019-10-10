@@ -5,11 +5,11 @@ import com.bill.common.util.CheckBeanUtil;
 import com.bill.common.util.RemainingSumUtils;
 import com.bill.model.conversion.ProductConversion;
 import com.bill.model.entity.auto.Product;
-import com.bill.model.vmo.common.PageParamVmo;
-import com.bill.model.vmo.common.PageVmo;
-import com.bill.model.vmo.common.ResultVmo;
-import com.bill.model.vmo.param.ProductSaveParamVmo;
-import com.bill.model.vmo.view.QueryProduct;
+import com.bill.model.vo.common.PageParamVO;
+import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.common.ResultVO;
+import com.bill.model.vo.param.ProductSaveParamVO;
+import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -46,7 +46,7 @@ public class ProductController extends BaseController {
      */
     @ApiOperation(value = "保存商品")
     @PostMapping(value = "/save_product")
-    public ResultVmo saveProduct(@RequestBody @Valid ProductSaveParamVmo productSaveParamVmo, HttpServletRequest request) {
+    public ResultVO saveProduct(@RequestBody @Valid ProductSaveParamVO productSaveParamVmo, HttpServletRequest request) {
         logger.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(productSaveParamVmo));
         Product product = new Product();
         ProductConversion.PRODUCT_CONVERSION.vmoToEntity(productSaveParamVmo, product);
@@ -67,8 +67,8 @@ public class ProductController extends BaseController {
      */
     @ApiOperation(value = "分页查询商品列表")
     @GetMapping(value = "/list_product")
-    public ResultVmo<PageVmo<List<QueryProduct>>> listProduct(@Valid PageParamVmo pageParamVmo) {
-        PageVmo<List<QueryProduct>> pageVmo = productService.listProduct(pageParamVmo.getPageNum(), pageParamVmo.getPageSize());
+    public ResultVO<PageVO<List<QueryProductVO>>> listProduct(@Valid PageParamVO pageParamVmo) {
+        PageVO<List<QueryProductVO>> pageVmo = productService.listProduct(pageParamVmo.getPageNum(), pageParamVmo.getPageSize());
         return super.resultSuccess(pageVmo);
     }
 
