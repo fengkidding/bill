@@ -1,6 +1,6 @@
 package com.bill.common.handle;
 
-import com.bill.manager.UserClient;
+import com.bill.manager.UserManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class ScheduleTask {
     private static final Logger logger = LoggerFactory.getLogger(ScheduleTask.class);
 
     @Autowired
-    private UserClient userClient;
+    private UserManager userClient;
 
     /**
      * 每个月月末执行

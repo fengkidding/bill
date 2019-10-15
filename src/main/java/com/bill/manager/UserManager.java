@@ -18,9 +18,9 @@ import org.springframework.stereotype.Component;
  * @date 2019-10-10
  */
 @Component
-public class UserClient {
+public class UserManager {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserClient.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
 
     @Autowired
     private UserFeign userFeign;

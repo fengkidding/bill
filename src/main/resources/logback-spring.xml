@@ -13,10 +13,10 @@
 
 	<!-- 记录到文件 (每天一个文件) -->
 	<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>log/bill.log</File>
+		<File>/Users/f/Desktop/ideaProject/bill/log/bill.log</File>
 		<!-- 最新的log文件名 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>/Users/f/Desktop/ideaProject/bill/log/bill.%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
+			<FileNamePattern>/Users/f/Desktop/ideaProject/bill/log/bill%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
 			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
@@ -32,10 +32,10 @@
 	</logger>
 
 	<springProfile name="dev">
-		<logger name="com.bill" level="INFO" />
+		<logger name="com.bill" level="DEBUG" />
 	</springProfile>
 	<springProfile name="prod">
-		<logger name="com.bill" level="INFO" />
+		<logger name="com.bill" level="DEBUG" />
 	</springProfile>
 
 	<!-- 其他框架的日志输出 -->

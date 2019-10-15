@@ -2,7 +2,7 @@ package com.bill.service.impl;
 
 import com.bill.common.util.RemainingSumUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
-import com.bill.manager.UserClient;
+import com.bill.manager.UserManager;
 import com.bill.model.conversion.ProductOrderConversion;
 import com.bill.model.entity.auto.Product;
 import com.bill.model.entity.auto.ProductOrder;
@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     private ProductService productService;
 
     @Autowired
-    private UserClient userClient;
+    private UserManager userClient;
 
     /**
      * 用户下单
