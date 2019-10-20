@@ -28,13 +28,19 @@ public class Swagger2Configuration {
 
     @Value("${swagger2.package}")
     private String basePackage;
+
     @Value("${spring.application.name}")
     private String title;
+
+    @Value("${swagger2.enable}")
+    private boolean enable;
+
     @Bean
     public Docket createRestApi() {
         List<SecurityScheme> list = new ArrayList<>();
         list.add(apiKey());
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(enable)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(basePackage))
