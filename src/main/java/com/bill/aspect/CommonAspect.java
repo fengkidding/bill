@@ -1,12 +1,11 @@
 package com.bill.aspect;
 
+import com.bill.common.util.LogUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -24,8 +23,6 @@ import java.util.UUID;
 @Component
 public class CommonAspect {
 
-    private static final Logger logger = LoggerFactory.getLogger(CommonAspect.class);
-
     /**
      * AOP处理http请求
      */
@@ -42,7 +39,7 @@ public class CommonAspect {
         HttpServletRequest request = servletRequestAttributes.getRequest();
         String uuid = UUID.randomUUID().toString();
         request.setAttribute("traceId", uuid);
-        logger.info("AOP_BEFORE: url=" + request.getRequestURL() + ",traceId=" + uuid + ",logTime=" + System.currentTimeMillis());
+        LogUtils.info("AOP_BEFORE: url=" + request.getRequestURL() + ",traceId=" + uuid + ",logTime=" + System.currentTimeMillis());
     }
 
     /**
@@ -52,7 +49,7 @@ public class CommonAspect {
     public void doAfter(JoinPoint joinPoint) {
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
-        logger.info("AOP_AFTER: url=" + request.getRequestURL() + ",traceId=" + request.getAttribute("traceId") + ",logTime=" + System.currentTimeMillis());
+        LogUtils.info("AOP_AFTER: url=" + request.getRequestURL() + ",traceId=" + request.getAttribute("traceId") + ",logTime=" + System.currentTimeMillis());
     }
 
 }

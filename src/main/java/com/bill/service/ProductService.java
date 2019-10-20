@@ -52,4 +52,11 @@ public interface ProductService {
      * @return
      */
     PageVO<List<QueryProductVO>> listProduct(Integer pageNum, Integer pageSize);
+
+    /**
+     * 商品销量排行榜
+     *
+     * @return
+     */
+    List<QueryProductVO> rankingProduct();
 }

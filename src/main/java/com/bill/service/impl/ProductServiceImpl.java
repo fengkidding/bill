@@ -1,7 +1,7 @@
 package com.bill.service.impl;
 
 
-import com.bill.common.util.RemainingSumUtils;
+import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductExtMapper;
 import com.bill.dao.redis.ProductDao;
 import com.bill.dao.redis.RedisUtils;
@@ -14,11 +14,15 @@ import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 商品service
@@ -105,7 +109,7 @@ public class ProductServiceImpl implements ProductService {
                         if (!CollectionUtils.isEmpty(list)) {
                             List<QueryProductVO> vmoList = ProductConversion.PRODUCT_CONVERSION.entityToVmo(list);
                             for (int i = 0; i < vmoList.size(); i++) {
-                                vmoList.get(i).setPrice(RemainingSumUtils.getYuan(list.get(i).getPrice()));
+                                vmoList.get(i).setPrice(ComputeUtils.getYuan(list.get(i).getPrice()));
                             }
                             pageVmo.setData(vmoList);
 
@@ -121,5 +125,30 @@ public class ProductServiceImpl implements ProductService {
         }
 
         return pageVmo;
+    }
+
+    /**
+     * 商品销量排行榜
+     *
+     * @return
+     */
+    @Override
+    public List<QueryProductVO> rankingProduct() {
+        List<QueryProductVO> result = new LinkedList<>();
+        List<Product> products = productExtMapper.listProduct();
+        List<Map<Integer, Integer>> maps = new LinkedList<>();
+        if (!CollectionUtils.isEmpty(products)) {
+            for (Product product : products) {
+                if (null != product && null != product.getId() && null != product.getTotalSold()) {
+                    Map<Integer, Integer> map = new HashMap<>();
+                    map.put(product.getId(), product.getTotalSold());
+                    maps.add(map);
+                }
+            }
+            Map<Integer, Product> productMap = Maps.uniqueIndex(products, Product::getId);
+            maps = ComputeUtils.fastSortDesc(maps);
+            maps.forEach(item -> item.keySet().forEach(set -> result.add(ProductConversion.PRODUCT_CONVERSION.entityToVmo(productMap.get(set)))));
+        }
+        return result;
     }
 }

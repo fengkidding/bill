@@ -1,7 +1,7 @@
 package com.bill.service.impl;
 
-import com.bill.common.util.CheckBeanUtil;
-import com.bill.common.util.RemainingSumUtils;
+import com.bill.common.util.CheckBeanUtils;
+import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductBillExtMapper;
 import com.bill.model.constant.BillConstant;
 import com.bill.model.conversion.ProductBillConversion;
@@ -59,7 +59,7 @@ public class ProductBillServiceImpl implements ProductBillService {
      */
     @Override
     public PageVO<List<QueryProductBillVO>> listProductBill(UserPageParamVO userPageParamVmo) {
-        if (!CheckBeanUtil.checkNotNullZero(userPageParamVmo.getClassificationId())) {
+        if (!CheckBeanUtils.checkNotNullZero(userPageParamVmo.getClassificationId())) {
             userPageParamVmo.setClassificationId(null);
         }
         PageVO<List<QueryProductBillVO>> pageVmo = new PageVO<>();
@@ -80,7 +80,7 @@ public class ProductBillServiceImpl implements ProductBillService {
      */
     @Override
     public void saveProductBill(BillParamVO billParamVmo) {
-        Long money = RemainingSumUtils.getFen(billParamVmo.getMoney());
+        Long money = ComputeUtils.getFen(billParamVmo.getMoney());
 
         //添加账单信息
         ProductBill productBill = new ProductBill();
@@ -133,17 +133,17 @@ public class ProductBillServiceImpl implements ProductBillService {
                     typeRightsMoney += productBill.getRightsMoney();
                     typeBillMoney += productBill.getAssetsMoney() + productBill.getRightsMoney();
                 }
-                statisticsBillVmo1.setBillMoney(RemainingSumUtils.getYuan(typeBillMoney));
-                statisticsBillVmo1.setAssetsMoney(RemainingSumUtils.getYuan(typeAssetsMoney));
-                statisticsBillVmo1.setRightsMoney(RemainingSumUtils.getYuan(typeRightsMoney));
+                statisticsBillVmo1.setBillMoney(ComputeUtils.getYuan(typeBillMoney));
+                statisticsBillVmo1.setAssetsMoney(ComputeUtils.getYuan(typeAssetsMoney));
+                statisticsBillVmo1.setRightsMoney(ComputeUtils.getYuan(typeRightsMoney));
                 result.add(statisticsBillVmo1);
             }
 
             StatisticsBillVO statisticsBillVmo = new StatisticsBillVO();
             statisticsBillVmo.setType(TypeEnum.ALL.getType());
-            statisticsBillVmo.setAssetsMoney(RemainingSumUtils.getYuan(assetsMoney));
-            statisticsBillVmo.setRightsMoney(RemainingSumUtils.getYuan(rightsMoney));
-            statisticsBillVmo.setBillMoney(RemainingSumUtils.getYuan(billMoney));
+            statisticsBillVmo.setAssetsMoney(ComputeUtils.getYuan(assetsMoney));
+            statisticsBillVmo.setRightsMoney(ComputeUtils.getYuan(rightsMoney));
+            statisticsBillVmo.setBillMoney(ComputeUtils.getYuan(billMoney));
             result.add(statisticsBillVmo);
         }
 

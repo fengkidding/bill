@@ -1,6 +1,6 @@
 package com.bill.service.impl;
 
-import com.bill.common.util.RemainingSumUtils;
+import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.UserManager;
 import com.bill.model.conversion.ProductOrderConversion;
@@ -31,8 +31,6 @@ import java.util.List;
  */
 @Service
 public class OrderServiceImpl implements OrderService {
-
-    private static final Logger logger = LoggerFactory.getLogger(OrderServiceImpl.class);
 
     @Autowired
     private ProductOrderExtMapper productOrderExtMapper;
@@ -91,7 +89,7 @@ public class OrderServiceImpl implements OrderService {
         if (!CollectionUtils.isEmpty(list)) {
             List<QueryOrderVO> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);
             for (int i = 0; i < vmoList.size(); i++) {
-                vmoList.get(i).setPrice(RemainingSumUtils.getYuan(list.get(i).getPrice()));
+                vmoList.get(i).setPrice(ComputeUtils.getYuan(list.get(i).getPrice()));
             }
             pageVmo.setData(vmoList);
         }

@@ -1,5 +1,6 @@
 package com.bill.common.handle;
 
+import com.bill.common.util.LogUtils;
 import com.bill.manager.UserManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,8 +18,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScheduleTask {
 
-    private static final Logger logger = LoggerFactory.getLogger(ScheduleTask.class);
-
     @Autowired
     private UserManager userClient;
 
@@ -29,6 +28,6 @@ public class ScheduleTask {
     @Scheduled(cron = "0 0 1 1 * ?")
     public void sendMoney() {
         Boolean result = userClient.updateRemainingSum("f", 950000L);
-        logger.info("定时任务执行更新用户余额：result=" + result);
+        LogUtils.info("定时任务执行更新用户余额：result=" + result);
     }
 }

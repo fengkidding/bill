@@ -1,13 +1,12 @@
 package com.bill.manager;
 
 import com.alibaba.fastjson.JSON;
+import com.bill.common.util.LogUtils;
 import com.bill.manager.client.UserFeign;
 import com.bill.model.bo.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,8 +18,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class UserManager {
-
-    private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
 
     @Autowired
     private UserFeign userFeign;
@@ -38,15 +35,15 @@ public class UserManager {
             ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
             consumerUserSumBO.setUserName(userName);
             consumerUserSumBO.setRemainingSum(remainingSum);
-            logger.info("UserClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
+            LogUtils.info("UserClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             try {
                 ResultVO resultVO = userFeign.updateRemainingSum(consumerUserSumBO);
-                logger.info("UserClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
+                LogUtils.info("UserClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
                 if (ResultEnum.SUCCESS.getCode().equals(resultVO.getCode())) {
                     result = true;
                 }
             } catch (Exception e) {
-                logger.error("UserClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
+                LogUtils.error("UserClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
             }
         }
         return result;

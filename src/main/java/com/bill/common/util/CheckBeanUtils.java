@@ -6,7 +6,7 @@ package com.bill.common.util;
  * @author f
  * @date 2019-02-19
  */
-public class CheckBeanUtil {
+public class CheckBeanUtils {
 
     /**
      * 校验integer是否为null，是否为0

@@ -1,11 +1,10 @@
 package com.bill.dao.redis;
 
+import com.bill.common.util.LogUtils;
 import com.bill.model.constant.ScriptConstant;
 import com.bill.model.enums.ResultEnum;
 import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -26,8 +25,6 @@ import java.util.UUID;
  */
 @Component
 public class RedisUtils {
-
-    private static Logger logger = LoggerFactory.getLogger(RedisUtils.class);
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -73,7 +70,7 @@ public class RedisUtils {
             });
             return StringUtil.isNotEmpty(result);
         } catch (Exception var8) {
-            logger.error("RedisUtils-setNx error", var8);
+            LogUtils.error("RedisUtils-setNx error", var8);
             return false;
         }
     }
@@ -95,7 +92,7 @@ public class RedisUtils {
             });
             return result;
         } catch (Exception var8) {
-            logger.error("RedisUtils-getNx error", var8);
+            LogUtils.error("RedisUtils-getNx error", var8);
             return "";
         }
     }

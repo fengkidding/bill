@@ -1,6 +1,7 @@
 package com.bill.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.bill.common.util.LogUtils;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.OrderParamVO;
@@ -29,8 +30,6 @@ import java.util.List;
 @RequestMapping(value = "/product_order")
 public class ProductOrderController extends BaseController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ProductOrderController.class);
-
     @Autowired
     private OrderService orderService;
 
@@ -44,7 +43,7 @@ public class ProductOrderController extends BaseController {
     @ApiOperation(value = "用户下单")
     @PostMapping(value = "/create_order")
     public ResultVO createOrder(@RequestBody @Valid OrderParamVO orderParamVmo, HttpServletRequest request) {
-        logger.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
+        LogUtils.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
         Integer id = orderService.createOrder(orderParamVmo);
         return super.resultSuccess(id);
     }
