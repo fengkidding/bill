@@ -63,7 +63,7 @@ druid:
     type: com.alibaba.druid.pool.DruidDataSource
     master:
         name: mysql
-        url: jdbc:mysql://39.98.50.149:3306/f?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://39.98.50.149:3306/commerce?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: aliyunm1!
         # 使用druid数据源
@@ -84,7 +84,7 @@ druid:
         maxOpenPreparedStatements: 20
     slave:
         name: mysql
-        url: jdbc:mysql://39.98.50.149:3306/f?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://39.98.50.149:3306/commerce?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: aliyunm1!
         # 使用druid数据源
@@ -118,10 +118,11 @@ redis:
 #mybatis
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml
-  type-aliases-package: com.user.model.entity
+  type-aliases-package: com.user.model.po
   #开启驼峰命名转换
   configuration:
       map-underscore-to-camel-case: true
+      default-executor-type: batch
 
 # mybatis分页插件
 pagehelper:

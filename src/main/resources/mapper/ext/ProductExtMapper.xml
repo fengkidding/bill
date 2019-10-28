@@ -11,7 +11,7 @@
         WHERE id = #{id}
     </update>
     
-    <select id="listProduct" resultType="com.bill.model.entity.auto.Product">
+    <select id="listProduct" resultType="com.bill.model.po.auto.Product">
       SELECT <include refid="BaseColumnList"></include>
       FROM product
       ORDER BY create_time DESC

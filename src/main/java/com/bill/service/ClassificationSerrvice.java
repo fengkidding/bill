@@ -1,6 +1,6 @@
 package com.bill.service;
 
-import com.bill.model.entity.auto.Classification;
+import com.bill.model.po.auto.Classification;
 import com.bill.model.vo.common.PageParamVO;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.ClassificationVO;

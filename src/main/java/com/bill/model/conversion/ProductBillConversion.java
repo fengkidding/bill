@@ -1,6 +1,6 @@
 package com.bill.model.conversion;
 
-import com.bill.model.entity.auto.ProductBill;
+import com.bill.model.po.auto.ProductBill;
 import com.bill.model.vo.view.QueryProductBillVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

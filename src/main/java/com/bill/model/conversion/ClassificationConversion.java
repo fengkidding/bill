@@ -1,6 +1,6 @@
 package com.bill.model.conversion;
 
-import com.bill.model.entity.auto.Classification;
+import com.bill.model.po.auto.Classification;
 import com.bill.model.vo.param.ClassificationVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

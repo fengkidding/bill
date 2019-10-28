@@ -1,6 +1,6 @@
 package com.bill.dao.db.auto;
 
-import com.bill.model.entity.auto.Classification;
+import com.bill.model.po.auto.Classification;
 
 public interface ClassificationMapper {
     int deleteByPrimaryKey(Integer id);

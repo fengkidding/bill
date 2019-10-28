@@ -30,17 +30,17 @@
         <!-- MyBatis Generator Java接口和实体类 -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
         <targetMapperPackage>com.bill.dao.db.auto</targetMapperPackage>
-        <targetModelPackage>com.bill.model.entity.auto</targetModelPackage>
+        <targetModelPackage>com.bill.model.po.auto</targetModelPackage>
         <!-- XML生成路径 -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper.auto</targetXMLPackage>
 
         <!-- 版本管理 -->
-        <druid.version>1.1.6</druid.version>
-        <druid.spring.version>1.1.9</druid.spring.version>
+        <druid.version>1.1.20</druid.version>
+        <druid.spring.version>1.1.20</druid.spring.version>
         <fastjson.version>1.2.54</fastjson.version>
         <jackson.datatype.version>2.9.8</jackson.datatype.version>
-        <mybatis.spring.version>1.3.1</mybatis.spring.version>
+        <mybatis.spring.version>2.0.0</mybatis.spring.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
         <pagehelper.version>1.2.3</pagehelper.version>
         <mapstruct.version>1.0.0.Final</mapstruct.version>

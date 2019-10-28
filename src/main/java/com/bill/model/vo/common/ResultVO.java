@@ -1,21 +1,27 @@
 package com.bill.model.vo.common;
 
 
-import com.bill.model.enums.ResultEnum;
-
 /**
- * 结果vmo
+ * 结果
  *
  * @author f
  * @date 2018-04-23
  */
 public class ResultVO<T> {
 
-    private Integer code = ResultEnum.SUCCESS.getCode();
+    private Integer code;
 
     private String msg;
 
     private T data;
+
+    public ResultVO() {
+    }
+
+    public ResultVO(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
 
     public Integer getCode() {
         return code;

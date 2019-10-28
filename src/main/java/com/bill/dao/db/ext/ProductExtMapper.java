@@ -1,7 +1,7 @@
 package com.bill.dao.db.ext;
 
 import com.bill.dao.db.auto.ProductMapper;
-import com.bill.model.entity.auto.Product;
+import com.bill.model.po.auto.Product;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

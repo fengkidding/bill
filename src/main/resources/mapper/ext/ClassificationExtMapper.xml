@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bill.dao.db.ext.ClassificationExtMapper">
-  <resultMap id="classificationMap" type="com.bill.model.entity.auto.Classification">
+  <resultMap id="classificationMap" type="com.bill.model.po.auto.Classification">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="classification" jdbcType="CHAR" property="classification" />
     <result column="classification_name" jdbcType="CHAR" property="classificationName" />

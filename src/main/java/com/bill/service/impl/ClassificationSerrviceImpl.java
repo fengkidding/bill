@@ -2,7 +2,7 @@ package com.bill.service.impl;
 
 import com.bill.dao.db.ext.ClassificationExtMapper;
 import com.bill.model.conversion.ClassificationConversion;
-import com.bill.model.entity.auto.Classification;
+import com.bill.model.po.auto.Classification;
 import com.bill.model.vo.common.PageParamVO;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.ClassificationVO;

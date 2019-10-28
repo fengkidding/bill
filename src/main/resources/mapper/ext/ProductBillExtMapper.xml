@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bill.dao.db.ext.ProductBillExtMapper">
 
-  <select id="listProductBill" resultType="com.bill.model.entity.auto.ProductBill">
+  <select id="listProductBill" resultType="com.bill.model.po.auto.ProductBill">
     SELECT assets_remark, rights_remark, create_time ,classification_id
     FROM product_bill
     WHERE bill_user = #{userName} AND create_time BETWEEN #{startTime} AND #{endTime}
@@ -12,7 +12,7 @@
     ORDER BY create_time DESC
   </select>
 
-  <select id="listProductBillAndDate" resultType="com.bill.model.entity.auto.ProductBill">
+  <select id="listProductBillAndDate" resultType="com.bill.model.po.auto.ProductBill">
     SELECT classification_id, assets_money, rights_money
     FROM product_bill
     WHERE bill_user = #{userName}

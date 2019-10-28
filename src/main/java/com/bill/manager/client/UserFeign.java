@@ -1,6 +1,6 @@
 package com.bill.manager.client;
 
-import com.bill.model.bo.ConsumerUserSumBO;
+import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.vo.common.ResultVO;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;

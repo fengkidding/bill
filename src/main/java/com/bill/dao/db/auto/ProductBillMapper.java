@@ -1,6 +1,6 @@
 package com.bill.dao.db.auto;
 
-import com.bill.model.entity.auto.ProductBill;
+import com.bill.model.po.auto.ProductBill;
 
 public interface ProductBillMapper {
     int deleteByPrimaryKey(Integer id);

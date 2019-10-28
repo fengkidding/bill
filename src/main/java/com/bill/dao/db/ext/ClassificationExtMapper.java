@@ -1,7 +1,7 @@
 package com.bill.dao.db.ext;
 
 import com.bill.dao.db.auto.ClassificationMapper;
-import com.bill.model.entity.auto.Classification;
+import com.bill.model.po.auto.Classification;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

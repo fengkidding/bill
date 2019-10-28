@@ -1,6 +1,6 @@
 package com.bill.service;
 
-import com.bill.model.entity.auto.ProductBill;
+import com.bill.model.po.auto.ProductBill;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.BillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;

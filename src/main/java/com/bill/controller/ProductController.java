@@ -5,7 +5,7 @@ import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
 import com.bill.common.util.LogUtils;
 import com.bill.model.conversion.ProductConversion;
-import com.bill.model.entity.auto.Product;
+import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageParamVO;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
@@ -14,8 +14,6 @@ import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,7 +64,7 @@ public class ProductController extends BaseController {
      */
     @ApiOperation(value = "分页查询商品列表")
     @GetMapping(value = "/list_product")
-    public ResultVO<PageVO<List<QueryProductVO>>> listProduct(@Valid PageParamVO pageParamVmo) {
+    public ResultVO<PageVO<List<QueryProductVO>>> listProduct(@Valid PageParamVO pageParamVmo) throws Exception {
         PageVO<List<QueryProductVO>> pageVmo = productService.listProduct(pageParamVmo.getPageNum(), pageParamVmo.getPageSize());
         return super.resultSuccess(pageVmo);
     }

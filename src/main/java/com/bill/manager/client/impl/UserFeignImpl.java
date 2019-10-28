@@ -1,8 +1,8 @@
 package com.bill.manager.client.impl;
 
+import com.bill.core.factory.ResultFactory;
 import com.bill.manager.client.UserFeign;
-import com.bill.model.bo.ConsumerUserSumBO;
-import com.bill.model.enums.ResultEnum;
+import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.vo.common.ResultVO;
 import org.springframework.stereotype.Component;
 
@@ -23,9 +23,6 @@ public class UserFeignImpl implements UserFeign {
      */
     @Override
     public ResultVO updateRemainingSum(ConsumerUserSumBO consumerUserSumBO) {
-        ResultVO resultVO = new ResultVO();
-        resultVO.setCode(ResultEnum.FALL_BACK.getCode());
-        resultVO.setMsg(ResultEnum.FALL_BACK.getMsg());
-        return resultVO;
+        return ResultFactory.getFallBackResult();
     }
 }

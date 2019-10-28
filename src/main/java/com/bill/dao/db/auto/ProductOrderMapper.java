@@ -1,6 +1,6 @@
 package com.bill.dao.db.auto;
 
-import com.bill.model.entity.auto.ProductOrder;
+import com.bill.model.po.auto.ProductOrder;
 
 public interface ProductOrderMapper {
     int deleteByPrimaryKey(Integer id);

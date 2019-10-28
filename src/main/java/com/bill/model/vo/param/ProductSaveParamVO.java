@@ -1,10 +1,12 @@
 package com.bill.model.vo.param;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 
 /**
@@ -22,6 +24,9 @@ public class ProductSaveParamVO {
     @ApiModelProperty(value = "商品名称")
     private String productName;
 
+    @ApiModelProperty(value = "用户")
+    private String userName;
+
     @ApiModelProperty(value = "商品库存")
     private Integer total;
 
@@ -32,6 +37,10 @@ public class ProductSaveParamVO {
     @ApiModelProperty(value = "商品分类id")
     @NotNull(message = "商品分类id不能为null！")
     private Integer classificationId;
+
+    @ApiModelProperty(value = "过期时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime expiredTime;
 
     public Integer getId() {
         return id;
@@ -49,12 +58,28 @@ public class ProductSaveParamVO {
         this.productName = productName == null ? null : productName.trim();
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public Integer getTotal() {
         return total;
     }
 
     public void setTotal(Integer total) {
         this.total = total;
+    }
+
+    public LocalDateTime getExpiredTime() {
+        return expiredTime;
+    }
+
+    public void setExpiredTime(LocalDateTime expiredTime) {
+        this.expiredTime = expiredTime;
     }
 
     public BigDecimal getPrice() {

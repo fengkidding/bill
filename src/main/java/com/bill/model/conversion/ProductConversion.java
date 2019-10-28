@@ -1,6 +1,6 @@
 package com.bill.model.conversion;
 
-import com.bill.model.entity.auto.Product;
+import com.bill.model.po.auto.Product;
 import com.bill.model.vo.param.ProductSaveParamVO;
 import com.bill.model.vo.view.QueryProductVO;
 import org.mapstruct.Mapper;

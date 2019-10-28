@@ -1,7 +1,7 @@
 package com.bill.service;
 
 
-import com.bill.model.entity.auto.ProductOrder;
+import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.OrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;

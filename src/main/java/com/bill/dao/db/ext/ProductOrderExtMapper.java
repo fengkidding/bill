@@ -1,6 +1,6 @@
 package com.bill.dao.db.ext;
 
-import com.bill.model.entity.auto.ProductOrder;
+import com.bill.model.po.auto.ProductOrder;
 import org.apache.ibatis.annotations.Param;
 
 import java.time.LocalDateTime;

@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bill.dao.db.auto.ProductMapper">
-  <resultMap id="BaseResultMap" type="com.bill.model.entity.auto.Product">
+  <resultMap id="BaseResultMap" type="com.bill.model.po.auto.Product">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="product_name" jdbcType="CHAR" property="productName" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="total_sold" jdbcType="INTEGER" property="totalSold" />
     <result column="price" jdbcType="BIGINT" property="price" />
+    <result column="classification_id" jdbcType="INTEGER" property="classificationId" />
+    <result column="user_name" jdbcType="CHAR" property="userName" />
+    <result column="is_delete" jdbcType="BIT" property="isDelete" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="classification_id" jdbcType="INTEGER" property="classificationId" />
+    <result column="expired_time" jdbcType="TIMESTAMP" property="expiredTime" />
+    <result column="product_status" jdbcType="TINYINT" property="productStatus" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, product_name, total, total_sold, price, create_time, update_time, classification_id
+    id, product_name, total, total_sold, price, classification_id, user_name, is_delete, 
+    create_time, update_time, expired_time, product_status
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -24,15 +29,19 @@
     delete from product
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.bill.model.entity.auto.Product">
+  <insert id="insert" parameterType="com.bill.model.po.auto.Product">
     insert into product (id, product_name, total, 
-      total_sold, price, create_time, 
-      update_time, classification_id)
+      total_sold, price, classification_id, 
+      user_name, is_delete, create_time, 
+      update_time, expired_time, product_status
+      )
     values (#{id,jdbcType=INTEGER}, #{productName,jdbcType=CHAR}, #{total,jdbcType=INTEGER}, 
-      #{totalSold,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP}, #{classificationId,jdbcType=INTEGER})
+      #{totalSold,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{classificationId,jdbcType=INTEGER}, 
+      #{userName,jdbcType=CHAR}, #{isDelete,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{expiredTime,jdbcType=TIMESTAMP}, #{productStatus,jdbcType=TINYINT}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="com.bill.model.entity.auto.Product">
+  <insert id="insertSelective" parameterType="com.bill.model.po.auto.Product">
     insert into product
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -50,14 +59,26 @@
       <if test="price != null">
         price,
       </if>
+      <if test="classificationId != null">
+        classification_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
       <if test="createTime != null">
         create_time,
       </if>
       <if test="updateTime != null">
         update_time,
       </if>
-      <if test="classificationId != null">
-        classification_id,
+      <if test="expiredTime != null">
+        expired_time,
+      </if>
+      <if test="productStatus != null">
+        product_status,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -76,18 +97,30 @@
       <if test="price != null">
         #{price,jdbcType=BIGINT},
       </if>
+      <if test="classificationId != null">
+        #{classificationId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=CHAR},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=BIT},
+      </if>
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="classificationId != null">
-        #{classificationId,jdbcType=INTEGER},
+      <if test="expiredTime != null">
+        #{expiredTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productStatus != null">
+        #{productStatus,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.entity.auto.Product">
+  <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.po.auto.Product">
     update product
     <set>
       <if test="productName != null">
@@ -102,27 +135,43 @@
       <if test="price != null">
         price = #{price,jdbcType=BIGINT},
       </if>
+      <if test="classificationId != null">
+        classification_id = #{classificationId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=CHAR},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=BIT},
+      </if>
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="classificationId != null">
-        classification_id = #{classificationId,jdbcType=INTEGER},
+      <if test="expiredTime != null">
+        expired_time = #{expiredTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="productStatus != null">
+        product_status = #{productStatus,jdbcType=TINYINT},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.bill.model.entity.auto.Product">
+  <update id="updateByPrimaryKey" parameterType="com.bill.model.po.auto.Product">
     update product
     set product_name = #{productName,jdbcType=CHAR},
       total = #{total,jdbcType=INTEGER},
       total_sold = #{totalSold,jdbcType=INTEGER},
       price = #{price,jdbcType=BIGINT},
+      classification_id = #{classificationId,jdbcType=INTEGER},
+      user_name = #{userName,jdbcType=CHAR},
+      is_delete = #{isDelete,jdbcType=BIT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      classification_id = #{classificationId,jdbcType=INTEGER}
+      expired_time = #{expiredTime,jdbcType=TIMESTAMP},
+      product_status = #{productStatus,jdbcType=TINYINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

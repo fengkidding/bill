@@ -1,7 +1,7 @@
 package com.bill.dao.db.ext;
 
 import com.bill.dao.db.auto.ProductBillMapper;
-import com.bill.model.entity.auto.ProductBill;
+import com.bill.model.po.auto.ProductBill;
 import org.apache.ibatis.annotations.Param;
 
 import java.time.LocalDateTime;

@@ -8,7 +8,7 @@ import com.bill.dao.redis.RedisUtils;
 import com.bill.model.constant.RedisCatchConstant;
 import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.conversion.ProductConversion;
-import com.bill.model.entity.auto.Product;
+import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;

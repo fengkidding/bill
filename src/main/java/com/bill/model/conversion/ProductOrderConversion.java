@@ -1,6 +1,6 @@
 package com.bill.model.conversion;
 
-import com.bill.model.entity.auto.ProductOrder;
+import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.view.QueryOrderVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

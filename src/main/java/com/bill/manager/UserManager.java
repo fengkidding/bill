@@ -3,7 +3,7 @@ package com.bill.manager;
 import com.alibaba.fastjson.JSON;
 import com.bill.common.util.LogUtils;
 import com.bill.manager.client.UserFeign;
-import com.bill.model.bo.ConsumerUserSumBO;
+import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
 import org.apache.commons.lang.StringUtils;

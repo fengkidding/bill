@@ -30,7 +30,11 @@ public enum ResultEnum {
     /**
      * 熔断
      */
-    FALL_BACK(4, "服务异常，触发熔断！");
+    FALL_BACK(4, "服务异常，触发熔断！"),
+    /**
+     * 校验失败
+     */
+    VALIDATE_ERROR(400, "校验失败！");
 
     private Integer code;
     private String msg;

@@ -1,6 +1,7 @@
 package com.bill.controller;
 
 
+import com.bill.core.factory.ResultFactory;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
 
@@ -18,9 +19,7 @@ public class BaseController {
      * @return
      */
     protected ResultVO resultSuccess() {
-        ResultVO resultVmo = new ResultVO();
-        resultVmo.setMsg(ResultEnum.SUCCESS.getMsg());
-        return resultVmo;
+        return ResultFactory.getSuccessResult();
     }
 
     /**
@@ -30,10 +29,7 @@ public class BaseController {
      * @return
      */
     protected ResultVO resultSuccess(Object object) {
-        ResultVO resultVmo = new ResultVO();
-        resultVmo.setMsg(ResultEnum.SUCCESS.getMsg());
-        resultVmo.setData(object);
-        return resultVmo;
+        return ResultFactory.getSuccessResult(object);
     }
 
     /**
@@ -41,24 +37,17 @@ public class BaseController {
      *
      * @return
      */
-    protected ResultVO resultFailed() {
-        ResultVO resultVmo = new ResultVO();
-        resultVmo.setCode(ResultEnum.ERROR.getCode());
-        resultVmo.setMsg(ResultEnum.ERROR.getMsg());
-        return resultVmo;
+    protected ResultVO resultError() {
+        return ResultFactory.getErrorResult();
     }
 
     /**
      * 封装返回失败结果
      *
-     * @param code
-     * @param msg
+     * @param resultEnum
      * @return
      */
-    protected ResultVO resultFailed(Integer code, String msg) {
-        ResultVO resultVmo = new ResultVO();
-        resultVmo.setCode(code);
-        resultVmo.setMsg(msg);
-        return resultVmo;
+    protected ResultVO result(ResultEnum resultEnum) {
+        return ResultFactory.getResult(resultEnum);
     }
 }

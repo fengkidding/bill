@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bill.dao.db.ext.ProductOrderExtMapper">
-  <resultMap id="ListOrderMap" type="com.bill.model.entity.auto.ProductOrder">
+  <resultMap id="ListOrderMap" type="com.bill.model.po.auto.ProductOrder">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="order_user" jdbcType="CHAR" property="orderUser" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
@@ -16,7 +16,7 @@
   <sql id="BaseColumnList">
     id, order_user, product_id, total, price, status, create_time, update_time, product_name ,remark
   </sql>
-  <insert id="saveSelective" parameterType="com.bill.model.entity.auto.ProductOrder" useGeneratedKeys="true" keyProperty="id">
+  <insert id="saveSelective" parameterType="com.bill.model.po.auto.ProductOrder" useGeneratedKeys="true" keyProperty="id">
     insert into product_order
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -98,7 +98,7 @@
     AND create_time BETWEEN #{startTime} AND #{endTime}
   </select>
   
-  <select id="getProductOrder" resultType="com.bill.model.entity.auto.ProductOrder" parameterType="java.lang.Integer">
+  <select id="getProductOrder" resultType="com.bill.model.po.auto.ProductOrder" parameterType="java.lang.Integer">
     SELECT <include refid="BaseColumnList"></include>
     FROM product_order
     WHERE id = #{id}

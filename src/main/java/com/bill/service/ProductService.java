@@ -1,6 +1,6 @@
 package com.bill.service;
 
-import com.bill.model.entity.auto.Product;
+import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.view.QueryProductVO;
 
