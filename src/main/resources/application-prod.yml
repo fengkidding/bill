@@ -11,10 +11,10 @@ spring:
     time-zone: GMT+8
   cloud:
     inetutils:
-      default-ip-address: 39.98.50.149
+      default-ip-address: localhost
   #spring redis
   redis:
-    host: 39.98.50.149
+    host: localhost
     port: 6379
     password: aliyunr1!
     timeout: 1000
@@ -31,7 +31,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:root@39.98.50.149:10000/eureka/
+      defaultZone: http://admin:root@localhost:10000/eureka/
     healthcheck:
       enabled: true
   instance:
@@ -63,7 +63,7 @@ druid:
     type: com.alibaba.druid.pool.DruidDataSource
     master:
         name: mysql
-        url: jdbc:mysql://39.98.50.149:3306/commerce?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://localhost:3306/commerce?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: aliyunm1!
         # 使用druid数据源
@@ -84,7 +84,7 @@ druid:
         maxOpenPreparedStatements: 20
     slave:
         name: mysql
-        url: jdbc:mysql://39.98.50.149:3306/commerce?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://localhost:3306/commerce?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: aliyunm1!
         # 使用druid数据源
@@ -106,7 +106,7 @@ druid:
 
 #redis
 redis:
-    ADDR: 39.98.50.149
+    ADDR: localhost
     AUTH: aliyunr1!
     PORT: 6379
     MAXACTIVE: -1
