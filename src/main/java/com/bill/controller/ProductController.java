@@ -3,7 +3,7 @@ package com.bill.controller;
 import com.alibaba.fastjson.JSON;
 import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.model.conversion.ProductConversion;
 import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageParamVO;
@@ -44,7 +44,7 @@ public class ProductController extends BaseController {
     @ApiOperation(value = "保存商品")
     @PostMapping(value = "/save_product")
     public ResultVO saveProduct(@RequestBody @Valid ProductSaveParamVO productSaveParamVmo, HttpServletRequest request) {
-        LogUtils.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(productSaveParamVmo));
+        LogBackUtils.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(productSaveParamVmo));
         Product product = new Product();
         ProductConversion.PRODUCT_CONVERSION.vmoToEntity(productSaveParamVmo, product);
         product.setPrice(ComputeUtils.getFen(productSaveParamVmo.getPrice()));

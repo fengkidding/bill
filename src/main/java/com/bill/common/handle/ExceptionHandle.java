@@ -1,7 +1,7 @@
 package com.bill.common.handle;
 
-import com.bill.common.util.LogUtils;
-import com.bill.core.factory.ResultFactory;
+import com.bill.common.util.LogBackUtils;
+import com.bill.core.factory.ResultVOFactory;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.exception.ServiceException;
 import com.bill.model.vo.common.ResultVO;
@@ -27,8 +27,8 @@ public class ExceptionHandle {
      */
     @ExceptionHandler(BindException.class)
     public ResultVO handleError(BindException e) {
-        LogUtils.error("ExceptionHandle.BindException 抛出的异常:", e);
-        return ResultFactory.getResult(ResultEnum.VALIDATE_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
+        LogBackUtils.error("ExceptionHandle.BindException 抛出的异常:", e);
+        return ResultVOFactory.getResult(ResultEnum.VALIDATE_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
     }
 
     /**
@@ -39,8 +39,8 @@ public class ExceptionHandle {
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResultVO handleError(MethodArgumentNotValidException e) {
-        LogUtils.error("ExceptionHandle.MethodArgumentNotValidException 抛出的异常:", e);
-        return ResultFactory.getResult(ResultEnum.VALIDATE_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
+        LogBackUtils.error("ExceptionHandle.MethodArgumentNotValidException 抛出的异常:", e);
+        return ResultVOFactory.getResult(ResultEnum.VALIDATE_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
     }
 
     /**
@@ -51,8 +51,8 @@ public class ExceptionHandle {
      */
     @ExceptionHandler(ServiceException.class)
     public ResultVO handleError(ServiceException e) {
-        LogUtils.error("ExceptionHandle.ServiceException 抛出的异常:" + e.getResultEnum(), e);
-        return ResultFactory.getResult(e.getResultEnum());
+        LogBackUtils.error("ExceptionHandle.ServiceException 抛出的异常:" + e.getResultEnum(), e);
+        return ResultVOFactory.getResult(e.getResultEnum());
     }
 
     /**
@@ -63,7 +63,7 @@ public class ExceptionHandle {
      */
     @ExceptionHandler(value = Throwable.class)
     public ResultVO handleError(Throwable e) {
-        LogUtils.error("ExceptionHandle.Throwable 抛出的异常:", e);
-        return ResultFactory.getErrorResult();
+        LogBackUtils.error("ExceptionHandle.Throwable 抛出的异常:", e);
+        return ResultVOFactory.getErrorResult();
     }
 }

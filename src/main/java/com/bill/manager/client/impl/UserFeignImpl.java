@@ -1,6 +1,6 @@
 package com.bill.manager.client.impl;
 
-import com.bill.core.factory.ResultFactory;
+import com.bill.core.factory.ResultVOFactory;
 import com.bill.manager.client.UserFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.vo.common.ResultVO;
@@ -23,6 +23,6 @@ public class UserFeignImpl implements UserFeign {
      */
     @Override
     public ResultVO updateRemainingSum(ConsumerUserSumBO consumerUserSumBO) {
-        return ResultFactory.getFallBackResult();
+        return ResultVOFactory.getFallBackResult();
     }
 }

@@ -1,7 +1,7 @@
 package com.bill.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.BillParamVO;
@@ -12,8 +12,6 @@ import com.bill.model.vo.view.StatisticsBillVO;
 import com.bill.service.ProductBillService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -71,7 +69,7 @@ public class ProductBillController extends BaseController {
     @ApiOperation(value = "保存入账信息")
     @PostMapping(value = "/save_product_bill")
     public ResultVO saveProductBill(@RequestBody @Valid BillParamVO billParamVmo) {
-        LogUtils.info("saveProductBill-保存入账信息:billParamVmo=" + JSON.toJSONString(billParamVmo));
+        LogBackUtils.info("saveProductBill-保存入账信息:billParamVmo=" + JSON.toJSONString(billParamVmo));
         productBillService.saveProductBill(billParamVmo);
         return super.resultSuccess();
     }

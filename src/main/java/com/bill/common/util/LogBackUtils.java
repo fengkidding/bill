@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
  * @author f
  * @date 2019-10-20
  */
-public class LogUtils {
+public class LogBackUtils {
 
     /**
      * 错误日志

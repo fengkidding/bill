@@ -1,7 +1,7 @@
 package com.bill.manager;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.manager.client.UserFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;
@@ -35,15 +35,15 @@ public class UserManager {
             ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
             consumerUserSumBO.setUserName(userName);
             consumerUserSumBO.setRemainingSum(remainingSum);
-            LogUtils.info("UserClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
+            LogBackUtils.info("UserClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             try {
                 ResultVO resultVO = userFeign.updateRemainingSum(consumerUserSumBO);
-                LogUtils.info("UserClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
+                LogBackUtils.info("UserClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
                 if (ResultEnum.SUCCESS.getCode().equals(resultVO.getCode())) {
                     result = true;
                 }
             } catch (Exception e) {
-                LogUtils.error("UserClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
+                LogBackUtils.error("UserClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
             }
         }
         return result;

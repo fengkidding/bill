@@ -1,7 +1,7 @@
 package com.bill.controller;
 
 
-import com.bill.core.factory.ResultFactory;
+import com.bill.core.factory.ResultVOFactory;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
 
@@ -19,7 +19,7 @@ public class BaseController {
      * @return
      */
     protected ResultVO resultSuccess() {
-        return ResultFactory.getSuccessResult();
+        return ResultVOFactory.getSuccessResult();
     }
 
     /**
@@ -29,7 +29,7 @@ public class BaseController {
      * @return
      */
     protected ResultVO resultSuccess(Object object) {
-        return ResultFactory.getSuccessResult(object);
+        return ResultVOFactory.getSuccessResult(object);
     }
 
     /**
@@ -38,7 +38,7 @@ public class BaseController {
      * @return
      */
     protected ResultVO resultError() {
-        return ResultFactory.getErrorResult();
+        return ResultVOFactory.getErrorResult();
     }
 
     /**
@@ -48,6 +48,6 @@ public class BaseController {
      * @return
      */
     protected ResultVO result(ResultEnum resultEnum) {
-        return ResultFactory.getResult(resultEnum);
+        return ResultVOFactory.getResult(resultEnum);
     }
 }

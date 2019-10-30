@@ -1,6 +1,6 @@
 package com.bill.aspect;
 
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -39,7 +39,7 @@ public class CommonAspect {
         HttpServletRequest request = servletRequestAttributes.getRequest();
         String uuid = UUID.randomUUID().toString();
         request.setAttribute("traceId", uuid);
-        LogUtils.info("AOP_BEFORE: url=" + request.getRequestURL() + ",traceId=" + uuid + ",logTime=" + System.currentTimeMillis());
+        LogBackUtils.info("AOP_BEFORE: url=" + request.getRequestURL() + ",traceId=" + uuid + ",logTime=" + System.currentTimeMillis());
     }
 
     /**
@@ -49,7 +49,7 @@ public class CommonAspect {
     public void doAfter(JoinPoint joinPoint) {
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
-        LogUtils.info("AOP_AFTER: url=" + request.getRequestURL() + ",traceId=" + request.getAttribute("traceId") + ",logTime=" + System.currentTimeMillis());
+        LogBackUtils.info("AOP_AFTER: url=" + request.getRequestURL() + ",traceId=" + request.getAttribute("traceId") + ",logTime=" + System.currentTimeMillis());
     }
 
 }

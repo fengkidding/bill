@@ -1,13 +1,11 @@
 package com.bill.dao.redis;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.model.constant.RedisCatchConstant;
 import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.view.QueryProductVO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -37,7 +35,7 @@ public class ProductDao {
             redisTemplate.opsForValue().set(RedisKeyConstant.PRODUCT_LIST_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_CATCH, TimeUnit.SECONDS);
             redisTemplate.opsForValue().set(RedisKeyConstant.PRODUCT_LIST_LONG_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_LONG_CATCH, TimeUnit.SECONDS);
         } catch (Exception e) {
-            LogUtils.error("保存产品列表异常：pageVmo=" + JSON.toJSONString(pageVmo), e);
+            LogBackUtils.error("保存产品列表异常：pageVmo=" + JSON.toJSONString(pageVmo), e);
         }
     }
 
@@ -61,7 +59,7 @@ public class ProductDao {
             }
             return result;
         } catch (Exception e) {
-            LogUtils.error("获取产品列表异常", e);
+            LogBackUtils.error("获取产品列表异常", e);
         }
         return null;
     }
@@ -74,7 +72,7 @@ public class ProductDao {
             redisTemplate.delete(RedisKeyConstant.PRODUCT_LIST_KEY);
             redisTemplate.delete(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
         } catch (Exception e) {
-            LogUtils.error("删除产品列表异常", e);
+            LogBackUtils.error("删除产品列表异常", e);
         }
     }
 

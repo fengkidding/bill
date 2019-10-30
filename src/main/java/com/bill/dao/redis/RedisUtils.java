@@ -1,6 +1,6 @@
 package com.bill.dao.redis;
 
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.model.constant.ScriptConstant;
 import com.bill.model.enums.ResultEnum;
 import com.github.pagehelper.util.StringUtil;
@@ -70,7 +70,7 @@ public class RedisUtils {
             });
             return StringUtil.isNotEmpty(result);
         } catch (Exception var8) {
-            LogUtils.error("RedisUtils-setNx error", var8);
+            LogBackUtils.error("RedisUtils-setNx error", var8);
             return false;
         }
     }
@@ -92,7 +92,7 @@ public class RedisUtils {
             });
             return result;
         } catch (Exception var8) {
-            LogUtils.error("RedisUtils-getNx error", var8);
+            LogBackUtils.error("RedisUtils-getNx error", var8);
             return "";
         }
     }

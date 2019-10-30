@@ -2,7 +2,7 @@ package com.bill.annotation.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.bill.annotation.PhoneNumber;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -18,7 +18,7 @@ public class PhoneNumberValidator implements ConstraintValidator<PhoneNumber, St
     @Override
     public void initialize(PhoneNumber phoneNumber) {
         //初始化操作
-        LogUtils.info(JSON.toJSONString(phoneNumber));
+        LogBackUtils.info(JSON.toJSONString(phoneNumber));
     }
 
     /**

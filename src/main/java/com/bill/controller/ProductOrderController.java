@@ -1,7 +1,7 @@
 package com.bill.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogUtils;
+import com.bill.common.util.LogBackUtils;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.OrderParamVO;
@@ -10,8 +10,6 @@ import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,7 +41,7 @@ public class ProductOrderController extends BaseController {
     @ApiOperation(value = "用户下单")
     @PostMapping(value = "/create_order")
     public ResultVO createOrder(@RequestBody @Valid OrderParamVO orderParamVmo, HttpServletRequest request) {
-        LogUtils.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
+        LogBackUtils.info("更新用户余额: traceId=" + request.getAttribute("traceId") + ",productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
         Integer id = orderService.createOrder(orderParamVmo);
         return super.resultSuccess(id);
     }
