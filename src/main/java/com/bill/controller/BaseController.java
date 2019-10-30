@@ -1,7 +1,7 @@
 package com.bill.controller;
 
 
-import com.bill.core.factory.ResultVOFactory;
+import com.bill.pattern.factory.ResultVOFactory;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
 

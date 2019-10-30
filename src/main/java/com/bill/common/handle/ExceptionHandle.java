@@ -1,7 +1,7 @@
 package com.bill.common.handle;
 
 import com.bill.common.util.LogBackUtils;
-import com.bill.core.factory.ResultVOFactory;
+import com.bill.pattern.factory.ResultVOFactory;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.exception.ServiceException;
 import com.bill.model.vo.common.ResultVO;

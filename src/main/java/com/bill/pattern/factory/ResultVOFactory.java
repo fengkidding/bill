@@ -1,4 +1,4 @@
-package com.bill.core.factory;
+package com.bill.pattern.factory;
 
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
