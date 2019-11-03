@@ -4,6 +4,7 @@ import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.view.QueryProductVO;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -59,4 +60,12 @@ public interface ProductService {
      * @return
      */
     List<QueryProductVO> rankingProduct();
+
+    /**
+     * 设置产品过期
+     *
+     * @param localDateTime
+     * @return
+     */
+    Integer expiredProduct(LocalDateTime localDateTime);
 }

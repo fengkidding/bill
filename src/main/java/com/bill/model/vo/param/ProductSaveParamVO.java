@@ -38,7 +38,7 @@ public class ProductSaveParamVO {
     @NotNull(message = "商品分类id不能为null！")
     private Integer classificationId;
 
-    @ApiModelProperty(value = "过期时间")
+    @ApiModelProperty(value = "过期时间",example = "2019-11-01 00:00:00")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime expiredTime;
 

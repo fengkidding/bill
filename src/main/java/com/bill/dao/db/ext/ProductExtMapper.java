@@ -4,6 +4,7 @@ import com.bill.dao.db.auto.ProductMapper;
 import com.bill.model.po.auto.Product;
 import org.apache.ibatis.annotations.Param;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -29,4 +30,12 @@ public interface ProductExtMapper extends ProductMapper {
      * @return
      */
     List<Product> listProduct();
+
+    /**
+     * 产品过期
+     *
+     * @param localDateTime
+     * @return
+     */
+    Integer expiredProduct(@Param("localDateTime") LocalDateTime localDateTime);
 }

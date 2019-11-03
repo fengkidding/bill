@@ -13,7 +13,14 @@
     
     <select id="listProduct" resultType="com.bill.model.po.auto.Product">
       SELECT <include refid="BaseColumnList"></include>
-      FROM product
+      FROM product AND product_status = 0
       ORDER BY create_time DESC
+    </select>
+
+    <select id="expiredProduct" resultType="java.lang.Integer">
+      UPDATE product
+      SET product_status = 2
+      WHERE expired_time &lt; #{localDateTime}
+      and product_status = 0
     </select>
 </mapper>
