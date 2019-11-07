@@ -10,6 +10,10 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import java.util.Set;
+
 /**
  * 统一异常处理
  *
@@ -41,6 +45,22 @@ public class ExceptionHandle {
     public ResultVO handleError(MethodArgumentNotValidException e) {
         LogBackUtils.error("ExceptionHandle.MethodArgumentNotValidException 抛出的异常:", e);
         return ResultVOFactory.getResult(ResultEnum.VALIDATE_ERROR, e.getBindingResult().getFieldError().getDefaultMessage());
+    }
+
+    /**
+     * 捕获@Validate校验抛出的异常
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResultVO handleError(ConstraintViolationException e) {
+        LogBackUtils.error("ExceptionHandle.MethodArgumentNotValidException 抛出的异常:", e);
+        Set<ConstraintViolation<?>> constraintViolations = e.getConstraintViolations();
+        for (ConstraintViolation<?> constraintViolation : constraintViolations) {
+            return ResultVOFactory.getResult(ResultEnum.VALIDATE_ERROR, constraintViolation.getMessage());
+        }
+        return ResultVOFactory.getResult(ResultEnum.VALIDATE_ERROR);
     }
 
     /**
