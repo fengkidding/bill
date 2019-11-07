@@ -1,6 +1,5 @@
 package com.bill;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -19,7 +18,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "com.bill.manager.client")
 @EnableAsync
-@MapperScan("com.bill.dao.db")
 public class BillApplication {
 
     public static void main(String[] args) {
