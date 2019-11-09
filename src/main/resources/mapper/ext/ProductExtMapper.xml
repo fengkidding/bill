@@ -13,7 +13,7 @@
     
     <select id="listProduct" resultType="com.bill.model.po.auto.Product">
       SELECT <include refid="BaseColumnList"></include>
-      FROM product AND product_status = 0
+      FROM product WHERE product_status = 0
       ORDER BY create_time DESC
     </select>
 

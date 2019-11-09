@@ -135,3 +135,11 @@ pagehelper:
 swagger2:
     package: com.bill.controller
     enable: true
+
+# 熔断
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE

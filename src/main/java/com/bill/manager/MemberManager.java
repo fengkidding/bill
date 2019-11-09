@@ -2,7 +2,7 @@ package com.bill.manager;
 
 import com.alibaba.fastjson.JSON;
 import com.bill.common.util.LogBackUtils;
-import com.bill.manager.client.UserFeign;
+import com.bill.manager.client.MemberFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
@@ -17,10 +17,10 @@ import org.springframework.stereotype.Component;
  * @date 2019-10-10
  */
 @Component
-public class UserManager {
+public class MemberManager {
 
     @Autowired
-    private UserFeign userFeign;
+    private MemberFeign memberFeign;
 
     /**
      * 更新用户余额
@@ -35,15 +35,15 @@ public class UserManager {
             ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
             consumerUserSumBO.setUserName(userName);
             consumerUserSumBO.setRemainingSum(remainingSum);
-            LogBackUtils.info("UserClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
+            LogBackUtils.info("MemberClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             try {
-                ResultVO resultVO = userFeign.updateRemainingSum(consumerUserSumBO);
-                LogBackUtils.info("UserClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
+                ResultVO resultVO = memberFeign.updateRemainingSum(consumerUserSumBO);
+                LogBackUtils.info("MemberClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
                 if (ResultEnum.SUCCESS.getCode().equals(resultVO.getCode())) {
                     result = true;
                 }
             } catch (Exception e) {
-                LogBackUtils.error("UserClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
+                LogBackUtils.error("MemberClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO), e);
             }
         }
         return result;

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author f
  * @date 2018-5-8
  */
-@FeignClient(name = "user")
-public interface UserFeign {
+@FeignClient(name = "member")
+public interface MemberFeign {
 
     /**
      * 更新用户余额
@@ -22,6 +22,6 @@ public interface UserFeign {
      * @param consumerUserSumBO
      * @return
      */
-    @RequestMapping(value = "/consumer_user/update_remaining_sum", method = RequestMethod.POST)
+    @RequestMapping(value = "/member/update_remaining_sum", method = RequestMethod.POST)
     ResultVO updateRemainingSum(@RequestBody ConsumerUserSumBO consumerUserSumBO);
 }
