@@ -3,7 +3,6 @@ package com.bill.service.impl;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.MemberManager;
-import com.bill.manager.UserManager;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitQueueConstant;
 import com.bill.model.conversion.ProductOrderConversion;
@@ -42,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     private ProductService productService;
 
     @Autowired
-    private MemberManager userClient;
+    private MemberManager memberManager;
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
@@ -72,7 +71,7 @@ public class OrderServiceImpl implements OrderService {
         productOrderExtMapper.saveSelective(productOrder);
 
         //扣除用户余额
-        boolean result = userClient.updateRemainingSum(orderParamVmo.getOrderUser(), -price);
+        boolean result = memberManager.updateRemainingSum(orderParamVmo.getOrderUser(), -price);
         if (!result) {
             throw new RuntimeException("扣除用户余额失败");
         }
