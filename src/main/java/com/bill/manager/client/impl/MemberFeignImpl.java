@@ -1,7 +1,7 @@
 package com.bill.manager.client.impl;
 
 import com.bill.pattern.factory.ResultVOFactory;
-import com.bill.manager.client.UserFeign;
+import com.bill.manager.client.MemberFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.vo.common.ResultVO;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @date 2018-5-8
  */
 @Component
-public class UserFeignImpl implements UserFeign {
+public class MemberFeignImpl implements MemberFeign {
 
     /**
      * 更新用户余额

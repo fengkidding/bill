@@ -2,6 +2,7 @@ package com.bill.service.impl;
 
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
+import com.bill.manager.MemberManager;
 import com.bill.manager.UserManager;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitQueueConstant;
@@ -41,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
     private ProductService productService;
 
     @Autowired
-    private UserManager userClient;
+    private MemberManager userClient;
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
