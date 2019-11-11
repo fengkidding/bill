@@ -5,8 +5,8 @@ import com.bill.model.constant.RabbitQueueConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,8 +35,8 @@ public class RabbitConfig {
      * @return
      */
     @Bean
-    public DirectExchange memberRemainingSumExchange() {
-        return new DirectExchange(RabbitExchangeConstant.MEMBER_REMAINING_SUM);
+    public TopicExchange memberRemainingSumExchange() {
+        return new TopicExchange(RabbitExchangeConstant.MEMBER_REMAINING_SUM);
     }
 
     /**

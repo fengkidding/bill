@@ -1,10 +1,11 @@
 package com.bill.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.MemberManager;
 import com.bill.model.constant.RabbitExchangeConstant;
-import com.bill.model.constant.RabbitQueueConstant;
+import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.po.auto.Product;
@@ -16,6 +17,9 @@ import com.bill.service.OrderService;
 import com.bill.service.ProductService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageBuilder;
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -80,7 +84,10 @@ public class OrderServiceImpl implements OrderService {
         ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
         consumerUserSumBO.setUserName(product.getUserName());
         consumerUserSumBO.setRemainingSum(price);
-        rabbitTemplate.convertAndSend(RabbitExchangeConstant.MEMBER_REMAINING_SUM, RabbitQueueConstant.MEMBER_REMAINING_SUM, consumerUserSumBO);
+        Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
+                .setContentType(MessageProperties.CONTENT_TYPE_JSON)
+                .setMessageId(productOrder.getId().toString()).build();
+        rabbitTemplate.send(RabbitExchangeConstant.MEMBER_REMAINING_SUM, RabbitRoutingKeyConstant.MEMBER_REMAINING_SUM, message);
 
         return productOrder.getId();
     }
