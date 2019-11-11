@@ -3,7 +3,10 @@ package com.bill.service.impl;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.UserManager;
+import com.bill.model.constant.RabbitExchangeConstant;
+import com.bill.model.constant.RabbitQueueConstant;
 import com.bill.model.conversion.ProductOrderConversion;
+import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.po.auto.Product;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
@@ -13,6 +16,7 @@ import com.bill.service.OrderService;
 import com.bill.service.ProductService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,6 +42,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private UserManager userClient;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     /**
      * 用户下单
@@ -68,6 +75,12 @@ public class OrderServiceImpl implements OrderService {
         if (!result) {
             throw new RuntimeException("扣除用户余额失败");
         }
+
+        //用户收钱
+        ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
+        consumerUserSumBO.setUserName(product.getUserName());
+        consumerUserSumBO.setRemainingSum(price);
+        rabbitTemplate.convertAndSend(RabbitExchangeConstant.MEMBER_REMAINING_SUM, RabbitQueueConstant.MEMBER_REMAINING_SUM, consumerUserSumBO);
 
         return productOrder.getId();
     }

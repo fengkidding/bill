@@ -26,6 +26,14 @@ spring:
       # 连接池中的最大空闲连接
       max-idle: 100
       min-idle: 10
+  #spring rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: rabbitadmin
+    password: rabbit1
+    publisher-confirms: true
+    virtual-host: /
 
 # 微服务注册
 eureka:

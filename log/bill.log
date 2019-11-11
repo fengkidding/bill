@@ -1,520 +1,41 @@
-2019-10-10 10:31:21 [main] INFO  com.bill.BillApplication : 
+2019-11-11 19:20:58 [main] INFO  com.bill.BillApplication : 
  The following profiles are active: dev 
-2019-10-10 10:31:27 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 7.103 seconds (JVM running for 7.559) 
-2019-10-10 11:50:21 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 11:50:28 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 7.121 seconds (JVM running for 7.713) 
-2019-10-10 11:51:11 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 11:51:17 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 7.167 seconds (JVM running for 7.666) 
-2019-10-10 11:51:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/classification/listClassification,traceId=e64327d7-2564-4593-ae42-90521d4824cc,logTime=1570679477705 
-2019-10-10 11:51:17 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/classification/listClassification,traceId=e64327d7-2564-4593-ae42-90521d4824cc,logTime=1570679477748 
-2019-10-10 11:52:58 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/classification/save_classification,traceId=e4fb891d-ac6f-4794-b471-12172353dc54,logTime=1570679578434 
-2019-10-10 11:52:58 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/classification/save_classification,traceId=e4fb891d-ac6f-4794-b471-12172353dc54,logTime=1570679578606 
-2019-10-10 11:53:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/classification/listClassification,traceId=ffb0251d-b38f-441c-b43b-e16c863a539e,logTime=1570679582542 
-2019-10-10 11:53:02 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/classification/listClassification,traceId=ffb0251d-b38f-441c-b43b-e16c863a539e,logTime=1570679582564 
-2019-10-10 14:27:17 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 14:27:24 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.514 seconds (JVM running for 9.424) 
-2019-10-10 14:28:15 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=24b057bd-4686-4a62-9e96-b5cbb213013e,logTime=1570688895588 
-2019-10-10 14:28:15 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=24b057bd-4686-4a62-9e96-b5cbb213013e,logTime=1570688895703 
-2019-10-10 14:28:43 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=63b29844-9907-44e4-90ae-6a9e965349b6,logTime=1570688923230 
-2019-10-10 14:28:43 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=63b29844-9907-44e4-90ae-6a9e965349b6,logTime=1570688923248 
-2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/save_product_bill,traceId=b6c6dd3a-af69-455a-b14c-130da12644e9,logTime=1570688940294 
-2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  c.b.c.ProductBillController : 
- saveProductBill-保存入账信息:billParamVmo={"billUser":"f","classificationId":1,"money":10,"remark":"string"} 
-2019-10-10 14:29:00 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/save_product_bill,traceId=b6c6dd3a-af69-455a-b14c-130da12644e9,logTime=1570688940366 
-2019-10-10 14:29:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=94295721-9c2a-4fdb-9d34-21dd710b278c,logTime=1570688944490 
-2019-10-10 14:29:04 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=94295721-9c2a-4fdb-9d34-21dd710b278c,logTime=1570688944528 
-2019-10-10 14:29:40 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 14:29:48 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.249 seconds (JVM running for 9.194) 
-2019-10-10 14:30:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=2440bf53-a008-4cbe-8947-93566033e92b,logTime=1570689005056 
-2019-10-10 14:30:05 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=2440bf53-a008-4cbe-8947-93566033e92b,logTime=1570689005149 
-2019-10-10 14:30:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/list_product_bill,traceId=f21679f8-1508-4a36-b0fd-8596f007eb0e,logTime=1570689013183 
-2019-10-10 14:30:13 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/list_product_bill,traceId=f21679f8-1508-4a36-b0fd-8596f007eb0e,logTime=1570689013220 
-2019-10-10 14:30:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_bill/statistics_bill,traceId=7b14121e-becc-46cc-8457-0894245b33da,logTime=1570689053706 
-2019-10-10 14:30:53 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_bill/statistics_bill,traceId=7b14121e-becc-46cc-8457-0894245b33da,logTime=1570689053756 
-2019-10-10 15:42:06 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:42:14 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.515 seconds (JVM running for 9.278) 
-2019-10-10 15:42:44 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=68715e9b-3a8f-4174-9477-9b30cf13cb84,logTime=1570693364049 
-2019-10-10 15:42:44 [http-nio-10003-exec-5] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=68715e9b-3a8f-4174-9477-9b30cf13cb84,logTime=1570693364322 
-2019-10-10 15:42:44 [http-nio-10003-exec-5] ERROR c.b.common.handle.ExceptionHandle : 
- 统一异常处理: 
-org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-### The error may exist in file [C:\Users\fengchangteng\Desktop\project\bill\target\classes\mapper\ext\ProductExtMapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: SELECT           id, product_name, product_type, total, total_sold, price, create_time, update_time, classification_id             FROM product       ORDER BY create_time DESC LIMIT ?
-### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
-	at com.sun.proxy.$Proxy132.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
-	at com.sun.proxy.$Proxy135.listProduct(Unknown Source)
-	at com.bill.service.impl.ProductServiceImpl.listProduct(ProductServiceImpl.java:102)
-	at com.bill.controller.ProductController.listProduct(ProductController.java:71)
-	at com.bill.controller.ProductController$$FastClassBySpringCGLIB$$ac433f53.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.controller.ProductController$$EnhancerBySpringCGLIB$$9eb1fa63.listProduct(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
-	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
-	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
-	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
-	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
-	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
-	at com.bill.config.db.DynamicPlugin.intercept(DynamicPlugin.java:78)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy192.query(Unknown Source)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy192.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
-	... 89 common frames omitted
-2019-10-10 15:43:22 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:43:35 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:43:43 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.321 seconds (JVM running for 9.193) 
-2019-10-10 15:43:55 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=33ab19c7-9303-4f62-bee8-b5c48f0f4e16,logTime=1570693435082 
-2019-10-10 15:43:55 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=33ab19c7-9303-4f62-bee8-b5c48f0f4e16,logTime=1570693435339 
-2019-10-10 15:44:44 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:44:52 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.403 seconds (JVM running for 8.966) 
-2019-10-10 15:45:42 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=a7f17f2f-cca8-49ce-b54f-2f8058bc442c,logTime=1570693542298 
-2019-10-10 15:45:42 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=a7f17f2f-cca8-49ce-b54f-2f8058bc442c,logTime=1570693542324 
-2019-10-10 15:46:45 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:46:52 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.22 seconds (JVM running for 8.772) 
-2019-10-10 15:47:09 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/save_product,traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,logTime=1570693629916 
-2019-10-10 15:47:09 [http-nio-10003-exec-7] INFO  c.bill.controller.ProductController : 
- 更新用户余额: traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,productSaveParamVmo={"classificationId":0,"id":0,"price":10,"productName":"str2134ing","total":10} 
-2019-10-10 15:47:10 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/save_product,traceId=3dfe75bc-899e-4a1d-8b87-eb7a6cfd90ac,logTime=1570693630002 
-2019-10-10 15:47:16 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=3f87cb90-707d-4618-9233-fb6dc9d46421,logTime=1570693636153 
-2019-10-10 15:47:16 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=3f87cb90-707d-4618-9233-fb6dc9d46421,logTime=1570693636398 
-2019-10-10 15:47:30 [http-nio-10003-exec-9] ERROR c.b.common.handle.ExceptionHandle : 
- 统一异常处理: 
-org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'pageParamVO' on field 'pageSize': rejected value [100]; codes [Max.pageParamVO.pageSize,Max.pageSize,Max.java.lang.Integer,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pageParamVO.pageSize,pageSize]; arguments []; default message [pageSize],50]; default message [每页条数超出上线！]
-	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:118)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:160)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:129)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-10-10 15:47:39 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=8ee8d825-7a2b-420a-b80f-e4baa01897dd,logTime=1570693659053 
-2019-10-10 15:47:39 [http-nio-10003-exec-10] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=8ee8d825-7a2b-420a-b80f-e4baa01897dd,logTime=1570693659071 
-2019-10-10 15:48:59 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:49:07 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 9.453 seconds (JVM running for 10.008) 
-2019-10-10 15:49:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=74af131c-ce98-4e08-8da1-e341e138342b,logTime=1570693751123 
-2019-10-10 15:49:11 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=74af131c-ce98-4e08-8da1-e341e138342b,logTime=1570693751148 
-2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/save_product,traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,logTime=1570693761375 
-2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  c.bill.controller.ProductController : 
- 更新用户余额: traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,productSaveParamVmo={"classificationId":0,"id":0,"price":10,"productName":"str2134ing","total":10} 
-2019-10-10 15:49:21 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/save_product,traceId=52263f02-8705-416e-a415-7c1eccf3a6e9,logTime=1570693761492 
-2019-10-10 15:49:24 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product/list_product,traceId=dc497860-2481-48c3-a2ec-64927202a898,logTime=1570693764882 
-2019-10-10 15:49:25 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product/list_product,traceId=dc497860-2481-48c3-a2ec-64927202a898,logTime=1570693765347 
-2019-10-10 15:49:39 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_order/list_order,traceId=23113a25-7bd6-4e0d-951b-54762093a97b,logTime=1570693779860 
-2019-10-10 15:49:39 [http-nio-10003-exec-4] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_order/list_order,traceId=23113a25-7bd6-4e0d-951b-54762093a97b,logTime=1570693779926 
-2019-10-10 15:49:39 [http-nio-10003-exec-4] ERROR c.b.common.handle.ExceptionHandle : 
- 统一异常处理: 
-org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-### The error may exist in file [C:\Users\fengchangteng\Desktop\project\bill\target\classes\mapper\ext\ProductOrderExtMapper.xml]
-### The error may involve com.bill.dao.db.ext.ProductOrderExtMapper.listOrder-Inline
-### The error occurred while setting parameters
-### SQL: SELECT       id, order_user, product_id, product_type, total, price, status, create_time, update_time, product_name ,remark         FROM product_order     WHERE order_user = ?     ORDER BY create_time DESC LIMIT ?
-### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
-	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
-	at com.sun.proxy.$Proxy132.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:230)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:137)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
-	at com.sun.proxy.$Proxy137.listOrder(Unknown Source)
-	at com.bill.service.impl.OrderServiceImpl.listOrder(OrderServiceImpl.java:89)
-	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:652)
-	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$3147cc10.listOrder(<generated>)
-	at com.bill.controller.ProductOrderController.listOrder(ProductOrderController.java:61)
-	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$f76bc80f.listOrder(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'product_type' in 'field list'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2549)
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
-	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)
-	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3051)
-	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
-	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3049)
-	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.ibatis.plugin.Invocation.proceed(Invocation.java:49)
-	at com.bill.config.db.DynamicPlugin.intercept(DynamicPlugin.java:78)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy182.query(Unknown Source)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:136)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
-	at com.sun.proxy.$Proxy182.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
-	... 93 common frames omitted
-2019-10-10 15:50:42 [main] INFO  com.bill.BillApplication : 
- The following profiles are active: dev 
-2019-10-10 15:50:49 [main] INFO  com.bill.BillApplication : 
- Started BillApplication in 8.145 seconds (JVM running for 8.775) 
-2019-10-10 15:50:52 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_order/list_order,traceId=ad90bfe6-9719-4df7-bdd7-fedf75195b51,logTime=1570693852709 
-2019-10-10 15:50:52 [http-nio-10003-exec-1] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_order/list_order,traceId=ad90bfe6-9719-4df7-bdd7-fedf75195b51,logTime=1570693852789 
-2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,logTime=1570693875585 
-2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  c.b.c.ProductOrderController : 
- 更新用户余额: traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,productSaveParamVmo={"orderUser":"f","productId":78,"remark":"string","total":1} 
-2019-10-10 15:51:15 [http-nio-10003-exec-2] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=28e44374-66bb-41ce-98c4-cc5fc639149f,logTime=1570693875929 
-2019-10-10 15:51:15 [http-nio-10003-exec-2] ERROR c.b.common.handle.ExceptionHandle : 
- 统一异常处理: 
+2019-11-11 19:21:07 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 9.898 seconds (JVM running for 10.877) 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=5d8c0131-b844-4087-a22c-92bdb7db526f,logTime=1573471314018 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=5d8c0131-b844-4087-a22c-92bdb7db526f,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 0 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 0 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=5d8c0131-b844-4087-a22c-92bdb7db526f,logTime=1573471314108 
+2019-11-11 19:21:54 [http-nio-10003-exec-7] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
 java.lang.NullPointerException: null
-	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:63)
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:66)
 	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
@@ -524,8 +45,8 @@ java.lang.NullPointerException: null
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$3537d018.createOrder(<generated>)
-	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:48)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
 	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
@@ -537,7 +58,7 @@ java.lang.NullPointerException: null
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
-	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$ce43903f.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -562,9 +83,6 @@ java.lang.NullPointerException: null
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
 	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
 	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
@@ -607,13 +125,1263 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2019-10-10 15:51:58 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,logTime=1570693918934 
-2019-10-10 15:51:58 [http-nio-10003-exec-3] INFO  c.b.c.ProductOrderController : 
- 更新用户余额: traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,productSaveParamVmo={"orderUser":"f","productId":18,"remark":"string","total":1} 
-2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.manager.UserClient : 
- UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-1000,"userName":"f"} 
-2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.manager.UserClient : 
- UserClient-扣除用户余额：resultVO={"code":0,"msg":"成功！"} 
-2019-10-10 15:52:37 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
- AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=3c33668d-451e-485d-95f4-bbb2d5ceff64,logTime=1570693957931 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=08c70ec3-90de-43b8-835d-16c150c69ab1,logTime=1573471327095 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=08c70ec3-90de-43b8-835d-16c150c69ab1,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 0 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 0 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=08c70ec3-90de-43b8-835d-16c150c69ab1,logTime=1573471327105 
+2019-11-11 19:22:07 [http-nio-10003-exec-8] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.NullPointerException: null
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:66)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:22:08 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=8c924f2a-4534-4806-b0ef-9b661ef76368,logTime=1573471328951 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=8c924f2a-4534-4806-b0ef-9b661ef76368,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 0 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 0 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=8c924f2a-4534-4806-b0ef-9b661ef76368,logTime=1573471328962 
+2019-11-11 19:22:08 [http-nio-10003-exec-9] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.NullPointerException: null
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:66)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:22:59 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=98c452b2-aef2-4cec-befe-6150ea1a5be2,logTime=1573471379245 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=98c452b2-aef2-4cec-befe-6150ea1a5be2,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 1 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 1 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==>  Preparing: insert into product_order ( order_user, product_id, total, price, status, product_name, remark ) values ( ?, ?, ?, ?, ?, ?, ? )  
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==> Parameters: f(String), 1(Integer), 1(Integer), 100(Long), 1(Byte), test(String), mq(String) 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.d.d.e.P.saveSelective : 
+ <==    Updates: 1 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] INFO  com.bill.manager.UserManager : 
+ UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] ERROR com.bill.manager.UserManager : 
+ UserClient-扣除用户余额异常：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+com.netflix.hystrix.exception.HystrixRuntimeException: UserFeign#updateRemainingSum(ConsumerUserSumBO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:805)
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:790)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1451)
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1376)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1173)
+	at rx.internal.operators.OperatorSubscribeOn$1$1.onError(OperatorSubscribeOn.java:59)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1410)
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1341)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorSubscribeOn$1.call(OperatorSubscribeOn.java:94)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69)
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:71)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:97)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:76)
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:108)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:301)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:297)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46)
+	... 27 common frames omitted
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:468)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45)
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276)
+	at rx.Subscriber.setProducer(Subscriber.java:209)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10307)
+	at rx.Observable.subscribe(Observable.java:10274)
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:445)
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:342)
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:102)
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:63)
+	... 33 common frames omitted
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=98c452b2-aef2-4cec-befe-6150ea1a5be2,logTime=1573471379715 
+2019-11-11 19:22:59 [http-nio-10003-exec-6] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.RuntimeException: 扣除用户余额失败
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:76)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:23:17 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=8f215194-ac67-499f-82c6-2bd58e3dd00f,logTime=1573471397845 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=8f215194-ac67-499f-82c6-2bd58e3dd00f,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 1 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 1 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==>  Preparing: insert into product_order ( order_user, product_id, total, price, status, product_name, remark ) values ( ?, ?, ?, ?, ?, ?, ? )  
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==> Parameters: f(String), 1(Integer), 1(Integer), 100(Long), 1(Byte), test(String), mq(String) 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.d.d.e.P.saveSelective : 
+ <==    Updates: 1 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] INFO  com.bill.manager.UserManager : 
+ UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] ERROR com.bill.manager.UserManager : 
+ UserClient-扣除用户余额异常：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+com.netflix.hystrix.exception.HystrixRuntimeException: UserFeign#updateRemainingSum(ConsumerUserSumBO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:805)
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:790)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1451)
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1376)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1173)
+	at rx.internal.operators.OperatorSubscribeOn$1$1.onError(OperatorSubscribeOn.java:59)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1410)
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1341)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorSubscribeOn$1.call(OperatorSubscribeOn.java:94)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69)
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:71)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:97)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:76)
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:108)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:301)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:297)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46)
+	... 27 common frames omitted
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:468)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45)
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276)
+	at rx.Subscriber.setProducer(Subscriber.java:209)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10307)
+	at rx.Observable.subscribe(Observable.java:10274)
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:445)
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:342)
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:102)
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:63)
+	... 33 common frames omitted
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=8f215194-ac67-499f-82c6-2bd58e3dd00f,logTime=1573471397865 
+2019-11-11 19:23:17 [http-nio-10003-exec-3] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.RuntimeException: 扣除用户余额失败
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:76)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:25:05 [pool-11-thread-1] DEBUG c.b.d.d.e.P.expiredProduct : 
+ ==>  Preparing: UPDATE product SET product_status = 2 WHERE expired_time < ? and product_status = 0  
+2019-11-11 19:25:05 [pool-11-thread-1] DEBUG c.b.d.d.e.P.expiredProduct : 
+ ==> Parameters: 2019-11-11 19:25:05.0(Timestamp) 
+2019-11-11 19:25:05 [pool-11-thread-1] INFO  com.bill.common.task.ScheduleTask : 
+ ScheduleTask.checkProduct 商品过期定时任务：null 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=13fcadd6-e566-45ba-a03e-d6e5581029aa,logTime=1573471534758 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=13fcadd6-e566-45ba-a03e-d6e5581029aa,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 1 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 1 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==>  Preparing: insert into product_order ( order_user, product_id, total, price, status, product_name, remark ) values ( ?, ?, ?, ?, ?, ?, ? )  
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==> Parameters: f(String), 1(Integer), 1(Integer), 100(Long), 1(Byte), test(String), mq(String) 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.d.d.e.P.saveSelective : 
+ <==    Updates: 1 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] INFO  com.bill.manager.UserManager : 
+ UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] ERROR com.bill.manager.UserManager : 
+ UserClient-扣除用户余额异常：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+com.netflix.hystrix.exception.HystrixRuntimeException: UserFeign#updateRemainingSum(ConsumerUserSumBO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:805)
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:790)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1451)
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1376)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1173)
+	at rx.internal.operators.OperatorSubscribeOn$1$1.onError(OperatorSubscribeOn.java:59)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1410)
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1341)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorSubscribeOn$1.call(OperatorSubscribeOn.java:94)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69)
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:71)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:97)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:76)
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:108)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:301)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:297)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46)
+	... 27 common frames omitted
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:468)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45)
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276)
+	at rx.Subscriber.setProducer(Subscriber.java:209)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10307)
+	at rx.Observable.subscribe(Observable.java:10274)
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:445)
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:342)
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:102)
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:63)
+	... 33 common frames omitted
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=13fcadd6-e566-45ba-a03e-d6e5581029aa,logTime=1573471534788 
+2019-11-11 19:25:34 [http-nio-10003-exec-8] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.RuntimeException: 扣除用户余额失败
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:76)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:26:31 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
+ AOP_BEFORE: url=http://localhost:10003/product_order/create_order,traceId=bcf30bd6-506c-4c99-80ed-27a775b7cb63,logTime=1573471591477 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] INFO  c.b.c.ProductOrderController : 
+ 更新用户余额: traceId=bcf30bd6-506c-4c99-80ed-27a775b7cb63,productSaveParamVmo={"orderUser":"f","productId":1,"remark":"mq","total":1} 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Creating new transaction with name [com.bill.service.impl.OrderServiceImpl.createOrder]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; '',-java.lang.Exception 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Acquired Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] for JDBC transaction 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Switching JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] to manual commit 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==>  Preparing: select id, product_name, total, total_sold, price, classification_id, user_name, is_delete, create_time, update_time, expired_time, product_status from product where id = ?  
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ ==> Parameters: 1(Integer) 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.a.P.selectByPrimaryKey : 
+ <==      Total: 1 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==>  Preparing: UPDATE product SET total = total - ? , total_sold = total_sold + ? WHERE id = ?  
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ ==> Parameters: 1(Integer), 1(Integer), 1(Integer) 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.soldProduct : 
+ <==    Updates: 1 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==>  Preparing: insert into product_order ( order_user, product_id, total, price, status, product_name, remark ) values ( ?, ?, ?, ?, ?, ?, ? )  
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.saveSelective : 
+ ==> Parameters: f(String), 1(Integer), 1(Integer), 100(Long), 1(Byte), test(String), mq(String) 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.d.d.e.P.saveSelective : 
+ <==    Updates: 1 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] INFO  com.bill.manager.UserManager : 
+ UserClient-扣除用户余额：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] ERROR com.bill.manager.UserManager : 
+ UserClient-扣除用户余额异常：consumerUserSumBO={"remainingSum":-100,"userName":"f"} 
+com.netflix.hystrix.exception.HystrixRuntimeException: UserFeign#updateRemainingSum(ConsumerUserSumBO) failed and no fallback available.
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:805)
+	at com.netflix.hystrix.AbstractCommand$22.call(AbstractCommand.java:790)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:140)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnFallbackHookApplication$1.onError(AbstractCommand.java:1451)
+	at com.netflix.hystrix.AbstractCommand$FallbackHookApplication$1.onError(AbstractCommand.java:1376)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorOnErrorResumeNextViaFunction$4.onError(OperatorOnErrorResumeNextViaFunction.java:142)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at com.netflix.hystrix.AbstractCommand$HystrixObservableTimeoutOperator$3.onError(AbstractCommand.java:1173)
+	at rx.internal.operators.OperatorSubscribeOn$1$1.onError(OperatorSubscribeOn.java:59)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:87)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at com.netflix.hystrix.AbstractCommand$DeprecatedOnRunHookApplication$1.onError(AbstractCommand.java:1410)
+	at com.netflix.hystrix.AbstractCommand$ExecutionHookApplication$1.onError(AbstractCommand.java:1341)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.observers.Subscribers$5.onError(Subscribers.java:230)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:44)
+	at rx.internal.operators.OnSubscribeThrow.call(OnSubscribeThrow.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:51)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:35)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorSubscribeOn$1.call(OperatorSubscribeOn.java:94)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:56)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction$1.call(HystrixContexSchedulerAction.java:47)
+	at com.netflix.hystrix.strategy.concurrency.HystrixContexSchedulerAction.call(HystrixContexSchedulerAction.java:69)
+	at rx.internal.schedulers.ScheduledAction.run(ScheduledAction.java:55)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:71)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:97)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:76)
+	at feign.hystrix.HystrixInvocationHandler$1.run(HystrixInvocationHandler.java:108)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:301)
+	at com.netflix.hystrix.HystrixCommand$2.call(HystrixCommand.java:297)
+	at rx.internal.operators.OnSubscribeDefer.call(OnSubscribeDefer.java:46)
+	... 27 common frames omitted
+Caused by: com.netflix.client.ClientException: Load balancer does not have available server for client: user
+	at com.netflix.loadbalancer.LoadBalancerContext.getServerFromLoadBalancer(LoadBalancerContext.java:468)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:184)
+	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94)
+	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42)
+	at rx.Observable.unsafeSubscribe(Observable.java:10211)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79)
+	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45)
+	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276)
+	at rx.Subscriber.setProducer(Subscriber.java:209)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138)
+	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10307)
+	at rx.Observable.subscribe(Observable.java:10274)
+	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:445)
+	at rx.observables.BlockingObservable.single(BlockingObservable.java:342)
+	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:102)
+	at org.springframework.cloud.netflix.feign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:63)
+	... 33 common frames omitted
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Initiating transaction rollback 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Rolling back JDBC transaction on Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] DEBUG c.b.c.d.DynamicDataSourceTransactionManager : 
+ Releasing JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@632de51] after transaction 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] INFO  com.bill.aspect.CommonAspect : 
+ AOP_AFTER: url=http://localhost:10003/product_order/create_order,traceId=bcf30bd6-506c-4c99-80ed-27a775b7cb63,logTime=1573471591497 
+2019-11-11 19:26:31 [http-nio-10003-exec-9] ERROR c.b.common.handle.ExceptionHandle : 
+ ExceptionHandle.Throwable 抛出的异常: 
+java.lang.RuntimeException: 扣除用户余额失败
+	at com.bill.service.impl.OrderServiceImpl.createOrder(OrderServiceImpl.java:76)
+	at com.bill.service.impl.OrderServiceImpl$$FastClassBySpringCGLIB$$1e5201e2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$d8930af6.createOrder(<generated>)
+	at com.bill.controller.ProductOrderController.createOrder(ProductOrderController.java:45)
+	at com.bill.controller.ProductOrderController$$FastClassBySpringCGLIB$$5ba65c33.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:721)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:47)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:656)
+	at com.bill.controller.ProductOrderController$$EnhancerBySpringCGLIB$$72a14466.createOrder(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:220)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:108)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:784)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:802)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1410)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-11-11 19:27:47 [main] INFO  com.bill.BillApplication : 
+ The following profiles are active: dev 
+2019-11-11 19:27:55 [main] INFO  com.bill.BillApplication : 
+ Started BillApplication in 9.507 seconds (JVM running for 10.123) 
