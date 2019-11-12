@@ -32,15 +32,15 @@ spring:
     port: 5672
     username: rabbitadmin
     password: rabbit1
+    # 开启发送确认
     publisher-confirms: true
     virtual-host: /
     listener:
-      simple:
-        concurrency: 10
-        max-concurrency: 15
-        # 手动ack
-        acknowledge-mode: manual
-        prefetch: 1
+      concurrency: 10
+      max-concurrency: 15
+      # 手动ack
+      acknowledge-mode: manual
+      prefetch: 1
 
 # 微服务注册
 eureka:
