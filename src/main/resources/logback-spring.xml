@@ -12,11 +12,11 @@
 	</appender>
 
 	<!-- 记录到文件 (每天一个文件) -->
-	<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>log/bill.log</File>
+	<appender name="applicationFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>applicationLog/application.log</File>
 		<!-- 最新的log文件名 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>log/bill%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
+			<FileNamePattern>applicationLog/application%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
 			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
@@ -25,21 +25,37 @@
 		</encoder>
 	</appender>
 
-	<!-- 将上面两个 appender 关联到我们的项目 -->
-	<logger name="com.bill" level="INFO" additivity="false">
+	<!-- 性能日志记录到文件 (每天一个文件) -->
+	<appender name="performanceFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>performanceLog/performance.log</File>
+		<!-- 最新的log文件名 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>performanceLog/performance%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
+			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
+			<charset>UTF-8</charset>  <!--解决中文乱码问题-->
+		</encoder>
+	</appender>
+
+	<!-- 将appender 关联到我们的项目 -->
+	<logger name="application" level="INFO" additivity="false">
 		<appender-ref ref="CONSOLE"/>
-		<appender-ref ref="dailyRollingFileAppender"/>
+		<appender-ref ref="applicationFileAppender"/>
+	</logger>
+	<logger name="performance" level="INFO" additivity="false">
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="performanceFileAppender"/>
 	</logger>
 
 	<springProfile name="dev">
-		<logger name="com.bill" level="DEBUG" />
+		<logger name="application" level="DEBUG" />
+		<logger name="performance" level="DEBUG" />
 	</springProfile>
 	<springProfile name="prod">
-		<logger name="com.bill" level="DEBUG" />
+		<logger name="application" level="DEBUG" />
+		<logger name="performance" level="DEBUG" />
 	</springProfile>
 
-	<!-- 其他框架的日志输出 -->
-	<!--<property name="LOG_FILE" value="log/spring-boot-blog-tmp.log"/>-->
-	<!--<logger name="org.springframework.web" level="INFO"/>   &lt;!&ndash; spring web 包下的 logger, 只输出 INFO 级别的 &ndash;&gt;-->
-	<!--<logger name="org.springframework.boot.web.filter" level="INFO"/>-->
 </configuration>

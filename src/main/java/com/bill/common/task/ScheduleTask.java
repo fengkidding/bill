@@ -1,6 +1,6 @@
 package com.bill.common.task;
 
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.model.constant.TaskConstant;
 import com.bill.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

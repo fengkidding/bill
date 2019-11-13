@@ -1,6 +1,6 @@
 package com.bill.dao.redis;
 
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.model.constant.ScriptConstant;
 import com.bill.model.enums.ResultEnum;
 import com.github.pagehelper.util.StringUtil;

@@ -1,6 +1,6 @@
 package com.bill.aspect;
 
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

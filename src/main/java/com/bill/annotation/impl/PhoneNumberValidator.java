@@ -2,7 +2,7 @@ package com.bill.annotation.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.bill.annotation.PhoneNumber;
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

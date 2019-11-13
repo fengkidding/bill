@@ -1,7 +1,7 @@
 package com.bill.manager;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.manager.client.MemberFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;

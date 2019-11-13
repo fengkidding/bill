@@ -119,17 +119,6 @@ druid:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
 
-#redis
-redis:
-    ADDR: 127.0.0.1
-    AUTH: redisl1
-    PORT: 6379
-    MAXACTIVE: -1
-    MAXIDLE: 200
-    MAXWAIT: 500
-    TIMEOUT: 500
-    TESTON_BORROW: true
-
 #mybatis
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml

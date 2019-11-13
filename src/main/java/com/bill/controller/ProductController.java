@@ -3,7 +3,7 @@ package com.bill.controller;
 import com.alibaba.fastjson.JSON;
 import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.model.conversion.ProductConversion;
 import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageParamVO;

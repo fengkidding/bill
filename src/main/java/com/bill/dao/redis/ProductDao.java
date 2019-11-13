@@ -1,7 +1,7 @@
 package com.bill.dao.redis;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.model.constant.RedisCatchConstant;
 import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.vo.common.PageVO;

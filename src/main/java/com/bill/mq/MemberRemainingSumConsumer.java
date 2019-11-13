@@ -1,7 +1,7 @@
 package com.bill.mq;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.util.LogBackUtils;
+import com.bill.common.log.LogBackUtils;
 import com.bill.manager.MemberManager;
 import com.bill.model.constant.RabbitQueueConstant;
 import com.bill.model.dto.ConsumerUserSumBO;
