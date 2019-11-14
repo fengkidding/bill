@@ -121,9 +121,11 @@ public class LogBackUtils {
      */
     public static void debug(String msg) {
         try {
-            ApplicationLog log = LogMsgFactory.getApplicationLog(LogLevel.DEBUG, msg);
-            log.setClassName(getClassName());
-            applicationLog.debug(log.toJsonString());
+            if(applicationLog.isDebugEnabled()){
+                ApplicationLog log = LogMsgFactory.getApplicationLog(LogLevel.DEBUG, msg);
+                log.setClassName(getClassName());
+                applicationLog.debug(log.toJsonString());
+            }
         } catch (Exception var2) {
         }
     }
