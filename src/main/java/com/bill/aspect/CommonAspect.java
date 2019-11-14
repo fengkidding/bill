@@ -11,7 +11,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.UUID;
 
 /**
  * aop
@@ -37,9 +36,7 @@ public class CommonAspect {
     public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
-        String uuid = UUID.randomUUID().toString();
-        request.setAttribute("traceId", uuid);
-        LogBackUtils.info("AOP_BEFORE: url=" + request.getRequestURL() + ",traceId=" + uuid + ",logTime=" + System.currentTimeMillis());
+        LogBackUtils.info("AOP_BEFORE: url=" + request.getRequestURL());
     }
 
     /**
@@ -49,7 +46,7 @@ public class CommonAspect {
     public void doAfter(JoinPoint joinPoint) {
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
-        LogBackUtils.info("AOP_AFTER: url=" + request.getRequestURL() + ",traceId=" + request.getAttribute("traceId") + ",logTime=" + System.currentTimeMillis());
+        LogBackUtils.info("AOP_AFTER: url=" + request.getRequestURL());
     }
 
 }
