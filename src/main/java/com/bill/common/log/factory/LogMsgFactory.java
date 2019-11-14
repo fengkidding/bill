@@ -9,6 +9,7 @@ import com.bill.common.util.RequestCommonUtils;
 import com.bill.config.FinalEnvConfig;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * log工厂
@@ -29,7 +30,7 @@ public class LogMsgFactory {
         ApplicationLog log = new ApplicationLog();
         log.setEnv(FinalEnvConfig.getEnv());
         log.setLogVersion("1.0.0");
-        log.setLogTime(LocalDateTime.now().toString());
+        log.setLogTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         log.setTraceId(RequestCommonUtils.getRequetHeader("trace_id"));
         LogApplicationContext context = new LogApplicationContext();
         context.setUrl(RequestCommonUtils.getUrl());
@@ -56,7 +57,7 @@ public class LogMsgFactory {
         PerformanceLog log = new PerformanceLog();
         log.setEnv(FinalEnvConfig.getEnv());
         log.setLogVersion("1.0.0");
-        log.setLogTime(LocalDateTime.now().toString());
+        log.setLogTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         log.setAppName(FinalEnvConfig.getAppName());
         log.setServerIp(RequestCommonUtils.getServerIp());
         log.setClientIp(RequestCommonUtils.getClientIp());

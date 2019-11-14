@@ -5,7 +5,7 @@
 	<!-- 控制台 -->
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<Pattern>[%-5level] %d{HH:mm:ss} %logger{36} %line: %msg %n</Pattern>
+			<Pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %logger{36} %line: %msg %n</Pattern>
 			<!-- 输出格式 --><!-- 解决中文乱码问题 -->
 			<charset>UTF-8</charset>
 		</encoder>
@@ -20,7 +20,7 @@
 			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
-			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
+			<Pattern>%msg %n</Pattern>
 			<charset>UTF-8</charset>  <!--解决中文乱码问题-->
 		</encoder>
 	</appender>
@@ -34,7 +34,7 @@
 			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
-			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{35} : %n %msg %n</Pattern>
+			<Pattern>%msg %n</Pattern>
 			<charset>UTF-8</charset>  <!--解决中文乱码问题-->
 		</encoder>
 	</appender>
