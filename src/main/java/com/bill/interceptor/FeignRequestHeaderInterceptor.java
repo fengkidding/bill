@@ -1,6 +1,7 @@
 package com.bill.interceptor;
 
 import com.bill.common.util.AuthContextUtils;
+import com.bill.common.util.RequestCommonUtils;
 import com.bill.model.constant.AuthConstant;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -26,6 +27,7 @@ public class FeignRequestHeaderInterceptor implements RequestInterceptor {
         String memberId = AuthContextUtils.getMemberId();
         if (StringUtils.isNotBlank(memberId)) {
             requestTemplate.header(AuthConstant.MEMBER_ID, memberId);
+            requestTemplate.header("trace_id", RequestCommonUtils.getRequetHeader("trace_id"));
         }
     }
 }
