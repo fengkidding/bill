@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class ProductBill {
     private Integer id;
 
-    private String billUser;
+    private Integer memberId;
 
     private Long assetsMoney;
 
@@ -14,6 +14,8 @@ public class ProductBill {
     private Long rightsMoney;
 
     private String rightsRemark;
+
+    private Boolean isDelete;
 
     private LocalDateTime createTime;
 
@@ -29,12 +31,12 @@ public class ProductBill {
         this.id = id;
     }
 
-    public String getBillUser() {
-        return billUser;
+    public Integer getMemberId() {
+        return memberId;
     }
 
-    public void setBillUser(String billUser) {
-        this.billUser = billUser == null ? null : billUser.trim();
+    public void setMemberId(Integer memberId) {
+        this.memberId = memberId;
     }
 
     public Long getAssetsMoney() {
@@ -67,6 +69,14 @@ public class ProductBill {
 
     public void setRightsRemark(String rightsRemark) {
         this.rightsRemark = rightsRemark == null ? null : rightsRemark.trim();
+    }
+
+    public Boolean getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Boolean isDelete) {
+        this.isDelete = isDelete;
     }
 
     public LocalDateTime getCreateTime() {

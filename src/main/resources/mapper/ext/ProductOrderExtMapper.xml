@@ -3,7 +3,7 @@
 <mapper namespace="com.bill.dao.db.ext.ProductOrderExtMapper">
   <resultMap id="ListOrderMap" type="com.bill.model.po.auto.ProductOrder">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="order_user" jdbcType="CHAR" property="orderUser" />
+    <result column="member_id" jdbcType="INTEGER" property="memberId" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="price" jdbcType="BIGINT" property="price" />
@@ -14,7 +14,7 @@
     <result column="remark" jdbcType="CHAR" property="remark" />
   </resultMap>
   <sql id="BaseColumnList">
-    id, order_user, product_id, total, price, status, create_time, update_time, product_name ,remark
+    id, member_id, product_id, total, price, status, create_time, update_time, product_name ,remark
   </sql>
   <insert id="saveSelective" parameterType="com.bill.model.po.auto.ProductOrder" useGeneratedKeys="true" keyProperty="id">
     insert into product_order
@@ -22,8 +22,8 @@
       <if test="id != null">
         id,
       </if>
-      <if test="orderUser != null">
-        order_user,
+      <if test="memberId != null">
+        member_id,
       </if>
       <if test="productId != null">
         product_id,
@@ -54,8 +54,8 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="orderUser != null">
-        #{orderUser,jdbcType=CHAR},
+      <if test="memberId != null">
+        #{memberId,jdbcType=CHAR},
       </if>
       <if test="productId != null">
         #{productId,jdbcType=INTEGER},
@@ -87,14 +87,14 @@
   <select id="listOrder" parameterType="java.lang.String" resultMap="ListOrderMap">
     SELECT <include refid="BaseColumnList"></include>
     FROM product_order
-    WHERE order_user = #{userName}
+    WHERE member_id = #{memberId}
     ORDER BY create_time DESC
   </select>
 
   <select id="listOrderAndDate" resultMap="ListOrderMap">
     SELECT <include refid="BaseColumnList"></include>
     FROM product_order
-    WHERE order_user = #{userName}
+    WHERE member_id = #{memberId}
     AND create_time BETWEEN #{startTime} AND #{endTime}
   </select>
   

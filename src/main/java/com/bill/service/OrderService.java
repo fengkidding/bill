@@ -27,18 +27,18 @@ public interface OrderService {
     /**
      * 分页根据用户查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, String userName);
+    PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, Integer memberId);
 
     /**
      * 根据用户查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    List<ProductOrder> listProductOrder(String userName, LocalDateTime startTime, LocalDateTime endTime);
+    List<ProductOrder> listProductOrder(Integer memberId, LocalDateTime startTime, LocalDateTime endTime);
 
     /**
      * 根据id查询订单

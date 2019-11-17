@@ -6,7 +6,6 @@ import com.bill.manager.client.MemberFeign;
 import com.bill.model.dto.ConsumerUserSumBO;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.vo.common.ResultVO;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,15 +24,15 @@ public class MemberManager {
     /**
      * 更新用户余额
      *
-     * @param userName
+     * @param memberId
      * @param remainingSum
      * @return
      */
-    public boolean updateRemainingSum(String userName, Long remainingSum) {
+    public boolean updateRemainingSum(Integer memberId, Long remainingSum) {
         boolean result = false;
-        if (StringUtils.isNotEmpty(userName)) {
+        if (null != memberId) {
             ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
-            consumerUserSumBO.setUserName(userName);
+            consumerUserSumBO.setMemberId(memberId);
             consumerUserSumBO.setRemainingSum(remainingSum);
             LogBackUtils.info("MemberClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             try {

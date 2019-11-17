@@ -5,13 +5,15 @@ import java.time.LocalDateTime;
 public class ProductOrder {
     private Integer id;
 
-    private String orderUser;
+    private Integer memberId;
 
     private Integer productId;
 
     private Integer total;
 
     private Long price;
+
+    private Boolean isDelete;
 
     private Byte status;
 
@@ -31,12 +33,12 @@ public class ProductOrder {
         this.id = id;
     }
 
-    public String getOrderUser() {
-        return orderUser;
+    public Integer getMemberId() {
+        return memberId;
     }
 
-    public void setOrderUser(String orderUser) {
-        this.orderUser = orderUser == null ? null : orderUser.trim();
+    public void setMemberId(Integer memberId) {
+        this.memberId = memberId;
     }
 
     public Integer getProductId() {
@@ -61,6 +63,14 @@ public class ProductOrder {
 
     public void setPrice(Long price) {
         this.price = price;
+    }
+
+    public Boolean getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Boolean isDelete) {
+        this.isDelete = isDelete;
     }
 
     public Byte getStatus() {

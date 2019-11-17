@@ -15,17 +15,13 @@ public class Product {
 
     private Integer classificationId;
 
-    private String userName;
+    private Integer memberId;
 
     private Boolean isDelete;
 
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
-
-    private LocalDateTime expiredTime;
-
-    private Byte productStatus;
 
     public Integer getId() {
         return id;
@@ -75,12 +71,12 @@ public class Product {
         this.classificationId = classificationId;
     }
 
-    public String getUserName() {
-        return userName;
+    public Integer getMemberId() {
+        return memberId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setMemberId(Integer memberId) {
+        this.memberId = memberId;
     }
 
     public Boolean getIsDelete() {
@@ -105,21 +101,5 @@ public class Product {
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
-    }
-
-    public LocalDateTime getExpiredTime() {
-        return expiredTime;
-    }
-
-    public void setExpiredTime(LocalDateTime expiredTime) {
-        this.expiredTime = expiredTime;
-    }
-
-    public Byte getProductStatus() {
-        return productStatus;
-    }
-
-    public void setProductStatus(Byte productStatus) {
-        this.productStatus = productStatus;
     }
 }

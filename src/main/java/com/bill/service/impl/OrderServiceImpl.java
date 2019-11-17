@@ -2,12 +2,16 @@ package com.bill.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.bill.common.util.ComputeUtils;
+import com.bill.common.util.RequestCommonUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.MemberManager;
+import com.bill.model.constant.AuthConstant;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
 import com.bill.model.dto.ConsumerUserSumBO;
+import com.bill.model.enums.ResultEnum;
+import com.bill.model.exception.ServiceException;
 import com.bill.model.po.auto.Product;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
@@ -25,6 +29,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -58,13 +63,19 @@ public class OrderServiceImpl implements OrderService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public Integer createOrder(OrderParamVO orderParamVmo) {
+        String member = RequestCommonUtils.getRequetHeader(AuthConstant.MEMBER_ID);
+        if (StringUtils.isEmpty(member)) {
+            throw new ServiceException(ResultEnum.MEMBER_LOGIN_ERROR);
+        }
+        Integer memberId = Integer.valueOf(member);
+
         //更新商品
         Product product = productService.getProduct(orderParamVmo.getProductId());
         productService.soldProduct(orderParamVmo.getProductId(), orderParamVmo.getTotal());
 
         //保存订单信息
         ProductOrder productOrder = new ProductOrder();
-        productOrder.setOrderUser(orderParamVmo.getOrderUser());
+        productOrder.setMemberId(memberId);
         productOrder.setProductId(orderParamVmo.getProductId());
         productOrder.setRemark(orderParamVmo.getRemark());
         productOrder.setProductName(product.getProductName());
@@ -75,14 +86,14 @@ public class OrderServiceImpl implements OrderService {
         productOrderExtMapper.saveSelective(productOrder);
 
         //扣除用户余额
-        boolean result = memberManager.updateRemainingSum(orderParamVmo.getOrderUser(), -price);
+        boolean result = memberManager.updateRemainingSum(memberId, -price);
         if (!result) {
             throw new RuntimeException("扣除用户余额失败");
         }
 
         //用户收钱
         ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
-        consumerUserSumBO.setUserName(product.getUserName());
+        consumerUserSumBO.setMemberId(memberId);
         consumerUserSumBO.setRemainingSum(price);
         Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
                 .setContentType(MessageProperties.CONTENT_TYPE_JSON)
@@ -95,14 +106,14 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 分页根据用户查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
     @Override
-    public PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, String userName) {
+    public PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, Integer memberId) {
         PageVO<List<QueryOrderVO>> pageVmo = new PageVO<>();
         Page page = PageHelper.startPage(pageNum, pageSize);
-        List<ProductOrder> list = productOrderExtMapper.listOrder(userName);
+        List<ProductOrder> list = productOrderExtMapper.listOrder(memberId);
         pageVmo.setTotal(page.getTotal());
         if (!CollectionUtils.isEmpty(list)) {
             List<QueryOrderVO> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);
@@ -117,12 +128,12 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 根据用户查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
     @Override
-    public List<ProductOrder> listProductOrder(String userName, LocalDateTime startTime, LocalDateTime endTime) {
-        return productOrderExtMapper.listOrderAndDate(userName, startTime, endTime);
+    public List<ProductOrder> listProductOrder(Integer memberId, LocalDateTime startTime, LocalDateTime endTime) {
+        return productOrderExtMapper.listOrderAndDate(memberId, startTime, endTime);
     }
 
     /**

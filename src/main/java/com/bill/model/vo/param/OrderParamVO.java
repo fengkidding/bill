@@ -16,10 +16,6 @@ import javax.validation.constraints.NotNull;
 @ApiModel(value = "用户下单参数")
 public class OrderParamVO {
 
-    @ApiModelProperty(value = "下单用户", example = "f")
-    @NotBlank(message = "下单用户不能为空！")
-    private String orderUser;
-
     @ApiModelProperty(value = "产品id")
     @NotNull(message = "产品id不能为null！")
     private Integer productId;
@@ -30,14 +26,6 @@ public class OrderParamVO {
 
     @ApiModelProperty(value = "备注")
     private String remark;
-
-    public String getOrderUser() {
-        return orderUser;
-    }
-
-    public void setOrderUser(String orderUser) {
-        this.orderUser = orderUser;
-    }
 
     public Integer getProductId() {
         return productId;

@@ -3,10 +3,11 @@
 <mapper namespace="com.bill.dao.db.auto.ProductOrderMapper">
   <resultMap id="BaseResultMap" type="com.bill.model.po.auto.ProductOrder">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="order_user" jdbcType="CHAR" property="orderUser" />
+    <result column="member_id" jdbcType="INTEGER" property="memberId" />
     <result column="product_id" jdbcType="INTEGER" property="productId" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="price" jdbcType="BIGINT" property="price" />
+    <result column="is_delete" jdbcType="BIT" property="isDelete" />
     <result column="status" jdbcType="TINYINT" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -14,8 +15,8 @@
     <result column="remark" jdbcType="VARCHAR" property="remark" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, order_user, product_id, total, price, status, create_time, update_time, product_name, 
-    remark
+    id, member_id, product_id, total, price, is_delete, status, create_time, update_time, 
+    product_name, remark
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -28,14 +29,14 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.bill.model.po.auto.ProductOrder">
-    insert into product_order (id, order_user, product_id, 
-      total, price, status, 
-      create_time, update_time, product_name, 
-      remark)
-    values (#{id,jdbcType=INTEGER}, #{orderUser,jdbcType=CHAR}, #{productId,jdbcType=INTEGER}, 
-      #{total,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{status,jdbcType=TINYINT}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{productName,jdbcType=CHAR}, 
-      #{remark,jdbcType=VARCHAR})
+    insert into product_order (id, member_id, product_id, 
+      total, price, is_delete, 
+      status, create_time, update_time, 
+      product_name, remark)
+    values (#{id,jdbcType=INTEGER}, #{memberId,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, 
+      #{total,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{isDelete,jdbcType=BIT}, 
+      #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{productName,jdbcType=CHAR}, #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.bill.model.po.auto.ProductOrder">
     insert into product_order
@@ -43,8 +44,8 @@
       <if test="id != null">
         id,
       </if>
-      <if test="orderUser != null">
-        order_user,
+      <if test="memberId != null">
+        member_id,
       </if>
       <if test="productId != null">
         product_id,
@@ -54,6 +55,9 @@
       </if>
       <if test="price != null">
         price,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
       </if>
       <if test="status != null">
         status,
@@ -75,8 +79,8 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="orderUser != null">
-        #{orderUser,jdbcType=CHAR},
+      <if test="memberId != null">
+        #{memberId,jdbcType=INTEGER},
       </if>
       <if test="productId != null">
         #{productId,jdbcType=INTEGER},
@@ -86,6 +90,9 @@
       </if>
       <if test="price != null">
         #{price,jdbcType=BIGINT},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=BIT},
       </if>
       <if test="status != null">
         #{status,jdbcType=TINYINT},
@@ -107,8 +114,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.po.auto.ProductOrder">
     update product_order
     <set>
-      <if test="orderUser != null">
-        order_user = #{orderUser,jdbcType=CHAR},
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=INTEGER},
       </if>
       <if test="productId != null">
         product_id = #{productId,jdbcType=INTEGER},
@@ -118,6 +125,9 @@
       </if>
       <if test="price != null">
         price = #{price,jdbcType=BIGINT},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=BIT},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=TINYINT},
@@ -139,10 +149,11 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.bill.model.po.auto.ProductOrder">
     update product_order
-    set order_user = #{orderUser,jdbcType=CHAR},
+    set member_id = #{memberId,jdbcType=INTEGER},
       product_id = #{productId,jdbcType=INTEGER},
       total = #{total,jdbcType=INTEGER},
       price = #{price,jdbcType=BIGINT},
+      is_delete = #{isDelete,jdbcType=BIT},
       status = #{status,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},

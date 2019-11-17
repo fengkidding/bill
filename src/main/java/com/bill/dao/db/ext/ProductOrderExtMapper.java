@@ -25,18 +25,18 @@ public interface ProductOrderExtMapper {
     /**
      * 根据用户查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    List<ProductOrder> listOrder(@Param("userName") String userName);
+    List<ProductOrder> listOrder(@Param("memberId") Integer memberId);
 
     /**
      * 根据用户,时间查询订单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    List<ProductOrder> listOrderAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
+    List<ProductOrder> listOrderAndDate(@Param("memberId") Integer memberId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 
     /**
      * 根据id查询订单
