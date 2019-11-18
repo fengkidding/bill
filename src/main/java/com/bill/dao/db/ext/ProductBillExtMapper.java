@@ -18,17 +18,17 @@ public interface ProductBillExtMapper extends ProductBillMapper {
     /**
      * 根据用户查询账单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    List<ProductBill> listProductBill(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("classificationId") Integer classificationId);
+    List<ProductBill> listProductBill(@Param("memberId") Integer memberId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime, @Param("classificationId") Integer classificationId);
 
     /**
      * 根据用户,时间查询账单
      *
-     * @param userName
+     * @param memberId
      * @return
      */
-    List<ProductBill> listProductBillAndDate(@Param("userName") String userName, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
+    List<ProductBill> listProductBillAndDate(@Param("memberId") Integer memberId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 
 }

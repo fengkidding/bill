@@ -16,10 +16,6 @@ import java.math.BigDecimal;
 @ApiModel(value = "入账参数")
 public class BillParamVO {
 
-    @ApiModelProperty(value = "用户", example = "f")
-    @NotBlank(message = "用户不能为空！")
-    private String billUser;
-
     @ApiModelProperty(value = "金额")
     @NotNull(message = "金额不能为null！")
     private BigDecimal money;
@@ -30,14 +26,6 @@ public class BillParamVO {
     @ApiModelProperty(value = "分类id")
     @NotNull(message = "分类id不能为null！")
     private Integer classificationId;
-
-    public String getBillUser() {
-        return billUser;
-    }
-
-    public void setBillUser(String billUser) {
-        this.billUser = billUser;
-    }
 
     public String getRemark() {
         return remark;

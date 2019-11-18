@@ -5,7 +5,7 @@
   <select id="listProductBill" resultType="com.bill.model.po.auto.ProductBill">
     SELECT assets_remark, rights_remark, create_time ,classification_id
     FROM product_bill
-    WHERE bill_user = #{userName} AND create_time BETWEEN #{startTime} AND #{endTime}
+    WHERE member_id = #{memberId} AND create_time BETWEEN #{startTime} AND #{endTime}
     <if test="classificationId != null">
       AND classification_id = #{classificationId}
     </if>
@@ -15,7 +15,7 @@
   <select id="listProductBillAndDate" resultType="com.bill.model.po.auto.ProductBill">
     SELECT classification_id, assets_money, rights_money
     FROM product_bill
-    WHERE bill_user = #{userName}
+    WHERE member_id = #{memberId}
     AND create_time BETWEEN #{startTime} AND #{endTime}
   </select>
 </mapper>

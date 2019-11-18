@@ -17,10 +17,6 @@ import java.time.LocalDateTime;
 @ApiModel(value = "统计账单参数")
 public class StatisticsBillParamVO {
 
-    @ApiModelProperty(value = "用户名称", example = "f")
-    @NotBlank(message = "用户不能为空！")
-    private String userName;
-
     @ApiModelProperty(value = "开始时间", example = "2019-07-01 00:00:00")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @NotNull(message = "开始时间不能为null！")
@@ -30,14 +26,6 @@ public class StatisticsBillParamVO {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @NotNull(message = "结束时间不能为null！")
     private LocalDateTime endTime;
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 
     public LocalDateTime getStartTime() {
         return startTime;

@@ -1,17 +1,18 @@
 package com.bill.service.impl;
 
+import com.bill.common.util.AuthContextUtils;
 import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductBillExtMapper;
 import com.bill.model.constant.BillConstant;
 import com.bill.model.conversion.ProductBillConversion;
+import com.bill.model.enums.TypeEnum;
 import com.bill.model.po.auto.Classification;
 import com.bill.model.po.auto.ProductBill;
-import com.bill.model.enums.TypeEnum;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.BillParamVO;
+import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.UserPageParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 import com.bill.service.ClassificationSerrvice;
@@ -48,23 +49,26 @@ public class ProductBillServiceImpl implements ProductBillService {
      */
     @Override
     public void saveProductBill(ProductBill productBill) {
+        Integer memberId = AuthContextUtils.getLoginMemberId();
+        productBill.setMemberId(memberId);
         productBillExtMapper.insertSelective(productBill);
     }
 
     /**
      * 根据用户查询账单
      *
-     * @param userPageParamVmo
+     * @param queryBillParamVO
      * @return
      */
     @Override
-    public PageVO<List<QueryProductBillVO>> listProductBill(UserPageParamVO userPageParamVmo) {
-        if (!CheckBeanUtils.checkNotNullZero(userPageParamVmo.getClassificationId())) {
-            userPageParamVmo.setClassificationId(null);
+    public PageVO<List<QueryProductBillVO>> listProductBill(QueryBillParamVO queryBillParamVO) {
+        Integer memberId = AuthContextUtils.getLoginMemberId();
+        if (!CheckBeanUtils.checkNotNullZero(queryBillParamVO.getClassificationId())) {
+            queryBillParamVO.setClassificationId(null);
         }
         PageVO<List<QueryProductBillVO>> pageVmo = new PageVO<>();
-        Page page = PageHelper.startPage(userPageParamVmo.getPageNum(), userPageParamVmo.getPageSize());
-        List<ProductBill> list = productBillExtMapper.listProductBill(userPageParamVmo.getUserName(), userPageParamVmo.getStartTime(), userPageParamVmo.getEndTime(), userPageParamVmo.getClassificationId());
+        Page page = PageHelper.startPage(queryBillParamVO.getPageNum(), queryBillParamVO.getPageSize());
+        List<ProductBill> list = productBillExtMapper.listProductBill(memberId, queryBillParamVO.getStartTime(), queryBillParamVO.getEndTime(), queryBillParamVO.getClassificationId());
         if (!CollectionUtils.isEmpty(list)) {
             List<QueryProductBillVO> vmoList = ProductBillConversion.PRODUCT_BILL_CONVERSION.entityToVmo(list);
             pageVmo.setTotal(page.getTotal());
@@ -80,11 +84,12 @@ public class ProductBillServiceImpl implements ProductBillService {
      */
     @Override
     public void saveProductBill(BillParamVO billParamVmo) {
+        Integer memberId = AuthContextUtils.getLoginMemberId();
         Long money = ComputeUtils.getFen(billParamVmo.getMoney());
 
         //添加账单信息
         ProductBill productBill = new ProductBill();
-        productBill.setBillUser(billParamVmo.getBillUser());
+        productBill.setMemberId(memberId);
         productBill.setAssetsMoney(money);
         productBill.setAssetsRemark(billParamVmo.getRemark() + BillConstant.MONEY_CHANGE + billParamVmo.getMoney());
         productBill.setRightsMoney(money);
@@ -101,8 +106,9 @@ public class ProductBillServiceImpl implements ProductBillService {
      */
     @Override
     public List<StatisticsBillVO> statisticsBill(StatisticsBillParamVO statisticsBillParamVmo) {
+        Integer memberId = AuthContextUtils.getLoginMemberId();
         List<StatisticsBillVO> result = new LinkedList<>();
-        List<ProductBill> bills = productBillExtMapper.listProductBillAndDate(statisticsBillParamVmo.getUserName(), statisticsBillParamVmo.getStartTime(), statisticsBillParamVmo.getEndTime());
+        List<ProductBill> bills = productBillExtMapper.listProductBillAndDate(memberId, statisticsBillParamVmo.getStartTime(), statisticsBillParamVmo.getEndTime());
         if (!CollectionUtils.isEmpty(bills)) {
             Long assetsMoney = 0L;
             Long rightsMoney = 0L;

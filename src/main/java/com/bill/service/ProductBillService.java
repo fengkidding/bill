@@ -3,8 +3,9 @@ package com.bill.service;
 import com.bill.model.po.auto.ProductBill;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.BillParamVO;
+import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.UserPageParamVO;
+import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 
@@ -28,10 +29,10 @@ public interface ProductBillService {
     /**
      * 根据用户查询账单
      *
-     * @param userPageParamVmo
+     * @param queryBillParamVO
      * @return
      */
-    PageVO<List<QueryProductBillVO>> listProductBill(UserPageParamVO userPageParamVmo);
+    PageVO<List<QueryProductBillVO>> listProductBill(QueryBillParamVO queryBillParamVO);
 
     /**
      * 保存入账信息

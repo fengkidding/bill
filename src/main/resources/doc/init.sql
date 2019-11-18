@@ -75,3 +75,5 @@ CREATE TABLE `commerce`.`classification` (
 ALTER TABLE `commerce`.`product` ADD column `expired_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '过期时间',
   ADD COLUMN `product_status` TINYINT(2) NOT NULL DEFAULT 0 COMMENT '状态：0售卖，1下架，2过期';
 
+-- 订单增加分类id
+ALTER TABLE `commerce`.`product_order` ADD column `classification_id` int(11) NOT NULL DEFAULT '0' COMMENT '分类id';

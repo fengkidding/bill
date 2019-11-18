@@ -49,7 +49,7 @@ public class ClassificationController extends BaseController {
      * @return
      */
     @ApiOperation(value = "分页查询商品分类接口")
-    @GetMapping(value = "listClassification")
+    @GetMapping(value = "/listClassification")
     public ResultVO<ClassificationVO> listClassification(@Valid PageParamVO pageParamVmo) {
         return super.resultSuccess(classificationSerrvice.listClassification(pageParamVmo));
     }

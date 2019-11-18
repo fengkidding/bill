@@ -8,6 +8,9 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 /**
  * 日志工具类
  *
@@ -48,6 +51,22 @@ public class LogBackUtils {
         try {
             ApplicationLog log = LogMsgFactory.getApplicationLog(LogLevel.ERROR, msg);
             log.setClassName(getClassName());
+            applicationLog.error(log.toJsonString());
+        } catch (Exception var2) {
+        }
+    }
+
+    /**
+     * 错误日志
+     *
+     * @param msg
+     * @param e
+     */
+    public static void error(String msg, Throwable e) {
+        try {
+            ApplicationLog log = LogMsgFactory.getApplicationLog(LogLevel.ERROR, msg);
+            log.setClassName(getClassName());
+            log.setStackMessage(LogBackUtils.getStackMessage(e));
             applicationLog.error(log.toJsonString());
         } catch (Exception var2) {
         }
@@ -185,4 +204,17 @@ public class LogBackUtils {
         return msg;
     }
 
+    /**
+     * 获取堆栈信息
+     *
+     * @param throwable
+     * @return
+     */
+    public static String getStackMessage(Throwable throwable) {
+        StringWriter sw = new StringWriter();
+        try (PrintWriter pw = new PrintWriter(sw)) {
+            throwable.printStackTrace(pw);
+            return sw.toString();
+        }
+    }
 }

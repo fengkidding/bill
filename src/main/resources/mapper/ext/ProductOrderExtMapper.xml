@@ -7,14 +7,17 @@
     <result column="product_id" jdbcType="INTEGER" property="productId" />
     <result column="total" jdbcType="INTEGER" property="total" />
     <result column="price" jdbcType="BIGINT" property="price" />
+    <result column="is_delete" jdbcType="BIT" property="isDelete" />
     <result column="status" jdbcType="TINYINT" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="product_name" jdbcType="CHAR" property="productName" />
-    <result column="remark" jdbcType="CHAR" property="remark" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="classification_id" jdbcType="INTEGER" property="classificationId" />
   </resultMap>
   <sql id="BaseColumnList">
-    id, member_id, product_id, total, price, status, create_time, update_time, product_name ,remark
+    id, member_id, product_id, total, price, is_delete, status, create_time, update_time,
+    product_name, remark, classification_id
   </sql>
   <insert id="saveSelective" parameterType="com.bill.model.po.auto.ProductOrder" useGeneratedKeys="true" keyProperty="id">
     insert into product_order
@@ -49,6 +52,9 @@
       <if test="remark != null">
         remark,
       </if>
+      <if test="classificationId != null">
+        classification_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -81,6 +87,9 @@
       <if test="remark != null">
         #{remark,jdbcType=VARCHAR},
       </if>
+      <if test="classificationId != null">
+        #{classificationId,jdbcType=INTEGER},
+      </if>
     </trim>
   </insert>
 
@@ -88,6 +97,9 @@
     SELECT <include refid="BaseColumnList"></include>
     FROM product_order
     WHERE member_id = #{memberId}
+    <if test="classificationId != null">
+      and classification_id = #{classificationId}
+    </if>
     ORDER BY create_time DESC
   </select>
 

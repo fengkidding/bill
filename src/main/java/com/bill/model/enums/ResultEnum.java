@@ -32,6 +32,10 @@ public enum ResultEnum {
      */
     FALL_BACK(4, "服务异常，触发熔断！"),
     /**
+     * 用户名或密码不正确！
+     */
+    MEMBER_NAME_PASSWORD_ERROR(5, "用户名或密码不正确！"),
+    /**
      * 用户未登陆！
      */
     MEMBER_LOGIN_ERROR(6, "用户未登陆！"),

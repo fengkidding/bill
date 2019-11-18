@@ -1,21 +1,20 @@
 package com.bill.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.bill.common.util.AuthContextUtils;
+import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
-import com.bill.common.util.RequestCommonUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.MemberManager;
-import com.bill.model.constant.AuthConstant;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
 import com.bill.model.dto.ConsumerUserSumBO;
-import com.bill.model.enums.ResultEnum;
-import com.bill.model.exception.ServiceException;
 import com.bill.model.po.auto.Product;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
 import com.bill.service.ProductService;
@@ -29,7 +28,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -63,11 +61,7 @@ public class OrderServiceImpl implements OrderService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public Integer createOrder(OrderParamVO orderParamVmo) {
-        String member = RequestCommonUtils.getRequetHeader(AuthConstant.MEMBER_ID);
-        if (StringUtils.isEmpty(member)) {
-            throw new ServiceException(ResultEnum.MEMBER_LOGIN_ERROR);
-        }
-        Integer memberId = Integer.valueOf(member);
+        Integer memberId = AuthContextUtils.getLoginMemberId();
 
         //更新商品
         Product product = productService.getProduct(orderParamVmo.getProductId());
@@ -83,6 +77,7 @@ public class OrderServiceImpl implements OrderService {
         productOrder.setStatus((byte) 1);
         Long price = orderParamVmo.getTotal() * product.getPrice();
         productOrder.setPrice(price);
+        productOrder.setClassificationId(product.getClassificationId());
         productOrderExtMapper.saveSelective(productOrder);
 
         //扣除用户余额
@@ -93,7 +88,7 @@ public class OrderServiceImpl implements OrderService {
 
         //用户收钱
         ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
-        consumerUserSumBO.setMemberId(memberId);
+        consumerUserSumBO.setMemberId(product.getMemberId());
         consumerUserSumBO.setRemainingSum(price);
         Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
                 .setContentType(MessageProperties.CONTENT_TYPE_JSON)
@@ -110,10 +105,13 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
-    public PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, Integer memberId) {
+    public PageVO<List<QueryOrderVO>> listOrder(QueryOrderParamVO orderPageParamVmo, Integer memberId) {
         PageVO<List<QueryOrderVO>> pageVmo = new PageVO<>();
-        Page page = PageHelper.startPage(pageNum, pageSize);
-        List<ProductOrder> list = productOrderExtMapper.listOrder(memberId);
+        if (!CheckBeanUtils.checkNotNullZero(orderPageParamVmo.getClassificationId())) {
+            orderPageParamVmo.setClassificationId(null);
+        }
+        Page page = PageHelper.startPage(orderPageParamVmo.getPageNum(), orderPageParamVmo.getPageSize());
+        List<ProductOrder> list = productOrderExtMapper.listOrder(memberId,orderPageParamVmo.getClassificationId());
         pageVmo.setTotal(page.getTotal());
         if (!CollectionUtils.isEmpty(list)) {
             List<QueryOrderVO> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);

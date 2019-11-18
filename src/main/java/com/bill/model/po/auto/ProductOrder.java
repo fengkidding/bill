@@ -25,6 +25,8 @@ public class ProductOrder {
 
     private String remark;
 
+    private Integer classificationId;
+
     public Integer getId() {
         return id;
     }
@@ -111,5 +113,13 @@ public class ProductOrder {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public Integer getClassificationId() {
+        return classificationId;
+    }
+
+    public void setClassificationId(Integer classificationId) {
+        this.classificationId = classificationId;
     }
 }

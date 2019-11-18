@@ -8,6 +8,8 @@ import feign.RequestTemplate;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
+import java.util.UUID;
+
 /**
  * Feign调用增加鉴权信息
  *
@@ -27,7 +29,12 @@ public class FeignRequestHeaderInterceptor implements RequestInterceptor {
         String memberId = AuthContextUtils.getMemberId();
         if (StringUtils.isNotBlank(memberId)) {
             requestTemplate.header(AuthConstant.MEMBER_ID, memberId);
-            requestTemplate.header("trace_id", RequestCommonUtils.getRequetHeader("trace_id"));
+        }
+        String trace_id = RequestCommonUtils.getRequetHeader(AuthConstant.TRACE_ID);
+        if (StringUtils.isNotEmpty(trace_id)) {
+            requestTemplate.header(AuthConstant.TRACE_ID, trace_id);
+        } else {
+            requestTemplate.header(AuthConstant.TRACE_ID, UUID.randomUUID().toString());
         }
     }
 }

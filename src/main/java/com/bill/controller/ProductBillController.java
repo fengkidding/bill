@@ -5,8 +5,9 @@ import com.bill.common.log.LogBackUtils;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.BillParamVO;
+import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.UserPageParamVO;
+import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 import com.bill.service.ProductBillService;
@@ -38,13 +39,13 @@ public class ProductBillController extends BaseController {
     /**
      * 分页查询商品账单列表
      *
-     * @param userPageParamVmo
+     * @param queryBillParamVO
      * @return
      */
     @ApiOperation(value = "分页查询商品账单列表")
     @PostMapping(value = "/list_product_bill")
-    public ResultVO<PageVO<List<QueryProductBillVO>>> listProductBill(@RequestBody @Valid UserPageParamVO userPageParamVmo) {
-        PageVO<List<QueryProductBillVO>> pageVmo = productBillService.listProductBill(userPageParamVmo);
+    public ResultVO<PageVO<List<QueryProductBillVO>>> listProductBill(@RequestBody @Valid QueryBillParamVO queryBillParamVO) {
+        PageVO<List<QueryProductBillVO>> pageVmo = productBillService.listProductBill(queryBillParamVO);
         return super.resultSuccess(pageVmo);
     }
 

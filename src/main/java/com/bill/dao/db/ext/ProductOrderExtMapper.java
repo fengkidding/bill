@@ -28,7 +28,7 @@ public interface ProductOrderExtMapper {
      * @param memberId
      * @return
      */
-    List<ProductOrder> listOrder(@Param("memberId") Integer memberId);
+    List<ProductOrder> listOrder(@Param("memberId") Integer memberId, @Param("classificationId") Integer classificationId);
 
     /**
      * 根据用户,时间查询订单

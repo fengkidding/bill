@@ -24,9 +24,6 @@ public class ProductSaveParamVO {
     @ApiModelProperty(value = "商品名称")
     private String productName;
 
-    @ApiModelProperty(value = "用户")
-    private String userName;
-
     @ApiModelProperty(value = "商品库存")
     private Integer total;
 
@@ -56,14 +53,6 @@ public class ProductSaveParamVO {
 
     public void setProductName(String productName) {
         this.productName = productName == null ? null : productName.trim();
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public Integer getTotal() {

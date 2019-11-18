@@ -4,6 +4,7 @@ package com.bill.service;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;
 
 import java.time.LocalDateTime;
@@ -30,7 +31,7 @@ public interface OrderService {
      * @param memberId
      * @return
      */
-    PageVO<List<QueryOrderVO>> listOrder(Integer pageNum, Integer pageSize, Integer memberId);
+    PageVO<List<QueryOrderVO>> listOrder(QueryOrderParamVO orderPageParamVmo, Integer memberId);
 
     /**
      * 根据用户查询订单

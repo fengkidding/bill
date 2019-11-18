@@ -40,7 +40,7 @@ public class MemberRemainingSumConsumer {
             if (null != consumerUserSumBO) {
                 Long remainingSum = consumerUserSumBO.getRemainingSum();
                 remainingSum = remainingSum - 100;
-                memberManager.updateRemainingSum(consumerUserSumBO.getUserName(), remainingSum);
+                memberManager.updateRemainingSum(consumerUserSumBO.getMemberId(), remainingSum);
             }
         } catch (Exception e) {
             LogBackUtils.error("MemberRemainingSumConsumer.updateMemberRemainingSum异常 message=" + JSON.toJSONString(message), e);
