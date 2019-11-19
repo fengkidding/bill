@@ -19,6 +19,8 @@ import java.time.format.DateTimeFormatter;
  */
 public class LogMsgFactory {
 
+    private static DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
     /**
      * 获取普通日志对象
      *
@@ -30,7 +32,7 @@ public class LogMsgFactory {
         ApplicationLog log = new ApplicationLog();
         log.setEnv(FinalEnvConfig.getEnv());
         log.setLogVersion("1.0.0");
-        log.setLogTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        log.setLogTime(LocalDateTime.now().format(dateTimeFormatter));
         log.setTraceId(RequestCommonUtils.getRequetHeader("trace_id"));
         LogApplicationContext context = new LogApplicationContext();
         context.setUrl(RequestCommonUtils.getUrl());
@@ -39,7 +41,6 @@ public class LogMsgFactory {
         log.setContext(JSON.toJSONString(context));
         log.setThreadId(Thread.currentThread().getId());
         log.setAppName(FinalEnvConfig.getAppName());
-//        log.setFilter(FinalEnvConfig.getFilter());
         log.setServerIp(RequestCommonUtils.getServerIp());
         log.setClientIp(RequestCommonUtils.getClientIp());
         log.setMethodName(getMethodName());
@@ -57,11 +58,10 @@ public class LogMsgFactory {
         PerformanceLog log = new PerformanceLog();
         log.setEnv(FinalEnvConfig.getEnv());
         log.setLogVersion("1.0.0");
-        log.setLogTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        log.setLogTime(LocalDateTime.now().format(dateTimeFormatter));
         log.setAppName(FinalEnvConfig.getAppName());
         log.setServerIp(RequestCommonUtils.getServerIp());
         log.setClientIp(RequestCommonUtils.getClientIp());
-//        log.setFilter(LogHolder.getFilter());
         log.setTraceId(RequestCommonUtils.getRequetHeader("trace_id"));
         return log;
     }
