@@ -1,10 +1,7 @@
 package com.bill.common.log.factory;
 
 import com.alibaba.fastjson.JSON;
-import com.bill.common.log.model.ApplicationLog;
-import com.bill.common.log.model.LogApplicationContext;
-import com.bill.common.log.model.LogLevel;
-import com.bill.common.log.model.PerformanceLog;
+import com.bill.common.log.model.*;
 import com.bill.common.util.RequestCommonUtils;
 import com.bill.config.FinalEnvConfig;
 
@@ -33,7 +30,7 @@ public class LogMsgFactory {
         log.setEnv(FinalEnvConfig.getEnv());
         log.setLogVersion("1.0.0");
         log.setLogTime(LocalDateTime.now().format(dateTimeFormatter));
-        log.setTraceId(RequestCommonUtils.getRequetHeader("trace_id"));
+        log.setTraceId(RequestCommonUtils.getRequetHeader(LogConstant.TRACE_ID));
         LogApplicationContext context = new LogApplicationContext();
         context.setUrl(RequestCommonUtils.getUrl());
         context.setMethod(RequestCommonUtils.getMethod());
@@ -62,7 +59,7 @@ public class LogMsgFactory {
         log.setAppName(FinalEnvConfig.getAppName());
         log.setServerIp(RequestCommonUtils.getServerIp());
         log.setClientIp(RequestCommonUtils.getClientIp());
-        log.setTraceId(RequestCommonUtils.getRequetHeader("trace_id"));
+        log.setTraceId(RequestCommonUtils.getRequetHeader(LogConstant.TRACE_ID));
         return log;
     }
 

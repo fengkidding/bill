@@ -2,6 +2,7 @@ package com.bill.common.log;
 
 import com.bill.common.log.factory.LogMsgFactory;
 import com.bill.common.log.model.ApplicationLog;
+import com.bill.common.log.model.LogConstant;
 import com.bill.common.log.model.LogLevel;
 import com.bill.common.log.model.PerformanceLog;
 import org.apache.commons.lang.StringUtils;
@@ -22,12 +23,12 @@ public class LogBackUtils {
     /**
      * 性能日志
      */
-    private static final Logger performanceLog = LoggerFactory.getLogger("performance");
+    private static final Logger performanceLog = LoggerFactory.getLogger(LogConstant.PERFORMANCE);
 
     /**
      * 普通日志
      */
-    private static final Logger applicationLog = LoggerFactory.getLogger("application");
+    private static final Logger applicationLog = LoggerFactory.getLogger(LogConstant.APPLICATION);
 
     /**
      * 打印性能日志

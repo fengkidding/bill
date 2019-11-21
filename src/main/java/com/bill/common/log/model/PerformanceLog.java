@@ -57,7 +57,7 @@ public class PerformanceLog extends AbstractLog {
     }
 
     public PerformanceLog() {
-        super.setLogType("performanceLog");
+        super.setLogType(LogConstant.PERFORMANCE_LOG);
     }
 
     public long getElapsedTime() {

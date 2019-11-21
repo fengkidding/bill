@@ -17,7 +17,7 @@ public class AuthConstant {
      * 用户名
      */
     public static final String USER_NAME = "userName";
-    
+
     /**
      * token名称
      */
@@ -33,11 +33,7 @@ public class AuthConstant {
      */
     public static final long SHORT_SESSION = 3600000;
 
-    /**
-     * 请求唯一id
-     */
-    public static final String TRACE_ID = "trace_id";
-
     private AuthConstant() {
     }
 }
+

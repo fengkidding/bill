@@ -79,7 +79,7 @@ public class ApplicationLog extends AbstractLog {
     }
 
     public ApplicationLog() {
-        super.setLogType("applicationLog");
+        super.setLogType(LogConstant.APPLICATION_LOG);
     }
 
     public String getClassName() {
@@ -90,3 +90,4 @@ public class ApplicationLog extends AbstractLog {
         this.className = className;
     }
 }
+
