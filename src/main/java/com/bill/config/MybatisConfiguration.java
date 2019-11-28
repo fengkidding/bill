@@ -25,7 +25,6 @@ import javax.sql.DataSource;
 @AutoConfigureAfter({DataSourceConfiguration.class})
 public class MybatisConfiguration {
 
-
     @Resource(name = "dataSourceMaster")
     private DataSource masterDataSource;
 

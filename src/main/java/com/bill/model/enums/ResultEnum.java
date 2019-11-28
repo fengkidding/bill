@@ -10,7 +10,7 @@ public enum ResultEnum {
     /**
      * 成功
      */
-    SUCCESS(0, "成功！"),
+    SUCCESS(200, "成功！"),
     /**
      * 服务器错误
      */
@@ -18,27 +18,27 @@ public enum ResultEnum {
     /**
      * 没有相关数据
      */
-    NO_DATA(1, "数据不存在！"),
+    NO_DATA(401, "数据不存在！"),
     /**
      * token验证失败，请尝试重新登录
      */
-    NO_TOKEN(2, "token验证失败，请尝试重新登录！"),
+    NO_TOKEN(402, "token验证失败，请尝试重新登录！"),
     /**
      * redis key null
      */
-    KEY_NONE(3, "key 不能为空！"),
+    KEY_NONE(403, "key 不能为空！"),
     /**
      * 熔断
      */
-    FALL_BACK(4, "服务异常，触发熔断！"),
+    FALL_BACK(404, "服务异常，触发熔断！"),
     /**
      * 用户名或密码不正确！
      */
-    MEMBER_NAME_PASSWORD_ERROR(5, "用户名或密码不正确！"),
+    MEMBER_NAME_PASSWORD_ERROR(405, "用户名或密码不正确！"),
     /**
      * 用户未登陆！
      */
-    MEMBER_LOGIN_ERROR(6, "用户未登陆！"),
+    MEMBER_LOGIN_ERROR(406, "用户未登陆！"),
     /**
      * 校验失败
      */
