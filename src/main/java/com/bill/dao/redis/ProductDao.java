@@ -7,7 +7,6 @@ import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.view.QueryProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -23,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class ProductDao {
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisUtils redisUtils;
 
     /**
      * 保存产品列表
@@ -32,8 +31,8 @@ public class ProductDao {
      */
     public void saveProductList(PageVO<List<QueryProductVO>> pageVmo) {
         try {
-            redisTemplate.opsForValue().set(RedisKeyConstant.PRODUCT_LIST_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_CATCH, TimeUnit.SECONDS);
-            redisTemplate.opsForValue().set(RedisKeyConstant.PRODUCT_LIST_LONG_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_LONG_CATCH, TimeUnit.SECONDS);
+            redisUtils.set(RedisKeyConstant.PRODUCT_LIST_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_CATCH, TimeUnit.SECONDS);
+            redisUtils.set(RedisKeyConstant.PRODUCT_LIST_LONG_KEY, JSON.toJSONString(pageVmo), RedisCatchConstant.PRODUCT_LIST_LONG_CATCH, TimeUnit.SECONDS);
         } catch (Exception e) {
             LogBackUtils.error("保存产品列表异常：pageVmo=" + JSON.toJSONString(pageVmo), e);
         }
@@ -47,9 +46,9 @@ public class ProductDao {
     public PageVO<List<QueryProductVO>> getProductList() {
         try {
             PageVO<List<QueryProductVO>> result = null;
-            Object pageVmo = redisTemplate.opsForValue().get(RedisKeyConstant.PRODUCT_LIST_KEY);
+            Object pageVmo = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_KEY);
             if (null == pageVmo) {
-                pageVmo = redisTemplate.opsForValue().get(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
+                pageVmo = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
                 if (null != pageVmo) {
                     result = JSON.parseObject(pageVmo.toString(), PageVO.class);
                     this.saveProductList(result);
@@ -69,8 +68,8 @@ public class ProductDao {
      */
     public void deleteProductList() {
         try {
-            redisTemplate.delete(RedisKeyConstant.PRODUCT_LIST_KEY);
-            redisTemplate.delete(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
+            redisUtils.delete(RedisKeyConstant.PRODUCT_LIST_KEY);
+            redisUtils.delete(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
         } catch (Exception e) {
             LogBackUtils.error("删除产品列表异常", e);
         }

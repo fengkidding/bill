@@ -6,6 +6,7 @@ import com.bill.model.enums.ResultEnum;
 import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,7 @@ import redis.clients.jedis.JedisCommands;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * redis工具类
@@ -28,6 +30,9 @@ public class RedisUtils {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Value("${spring.application.name}")
+    private String appName;
 
     /**
      * 分布式加锁
@@ -128,5 +133,73 @@ public class RedisUtils {
         } else {
             return true;
         }
+    }
+
+
+    /**
+     * set
+     *
+     * @param key
+     * @param value
+     */
+    public void set(String key, Object value) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        redisTemplate.opsForValue().set(appName + key, value);
+    }
+
+    /**
+     * set
+     *
+     * @param key
+     * @param value
+     * @param expire 过期时间，单位毫秒
+     */
+    public void set(String key, Object value, long expire) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        redisTemplate.opsForValue().set(appName + key, value, expire);
+    }
+
+    /**
+     * set
+     *
+     * @param key
+     * @param value
+     * @param expire
+     * @param timeUnit
+     */
+    public void set(String key, Object value, long expire, TimeUnit timeUnit) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        redisTemplate.opsForValue().set(appName + key, value, expire, timeUnit);
+    }
+
+    /**
+     * get
+     *
+     * @param key
+     * @return
+     */
+    public Object get(String key) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        return redisTemplate.opsForValue().get(appName + key);
+    }
+
+    /**
+     * delete
+     *
+     * @param key
+     */
+    public void delete(String key) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        redisTemplate.delete(key);
     }
 }
