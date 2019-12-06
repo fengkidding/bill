@@ -58,7 +58,7 @@ public class RedisUtils {
     }
 
     /**
-     * redis setnx操作
+     * redis setNx操作
      *
      * @param key
      * @param expire
@@ -71,7 +71,7 @@ public class RedisUtils {
         try {
             String result = (String) redisTemplate.execute((RedisConnection connection) -> {
                 JedisCommands commands = (JedisCommands) connection.getNativeConnection();
-                return commands.set(key, value, "NX", "PX", expire);
+                return commands.set(appName + key, value, "NX", "PX", expire);
             });
             return StringUtil.isNotEmpty(result);
         } catch (Exception var8) {
@@ -81,7 +81,7 @@ public class RedisUtils {
     }
 
     /**
-     * redis get操作
+     * redis getNx操作
      *
      * @param key
      * @return
@@ -93,7 +93,7 @@ public class RedisUtils {
         try {
             String result = (String) redisTemplate.execute((RedisConnection connection) -> {
                 JedisCommands commands = (JedisCommands) connection.getNativeConnection();
-                return commands.get(key);
+                return commands.get(appName + key);
             });
             return result;
         } catch (Exception var8) {
@@ -135,14 +135,14 @@ public class RedisUtils {
         }
     }
 
-
     /**
      * set
      *
      * @param key
      * @param value
      */
-    public void set(String key, Object value) {
+    @Deprecated
+    public void set(String key, String value) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -156,7 +156,7 @@ public class RedisUtils {
      * @param value
      * @param expire 过期时间，单位毫秒
      */
-    public void set(String key, Object value, long expire) {
+    public void set(String key, String value, long expire) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -171,7 +171,7 @@ public class RedisUtils {
      * @param expire
      * @param timeUnit
      */
-    public void set(String key, Object value, long expire, TimeUnit timeUnit) {
+    public void set(String key, String value, long expire, TimeUnit timeUnit) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -184,15 +184,56 @@ public class RedisUtils {
      * @param key
      * @return
      */
-    public Object get(String key) {
+    public String get(String key) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
-        return redisTemplate.opsForValue().get(appName + key);
+        return String.valueOf(redisTemplate.opsForValue().get(appName + key));
     }
 
     /**
-     * delete
+     * increment操作，如果key不存在会自动创建
+     *
+     * @param key
+     * @param value
+     * @return 操作之后保存的值
+     */
+    public Long increment(String key, Long value) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        return redisTemplate.opsForValue().increment(appName + key, value);
+    }
+
+    /**
+     * increment操作，如果key不存在会自动创建
+     *
+     * @param key
+     * @param value
+     * @return 操作之后保存的值
+     */
+    public Double increment(String key, Double value) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        return redisTemplate.opsForValue().increment(appName + key, value);
+    }
+
+    /**
+     * 当 key 不存在时，返回 -2 。当 key 存在但没有设置剩余生存时间时，返回 -1 。否则，以毫秒为单位，返回 key 的剩余生存时间。
+     *
+     * @param key
+     * @return
+     */
+    public Long getExpire(String key) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        return redisTemplate.getExpire(appName + key);
+    }
+
+    /**
+     * 删除key
      *
      * @param key
      */
@@ -200,6 +241,6 @@ public class RedisUtils {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
-        redisTemplate.delete(key);
+        redisTemplate.delete(appName + key);
     }
 }
