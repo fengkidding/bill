@@ -116,7 +116,7 @@ public class RedisUtils {
         String value = StringUtils.isNotEmpty(this.getNx(key)) ? this.getNx(key) : "";
         if (StringUtils.isNotEmpty(value)) {
             final List<String> keys = new ArrayList();
-            keys.add(key);
+            keys.add(appName + key);
             final List<String> args = new ArrayList();
             args.add(value);
             Long result = (Long) redisTemplate.execute((RedisConnection redisConnection) -> {
@@ -142,7 +142,7 @@ public class RedisUtils {
      * @param value
      */
     @Deprecated
-    public void set(String key, String value) {
+    public void set(String key, Object value) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -154,24 +154,10 @@ public class RedisUtils {
      *
      * @param key
      * @param value
-     * @param expire 过期时间，单位毫秒
-     */
-    public void set(String key, String value, long expire) {
-        if (StringUtils.isEmpty(key)) {
-            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
-        }
-        redisTemplate.opsForValue().set(appName + key, value, expire);
-    }
-
-    /**
-     * set
-     *
-     * @param key
-     * @param value
      * @param expire
      * @param timeUnit
      */
-    public void set(String key, String value, long expire, TimeUnit timeUnit) {
+    public void set(String key, Object value, long expire, TimeUnit timeUnit) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -184,11 +170,11 @@ public class RedisUtils {
      * @param key
      * @return
      */
-    public String get(String key) {
+    public Object get(String key) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
-        return String.valueOf(redisTemplate.opsForValue().get(appName + key));
+        return redisTemplate.opsForValue().get(appName + key);
     }
 
     /**
@@ -233,6 +219,20 @@ public class RedisUtils {
     }
 
     /**
+     * 设置过期时间
+     *
+     * @param key
+     * @param timeout
+     * @param unit
+     */
+    public void setExpire(String key, long timeout, TimeUnit unit) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        redisTemplate.expire(appName + key, timeout, unit);
+    }
+
+    /**
      * 删除key
      *
      * @param key
@@ -242,5 +242,18 @@ public class RedisUtils {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
         redisTemplate.delete(appName + key);
+    }
+
+    /**
+     * 是否含有key
+     *
+     * @param key
+     * @return
+     */
+    public Boolean hasKey(String key) {
+        if (StringUtils.isEmpty(key)) {
+            throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
+        }
+        return redisTemplate.hasKey(appName + key);
     }
 }
