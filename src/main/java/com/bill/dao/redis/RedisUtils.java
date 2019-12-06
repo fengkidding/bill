@@ -198,7 +198,7 @@ public class RedisUtils {
      * @param value
      * @return 操作之后保存的值
      */
-    public Long increment(String key, Long value) {
+    public Long increment(String key, long value) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
@@ -212,7 +212,7 @@ public class RedisUtils {
      * @param value
      * @return 操作之后保存的值
      */
-    public Double increment(String key, Double value) {
+    public Double increment(String key, double value) {
         if (StringUtils.isEmpty(key)) {
             throw new IllegalArgumentException(ResultEnum.KEY_NONE.getMsg());
         }
