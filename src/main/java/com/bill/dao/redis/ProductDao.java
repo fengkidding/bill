@@ -48,9 +48,11 @@ public class ProductDao {
     public PageVO<List<QueryProductVO>> getProductList() {
         try {
             PageVO<List<QueryProductVO>> result = null;
-            String pageVmo = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_KEY);
+            Object pageVmoObject = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_KEY);
+            String pageVmo = String.valueOf(pageVmoObject);
             if (StringUtils.isNotBlank(pageVmo) && !CommonConstant.STRING_NULL.equals(pageVmo)) {
-                pageVmo = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
+                pageVmoObject = redisUtils.get(RedisKeyConstant.PRODUCT_LIST_LONG_KEY);
+                pageVmo = String.valueOf(pageVmoObject);
                 if (StringUtils.isNotBlank(pageVmo) && !CommonConstant.STRING_NULL.equals(pageVmo)) {
                     result = JSON.parseObject(pageVmo, PageVO.class);
                     this.saveProductList(result);

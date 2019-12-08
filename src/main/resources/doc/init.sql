@@ -77,3 +77,4 @@ ALTER TABLE `commerce`.`product` ADD column `expired_time` datetime DEFAULT CURR
 
 -- 订单增加分类id
 ALTER TABLE `commerce`.`product_order` ADD column `classification_id` int(11) NOT NULL DEFAULT '0' COMMENT '分类id';
+
