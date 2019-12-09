@@ -10,7 +10,7 @@ import java.net.Socket;
  * @author f
  * @date 2019-12-08
  */
-public class ServerTest {
+public class SocketServerTest {
 
     /**
      * test
@@ -44,7 +44,6 @@ public class ServerTest {
         inputStream.close();
         socket.close();
         serverSocket.close();
-
     }
 
 }

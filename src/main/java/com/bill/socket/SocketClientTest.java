@@ -1,7 +1,6 @@
 package com.bill.socket;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
@@ -10,7 +9,7 @@ import java.net.Socket;
  * @author f
  * @date 2019-12-08
  */
-public class ClientTest {
+public class SocketClientTest {
 
     /**
      * test
@@ -19,7 +18,7 @@ public class ClientTest {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("localhost",10005);
+        Socket socket = new Socket("localhost", 10005);
         OutputStream outputStream = socket.getOutputStream();
         PrintWriter printWriter = new PrintWriter(outputStream);
         printWriter.write("客户端------------- test");
@@ -42,7 +41,6 @@ public class ClientTest {
         printWriter.close();
         outputStream.close();
         socket.close();
-
     }
 
 }
