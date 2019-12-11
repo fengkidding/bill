@@ -3,7 +3,6 @@ package com.bill.dao.redis;
 import com.bill.common.log.LogBackUtils;
 import com.bill.model.constant.ScriptConstant;
 import com.bill.model.enums.ResultEnum;
-import com.github.pagehelper.util.StringUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -73,7 +72,7 @@ public class RedisUtils {
                 JedisCommands commands = (JedisCommands) connection.getNativeConnection();
                 return commands.set(appName + key, value, "NX", "PX", expire);
             });
-            return StringUtil.isNotEmpty(result);
+            return StringUtils.isNotEmpty(result);
         } catch (Exception var8) {
             LogBackUtils.error("RedisUtils-setNx error", var8);
             return false;
