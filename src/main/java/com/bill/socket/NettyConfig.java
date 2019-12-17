@@ -30,7 +30,7 @@ public class NettyConfig {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, workGroup);
             serverBootstrap.channel(NioServerSocketChannel.class);
-            serverBootstrap.childHandler(new WebSocketChannelHandler());
+            serverBootstrap.childHandler(new NettyWebSocketChannelHandler());
             Channel ch = serverBootstrap.bind(10050).sync().channel();
             ch.closeFuture().sync();
         } catch (Exception e) {

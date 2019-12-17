@@ -22,7 +22,7 @@ import java.util.Date;
  * @author f
  * @date 2019-12-17s
  */
-public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
+public class NettyWebSocketHandler extends SimpleChannelInboundHandler<Object> {
 
     private WebSocketServerHandshaker handshaker;
 

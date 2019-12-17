@@ -13,7 +13,7 @@ import io.netty.handler.stream.ChunkedWriteHandler;
  * @author f
  * @date 2019-12-17
  */
-public class WebSocketChannelHandler extends ChannelInitializer<SocketChannel> {
+public class NettyWebSocketChannelHandler extends ChannelInitializer<SocketChannel> {
 
     /**
      * 初始化通道
@@ -27,6 +27,6 @@ public class WebSocketChannelHandler extends ChannelInitializer<SocketChannel> {
         channelPipeline.addLast("http-codec", new HttpServerCodec());
         channelPipeline.addLast("aggregator", new HttpObjectAggregator(65536));
         channelPipeline.addLast("http-chunked", new ChunkedWriteHandler());
-        channelPipeline.addLast("handler", new WebSocketHandler());
+        channelPipeline.addLast("handler", new NettyWebSocketHandler());
     }
 }
