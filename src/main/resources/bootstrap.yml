@@ -1,0 +1,39 @@
+# 配置中心
+spring:
+  application:
+    name: bill
+  profiles:
+    # 测试dev
+    active: dev
+    # 生产prod
+    # active: prod
+  cloud:
+    inetutils:
+      default-ip-address: 127.0.0.1
+    config:
+      name: eureka,db,redis,mq,bill
+      label: master
+      # 测试dev
+      profile: dev
+      # 生产prod
+      # profile: prod
+      discovery:
+        enabled: true
+        service-id: config-server
+
+# 微服务注册dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:root@127.0.0.1:10000/eureka/
+  instance:
+    hostname: ${spring.cloud.inetutils.default-ip-address}
+    ip-address: ${spring.cloud.inetutils.default-ip-address}
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.inetutils.default-ip-address}:${server.port}
+
+# 日志配置dev
+logback-logstash-tcp: 10.128.41.7:9700
+logback-application-path: applicationLog/
+logback-performance-path: performanceLog/
+logback-max-history: 15

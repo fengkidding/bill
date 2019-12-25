@@ -1,7 +1,7 @@
 #====================================================
-# 正式环境配置
+# 测试环境配置
 #
-# 完整文档：
+# 已废弃，改用配置中心
 #====================================================
 
 spring:
@@ -32,6 +32,7 @@ spring:
     port: 5672
     username: rabbitadmin
     password: rabbit1
+    # 开启发送确认
     publisher-confirms: true
     virtual-host: /
     listener:
@@ -72,56 +73,11 @@ server:
   tomcat:
     uri-encoding: utf-8
 
-#读写分离数据库
-druid:
-    type: com.alibaba.druid.pool.DruidDataSource
-    master:
-        name: mysql
-        url: jdbc:mysql://127.0.0.1:3306/commerce?useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: sql123
-        # 使用druid数据源
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        filters: stat
-        maxActive: 20
-        initialSize: 1
-        maxWait: 60000
-        minIdle: 1
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: select 'x'
-        testWhileIdle: true
-        testOnBorrow: false
-        testOnReturn: false
-        poolPreparedStatements: true
-        maxOpenPreparedStatements: 20
-    slave:
-        name: mysql
-        url: jdbc:mysql://127.0.0.1:3306/commerce?useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: sql123
-        # 使用druid数据源
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        filters: stat
-        maxActive: 20
-        initialSize: 1
-        maxWait: 60000
-        minIdle: 1
-        timeBetweenEvictionRunsMillis: 60000
-        minEvictableIdleTimeMillis: 300000
-        validationQuery: select 'x'
-        testWhileIdle: true
-        testOnBorrow: false
-        testOnReturn: false
-        poolPreparedStatements: true
-        maxOpenPreparedStatements: 20
 
-#mybatis
+# mybatis
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml
-  type-aliases-package: com.user.model.po
+  type-aliases-package: com.bill.model.po
   #开启驼峰命名转换
   configuration:
       map-underscore-to-camel-case: true
@@ -137,7 +93,7 @@ pagehelper:
 # swagger
 swagger2:
     package: com.bill.controller
-    enable: false
+    enable: true
 
 # 熔断
 hystrix:
@@ -146,3 +102,4 @@ hystrix:
       execution:
         isolation:
           strategy: SEMAPHORE
+
