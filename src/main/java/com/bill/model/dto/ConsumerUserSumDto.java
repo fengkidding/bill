@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * @date 2019-03-03
  */
 @ApiModel(value = "用户余额参数vmo")
-public class ConsumerUserSumBO {
+public class ConsumerUserSumDto {
 
     @ApiModelProperty(value = "用户id")
     @NotNull(message = "用户id不能为null！")

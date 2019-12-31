@@ -29,7 +29,7 @@ import java.util.List;
  */
 @Api(description = "订单接口")
 @RestController
-@RequestMapping(value = "/product_order")
+@RequestMapping(value = "/product-order")
 public class ProductOrderController extends BaseController {
 
     @Autowired
@@ -43,7 +43,7 @@ public class ProductOrderController extends BaseController {
      * @return
      */
     @ApiOperation(value = "用户下单")
-    @PostMapping(value = "/create_order")
+    @PostMapping(value = "/create-order")
     public ResultVO createOrder(@RequestBody @Valid OrderParamVO orderParamVmo, HttpServletRequest request) {
         LogBackUtils.info("更新用户余额: productSaveParamVmo=" + JSON.toJSONString(orderParamVmo));
         Integer id = orderService.createOrder(orderParamVmo);
@@ -57,7 +57,7 @@ public class ProductOrderController extends BaseController {
      * @return
      */
     @ApiOperation(value = "分页查询订单列表")
-    @PostMapping(value = "/list_order")
+    @PostMapping(value = "/list-order")
     public ResultVO<PageVO<List<QueryOrderVO>>> listOrder(@Valid @RequestBody QueryOrderParamVO orderPageParamVmo) {
         Integer memberId = AuthContextUtils.getLoginMemberId();
         PageVO<List<QueryOrderVO>> pageVmo = orderService.listOrder(orderPageParamVmo, memberId);

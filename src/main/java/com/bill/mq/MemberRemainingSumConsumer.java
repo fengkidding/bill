@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.bill.common.log.LogBackUtils;
 import com.bill.manager.MemberManager;
 import com.bill.model.constant.RabbitQueueConstant;
-import com.bill.model.dto.ConsumerUserSumBO;
+import com.bill.model.dto.ConsumerUserSumDto;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -35,7 +35,7 @@ public class MemberRemainingSumConsumer {
     public void updateMemberRemainingSum(Message message, Channel channel) throws IOException {
         LogBackUtils.info("MemberRemainingSumConsumer.updateMemberRemainingSum message=" + JSON.toJSONString(message));
         try {
-            ConsumerUserSumBO consumerUserSumBO = JSON.parseObject(message.getBody(), ConsumerUserSumBO.class);
+            ConsumerUserSumDto consumerUserSumBO = JSON.parseObject(message.getBody(), ConsumerUserSumDto.class);
             LogBackUtils.info("MemberRemainingSumConsumer.updateMemberRemainingSum consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             if (null != consumerUserSumBO) {
                 Long remainingSum = consumerUserSumBO.getRemainingSum();

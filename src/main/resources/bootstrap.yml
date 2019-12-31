@@ -11,7 +11,7 @@ spring:
     inetutils:
       default-ip-address: 127.0.0.1
     config:
-      name: eureka,db,redis,mq,bill
+      name: eureka,db,redis,mq,es,bill
       label: master
       # 测试dev
       profile: dev

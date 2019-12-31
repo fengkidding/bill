@@ -56,6 +56,8 @@
         <mapper.version>3.5.0</mapper.version>
         <netty.version>4.1.43.Final</netty.version>
         <logback.encoder.version>4.11</logback.encoder.version>
+        <elasticsearch.version>7.4.0</elasticsearch.version>
+        <elasticsearch.high.version>7.4.1</elasticsearch.high.version>
     </properties>
 
     <dependencies>
@@ -261,6 +263,23 @@
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>${logback.encoder.version}</version>
+        </dependency>
+
+        <!-- es -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>${elasticsearch.high.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>${elasticsearch.version}</version>
         </dependency>
 
     </dependencies>

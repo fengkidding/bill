@@ -43,7 +43,7 @@ public class ProductController extends BaseController {
      * @return
      */
     @ApiOperation(value = "保存商品")
-    @PostMapping(value = "/save_product")
+    @PostMapping(value = "/save-product")
     public ResultVO saveProduct(@RequestBody @Valid ProductSaveParamVO productSaveParamVmo, HttpServletRequest request) {
         LogBackUtils.info("保存商品: productSaveParamVmo=" + JSON.toJSONString(productSaveParamVmo));
         Product product = new Product();
@@ -67,7 +67,7 @@ public class ProductController extends BaseController {
      * @return
      */
     @ApiOperation(value = "分页查询商品列表")
-    @GetMapping(value = "/list_product")
+    @GetMapping(value = "/list-product")
     public ResultVO<PageVO<List<QueryProductVO>>> listProduct(@Valid PageParamVO pageParamVmo) throws Exception {
         PageVO<List<QueryProductVO>> pageVmo = productService.listProduct(pageParamVmo.getPageNum(), pageParamVmo.getPageSize());
         return super.resultSuccess(pageVmo);
@@ -79,7 +79,7 @@ public class ProductController extends BaseController {
      * @return
      */
     @ApiOperation(value = "商品销量排行榜")
-    @GetMapping(value = "/ranking_product")
+    @GetMapping(value = "/ranking-product")
     public ResultVO<List<QueryProductVO>> rankingProduct() {
         return super.resultSuccess(productService.rankingProduct());
     }

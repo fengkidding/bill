@@ -118,14 +118,14 @@ druid:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
 
-#mybatis
+# mybatis
 mybatis:
   mapper-locations: classpath:mapper/*/*.xml
-  type-aliases-package: com.user.model.po
+  type-aliases-package: com.bill.model.po
   #开启驼峰命名转换
   configuration:
-      map-underscore-to-camel-case: true
-      default-executor-type: batch
+    map-underscore-to-camel-case: true
+    default-executor-type: batch
 
 # mybatis分页插件
 pagehelper:

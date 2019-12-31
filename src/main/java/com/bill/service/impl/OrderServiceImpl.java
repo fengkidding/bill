@@ -9,7 +9,7 @@ import com.bill.manager.MemberManager;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
-import com.bill.model.dto.ConsumerUserSumBO;
+import com.bill.model.dto.ConsumerUserSumDto;
 import com.bill.model.po.auto.Product;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
@@ -87,7 +87,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         //用户收钱
-        ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
+        ConsumerUserSumDto consumerUserSumBO = new ConsumerUserSumDto();
         consumerUserSumBO.setMemberId(product.getMemberId());
         consumerUserSumBO.setRemainingSum(price);
         Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
