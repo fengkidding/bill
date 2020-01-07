@@ -40,23 +40,23 @@
 		</encoder>
 	</appender>
 
-	<appender name="logStash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-		<!-- 配置logstash的ip和端口 -->
-		<destination>${logback-logstash-tcp}</destination>
-		<encoder charset="UTF-8" class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
-			<providers>
-				<timestamp>
-					<timeZone>UTC</timeZone>
-				</timestamp>
-				<message/>
-			</providers>
-		</encoder>
-		<!-- 如果事件频繁的输出，在服务器闲置超时的情况下，链接一般会断掉。通过配置来保持链接处于激活 -->
-		<connectionStrategy>
-			<roundRobin>
-				<connectionTTL>5 minutes</connectionTTL>
-			</roundRobin>
-		</connectionStrategy>
+	<appender name="logStash" class="org.springframework.amqp.rabbit.logback.AmqpAppender">
+		<layout>
+			<pattern>%msg</pattern>
+		</layout>
+		<host>${logback-logstash-host}</host>
+		<port>${logback-logstash-port}</port>
+		<username>${logback-logstash-username}</username>
+		<password>${logback-logstash-password}</password>
+		<declareExchange>${logback-logstash-declareExchange}</declareExchange>
+		<exchangeType>${logback-logstash-exchangeType}</exchangeType>
+		<exchangeName>${logback-logstash-exchangeName}</exchangeName>
+		<routingKeyPattern>${logback-logstash-routingKeyPattern}</routingKeyPattern>
+		<generateId>${logback-logstash-generateId}</generateId>
+		<charset>${logback-logstash-charset}</charset>
+		<durable>${logback-logstash-durable}</durable>
+		<deliveryMode>${logback-logstash-deliveryMode}</deliveryMode>
+		<autoDelete>${logback-logstash-autoDelete}</autoDelete>
 	</appender>
 
 	<!-- 将appender 关联到我们的项目 -->

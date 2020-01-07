@@ -33,7 +33,19 @@ eureka:
     instance-id: ${spring.cloud.inetutils.default-ip-address}:${server.port}
 
 # 日志配置dev
-logback-logstash-tcp: 10.128.41.7:9700
+logback-logstash-host: 10.128.41.7
+logback-logstash-port: 5672
+logback-logstash-username: admin
+logback-logstash-password: rabbit1
+logback-logstash-declareExchange: true
+logback-logstash-exchangeType: topic
+logback-logstash-exchangeName: exchange_logstash
+logback-logstash-routingKeyPattern: logstash
+logback-logstash-generateId: true
+logback-logstash-charset: UTF-8
+logback-logstash-durable: true
+logback-logstash-deliveryMode: NON_PERSISTENT
+logback-logstash-autoDelete: false
 logback-application-path: applicationLog/
 logback-performance-path: performanceLog/
-logback-max-history: 15
+logback-max-history: 7
