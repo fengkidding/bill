@@ -225,6 +225,9 @@ public class SecuritUtils {
         return new String(resultBytes);
     }
 
+    private SecuritUtils() {
+    }
+
     /**
      * main
      *
@@ -247,7 +250,7 @@ public class SecuritUtils {
         System.out.println("start---------------" + test);
 
         int index = 0;
-        while (index < 100) {
+        while (index < 10) {
             long base1 = System.currentTimeMillis();
             String base = SecuritUtils.encodeBase64(test);
             long base2 = System.currentTimeMillis();
@@ -319,4 +322,5 @@ public class SecuritUtils {
             index++;
         }
     }
+
 }
