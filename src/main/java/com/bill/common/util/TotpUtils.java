@@ -177,7 +177,10 @@ public class TotpUtils {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             String code = TotpUtils.generateMyTOTP("codename", "password");
-            System.out.println("code-" + i + "------------" + code);
+            System.out.println("code" + i + "------------" + code);
+            long now = System.currentTimeMillis();
+            long x = now % STEP;
+            System.out.println("剩余时间------------" + (STEP - x));
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
