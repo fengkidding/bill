@@ -16,6 +16,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -59,6 +61,7 @@ public class ProductServiceImpl implements ProductService {
      *
      * @param product 商品实体
      */
+    @CacheEvict(value = "getQueryProductVO", key = "'PRODUCT_' + #product.id")
     @Override
     public void updateProduct(Product product) {
         productExtMapper.updateByPrimaryKeySelective(product);
@@ -162,6 +165,18 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Integer expiredProduct(LocalDateTime localDateTime) {
         return productExtMapper.expiredProduct(localDateTime);
+    }
+
+    /**
+     * 获取产品详情
+     *
+     * @param id
+     * @return
+     */
+    @Cacheable(value = "getQueryProductVO", key = "'PRODUCT_' + #id", unless = "#result == null")
+    @Override
+    public QueryProductVO getQueryProductVO(Integer id) {
+        return ProductConversion.PRODUCT_CONVERSION.entityToVmo(this.getProduct(id));
     }
 
 }

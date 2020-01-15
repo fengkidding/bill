@@ -83,4 +83,16 @@ public class ProductController extends BaseController {
     public ResultVO<List<QueryProductVO>> rankingProduct() {
         return super.resultSuccess(productService.rankingProduct());
     }
+
+    /**
+     * 获取产品详情
+     *
+     * @param id 产品id
+     * @return
+     */
+    @ApiOperation(value = "获取产品详情")
+    @GetMapping(value = "/get-product/{id}")
+    public ResultVO<QueryProductVO> getProduct(@PathVariable(value = "id") Integer id) {
+        return super.resultSuccess(productService.getQueryProductVO(id));
+    }
 }

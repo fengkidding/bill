@@ -68,4 +68,12 @@ public interface ProductService {
      * @return
      */
     Integer expiredProduct(LocalDateTime localDateTime);
+
+    /**
+     * 获取产品详情
+     *
+     * @param id
+     * @return
+     */
+    QueryProductVO getQueryProductVO(Integer id);
 }

@@ -4,6 +4,7 @@ import com.bill.config.FinalEnvConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -22,6 +23,7 @@ import javax.annotation.PostConstruct;
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "com.bill.manager.client")
 @EnableAsync
+@EnableCaching(proxyTargetClass = true)
 public class BillApplication {
 
     @Value("${spring.application.name}")
