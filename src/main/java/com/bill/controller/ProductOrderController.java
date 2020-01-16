@@ -6,6 +6,7 @@ import com.bill.common.util.AuthContextUtils;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.PayOrderParamVO;
 import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
@@ -64,4 +65,16 @@ public class ProductOrderController extends BaseController {
         return super.resultSuccess(pageVmo);
     }
 
+    /**
+     * 支付订单
+     *
+     * @param payOrderParamVO
+     * @return
+     */
+    @ApiOperation(value = "支付订单")
+    @PostMapping(value = "/pay-order")
+    public ResultVO payOrder(@Valid @RequestBody PayOrderParamVO payOrderParamVO) {
+        orderService.payOrder(payOrderParamVO);
+        return super.resultSuccess();
+    }
 }

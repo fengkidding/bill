@@ -176,7 +176,10 @@ public class ProductServiceImpl implements ProductService {
     @Cacheable(value = "getQueryProductVO", key = "'PRODUCT_' + #id", unless = "#result == null")
     @Override
     public QueryProductVO getQueryProductVO(Integer id) {
-        return ProductConversion.PRODUCT_CONVERSION.entityToVmo(this.getProduct(id));
+        Product product = this.getProduct(id);
+        QueryProductVO queryProductVO = ProductConversion.PRODUCT_CONVERSION.entityToVmo(product);
+        queryProductVO.setPrice(ComputeUtils.getYuan(product.getPrice()));
+        return queryProductVO;
     }
 
 }

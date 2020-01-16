@@ -40,6 +40,18 @@ public enum ResultEnum {
      */
     MEMBER_LOGIN_ERROR(406, "用户未登陆！"),
     /**
+     * 扣除用户余额失败
+     */
+    DEDUCT_REMAININGSUM_ERROR(407, "扣除用户余额失败！"),
+    /**
+     * 产品不存在
+     */
+    PRODUCT_NONE_ERROR(407, "产品不存在！"),
+    /**
+     * 订单不存在
+     */
+    ORDER_NONE_ERROR(407, "订单不存在！"),
+    /**
      * 校验失败
      */
     VALIDATE_ERROR(400, "校验失败！");

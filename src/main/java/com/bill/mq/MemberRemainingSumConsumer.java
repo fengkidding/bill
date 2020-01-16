@@ -38,9 +38,7 @@ public class MemberRemainingSumConsumer {
             ConsumerUserSumDto consumerUserSumBO = JSON.parseObject(message.getBody(), ConsumerUserSumDto.class);
             LogBackUtils.info("MemberRemainingSumConsumer.updateMemberRemainingSum consumerUserSumBO=" + JSON.toJSONString(consumerUserSumBO));
             if (null != consumerUserSumBO) {
-                Long remainingSum = consumerUserSumBO.getRemainingSum();
-                remainingSum = remainingSum - 100;
-                memberManager.updateRemainingSum(consumerUserSumBO.getMemberId(), remainingSum);
+                memberManager.updateRemainingSum(consumerUserSumBO.getMemberId(), consumerUserSumBO.getRemainingSum());
             }
         } catch (Exception e) {
             LogBackUtils.error("MemberRemainingSumConsumer.updateMemberRemainingSum异常 message=" + JSON.toJSONString(message), e);

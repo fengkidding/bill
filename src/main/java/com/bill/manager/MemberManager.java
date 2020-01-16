@@ -34,15 +34,15 @@ public class MemberManager {
             ConsumerUserSumDto consumerUserSumDto = new ConsumerUserSumDto();
             consumerUserSumDto.setMemberId(memberId);
             consumerUserSumDto.setRemainingSum(remainingSum);
-            LogBackUtils.info("MemberClient-扣除用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumDto));
+            LogBackUtils.info("MemberClient-更新用户余额：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumDto));
             try {
                 ResultVO resultVO = memberFeign.updateRemainingSum(consumerUserSumDto);
-                LogBackUtils.info("MemberClient-扣除用户余额：resultVO=" + JSON.toJSONString(resultVO));
+                LogBackUtils.info("MemberClient-更新用户余额：resultVO=" + JSON.toJSONString(resultVO));
                 if (ResultEnum.SUCCESS.getCode().equals(resultVO.getCode())) {
                     result = true;
                 }
             } catch (Exception e) {
-                LogBackUtils.error("MemberClient-扣除用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumDto), e);
+                LogBackUtils.error("MemberClient-更新用户余额异常：consumerUserSumBO=" + JSON.toJSONString(consumerUserSumDto), e);
             }
         }
         return result;

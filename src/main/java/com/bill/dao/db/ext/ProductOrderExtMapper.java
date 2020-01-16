@@ -1,5 +1,6 @@
 package com.bill.dao.db.ext;
 
+import com.bill.dao.db.auto.ProductOrderMapper;
 import com.bill.model.po.auto.ProductOrder;
 import org.apache.ibatis.annotations.Param;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @author f
  * @date 2019-03-10
  */
-public interface ProductOrderExtMapper {
+public interface ProductOrderExtMapper extends ProductOrderMapper {
 
     /**
      * 保存订单

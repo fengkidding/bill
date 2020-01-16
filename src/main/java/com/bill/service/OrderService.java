@@ -4,6 +4,7 @@ package com.bill.service;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.PayOrderParamVO;
 import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;
 
@@ -48,4 +49,18 @@ public interface OrderService {
      * @return
      */
     ProductOrder getProductOrder(Integer orderId);
+
+    /**
+     * 更新订单
+     *
+     * @param productOrder
+     */
+    void updateOrder(ProductOrder productOrder);
+
+    /**
+     * 支付订单
+     *
+     * @param payOrderParamVO
+     */
+    void payOrder(PayOrderParamVO payOrderParamVO);
 }
