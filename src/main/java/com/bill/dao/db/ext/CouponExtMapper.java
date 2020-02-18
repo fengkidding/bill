@@ -19,4 +19,20 @@ public interface CouponExtMapper extends CouponMapper {
      * @param coupons
      */
     void insertBatch(List<Coupon> coupons);
+
+    /**
+     * 根据订单id查询券码列表
+     *
+     * @param orderId
+     * @return
+     */
+    List<Coupon> listCoupon(Integer orderId);
+
+    /**
+     * 根据code查询券码
+     *
+     * @param code
+     * @return
+     */
+    List<Coupon> listCouponByCode(String code);
 }

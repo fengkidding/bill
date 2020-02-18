@@ -28,7 +28,7 @@ import java.util.List;
  * @author f
  * @date 2018-04-22
  */
-@Api(description = "商品接口")
+@Api(tags = {"商品接口"})
 @RestController
 @RequestMapping(value = "/product")
 public class ProductController extends BaseController {

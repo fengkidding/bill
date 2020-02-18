@@ -1,6 +1,7 @@
 package com.bill.service;
 
 import com.bill.model.po.auto.Coupon;
+import com.bill.model.vo.param.UseCouponVO;
 
 import java.util.List;
 
@@ -25,4 +26,27 @@ public interface CouponService {
      * @param coupons
      */
     void save(List<Coupon> coupons);
+
+    /**
+     * 根据订单id查询券码列表
+     *
+     * @param orderId 订单id
+     * @return
+     */
+    List<Coupon> listCoupon(Integer orderId);
+
+    /**
+     * 根据code查询券码
+     *
+     * @param code
+     * @return
+     */
+    Coupon getCouponByCode(String code);
+
+    /**
+     * 消费使用券码
+     *
+     * @param useCouponVO
+     */
+    void useCoupon(UseCouponVO useCouponVO);
 }

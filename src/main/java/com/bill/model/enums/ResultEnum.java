@@ -52,6 +52,14 @@ public enum ResultEnum {
      */
     ORDER_NONE_ERROR(409, "订单不存在！"),
     /**
+     * 券码不存在
+     */
+    COUPON_NONE_ERROR(410, "券码不存在！"),
+    /**
+     * 券码不可用
+     */
+    COUPON_UNUSE_ERROR(411, "券码不可用！"),
+    /**
      * 校验失败
      */
     VALIDATE_ERROR(400, "校验失败！");

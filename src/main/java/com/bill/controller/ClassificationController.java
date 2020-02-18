@@ -19,7 +19,7 @@ import javax.validation.Valid;
  * @author f
  * @date 2019-10-10
  */
-@Api(description = "商品分类api")
+@Api(tags = {"商品分类api"})
 @RestController
 @RequestMapping(value = "/classification")
 public class ClassificationController extends BaseController {

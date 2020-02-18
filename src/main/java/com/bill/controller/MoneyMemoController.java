@@ -23,7 +23,7 @@ import java.util.List;
  * @author f
  * @date 2019-10-10
  */
-@Api(description = "金额备忘api")
+@Api(tags = {"金额备忘api"})
 @RestController
 @RequestMapping(value = "/money-memo")
 public class MoneyMemoController extends BaseController {
