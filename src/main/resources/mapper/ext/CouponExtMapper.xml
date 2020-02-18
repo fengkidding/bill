@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.ext.CouponExtMapper">
+
+    <insert id="insertBatch" parameterType="java.util.Collection">
+        insert into coupon
+        (coupon_code, order_id, product_id)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (#{item.couponCode,jdbcType=CHAR},#{item.orderId,jdbcType=INTEGER}, #{item.productId,jdbcType=INTEGER})
+        </foreach>
+    </insert>
+
+</mapper>

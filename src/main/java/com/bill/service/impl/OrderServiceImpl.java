@@ -10,7 +10,7 @@ import com.bill.model.constant.NumberConstant;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
-import com.bill.model.dto.ConsumerUserSumDto;
+import com.bill.model.dto.PayOrderMsgDto;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.exception.ServiceException;
 import com.bill.model.po.auto.Product;
@@ -173,13 +173,15 @@ public class OrderServiceImpl implements OrderService {
         this.updateOrder(productOrderStatus);
 
         //用户收钱
-        ConsumerUserSumDto consumerUserSumBO = new ConsumerUserSumDto();
-        consumerUserSumBO.setMemberId(productOrder.getMemberId());
-        consumerUserSumBO.setRemainingSum(productOrder.getPrice());
-        Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
+        Product product = productService.getProduct(productOrder.getProductId());
+        PayOrderMsgDto payOrderMsgDto = new PayOrderMsgDto();
+        payOrderMsgDto.setMemberId(product.getMemberId());
+        payOrderMsgDto.setRemainingSum(productOrder.getPrice());
+        payOrderMsgDto.setOrderId(payOrderParamVO.getOrderId());
+        Message message = MessageBuilder.withBody(JSONObject.toJSONString(payOrderMsgDto).getBytes())
                 .setContentType(MessageProperties.CONTENT_TYPE_JSON)
                 .setMessageId(productOrder.getId().toString()).build();
-        rabbitTemplate.send(RabbitExchangeConstant.MEMBER_REMAINING_SUM, RabbitRoutingKeyConstant.MEMBER_REMAINING_SUM, message);
+        rabbitTemplate.send(RabbitExchangeConstant.PAY_ORDER_EXCHANGE, RabbitRoutingKeyConstant.PAY_ORDER_EXCHANGE_ROUTING, message);
     }
 
 }

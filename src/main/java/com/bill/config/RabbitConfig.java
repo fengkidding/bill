@@ -20,23 +20,23 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitConfig {
 
     /**
-     * 用户余额队列
+     * 支付订单队列
      *
      * @return
      */
     @Bean
-    public Queue memberRemainingSumQueue() {
-        return new Queue(RabbitQueueConstant.MEMBER_REMAINING_SUM, true);
+    public Queue payOrderQueue() {
+        return new Queue(RabbitQueueConstant.PAY_ORDER_QUEUE, true);
     }
 
     /**
-     * 用户余额交换机
+     * 支付订单交换机
      *
      * @return
      */
     @Bean
-    public TopicExchange memberRemainingSumExchange() {
-        return new TopicExchange(RabbitExchangeConstant.MEMBER_REMAINING_SUM);
+    public TopicExchange payOrderExchange() {
+        return new TopicExchange(RabbitExchangeConstant.PAY_ORDER_EXCHANGE);
     }
 
     /**
@@ -46,7 +46,7 @@ public class RabbitConfig {
      */
     @Bean
     public Binding bindingDirect() {
-        return BindingBuilder.bind(memberRemainingSumQueue()).to(memberRemainingSumExchange()).with(RabbitRoutingKeyConstant.MEMBER_REMAINING_SUM);
+        return BindingBuilder.bind(payOrderQueue()).to(payOrderExchange()).with(RabbitRoutingKeyConstant.PAY_ORDER_EXCHANGE_ROUTING);
     }
 
 }

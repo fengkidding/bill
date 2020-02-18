@@ -46,11 +46,11 @@ public enum ResultEnum {
     /**
      * 产品不存在
      */
-    PRODUCT_NONE_ERROR(407, "产品不存在！"),
+    PRODUCT_NONE_ERROR(408, "产品不存在！"),
     /**
      * 订单不存在
      */
-    ORDER_NONE_ERROR(407, "订单不存在！"),
+    ORDER_NONE_ERROR(409, "订单不存在！"),
     /**
      * 校验失败
      */

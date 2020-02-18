@@ -11,7 +11,7 @@ public class RabbitRoutingKeyConstant {
     /**
      * 用户余额路由键
      */
-    public static final String MEMBER_REMAINING_SUM = "MEMBER_REMAINING_SUM_ROUTING";
+    public static final String PAY_ORDER_EXCHANGE_ROUTING = "PAY_ORDER_EXCHANGE_ROUTING";
 
     private RabbitRoutingKeyConstant() {
 
