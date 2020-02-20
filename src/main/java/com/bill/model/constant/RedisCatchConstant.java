@@ -28,6 +28,16 @@ public class RedisCatchConstant {
      */
     public static final long PRODUCT_LIST_LOCK_SLEEP = 300;
 
+    /**
+     * 使用券码锁过期时间
+     */
+    public static final long USE_COUPON_LOCK_CATCH = 2000;
+
+    /**
+     * 使用券码锁睡眠时间
+     */
+    public static final long USE_COUPON_LOCK_SLEEP = 300;
+
     private RedisCatchConstant() {
 
     }

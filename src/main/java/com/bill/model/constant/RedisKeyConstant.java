@@ -23,6 +23,11 @@ public class RedisKeyConstant {
      */
     public static final String PRODUCT_LIST_LOCK_KEY = "productListLockKey_";
 
+    /**
+     * 使用券码锁
+     */
+    public static final String USE_COUPON_LOCK_KEY = "useCouponLockKey_";
+
     private RedisKeyConstant() {
 
     }

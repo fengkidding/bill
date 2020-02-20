@@ -60,6 +60,10 @@ public enum ResultEnum {
      */
     COUPON_UNUSE_ERROR(411, "券码不可用！"),
     /**
+     * 操作超时
+     */
+    LOCK_TIME_OUT_ERROR(412, "操作超时！"),
+    /**
      * 校验失败
      */
     VALIDATE_ERROR(400, "校验失败！");

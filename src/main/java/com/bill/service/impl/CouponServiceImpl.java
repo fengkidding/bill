@@ -1,10 +1,15 @@
 package com.bill.service.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.bill.common.log.LogBackUtils;
 import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.RandomNoUtils;
 import com.bill.dao.db.ext.CouponExtMapper;
+import com.bill.dao.redis.RedisUtils;
 import com.bill.model.constant.CommonConstant;
 import com.bill.model.constant.NumberConstant;
+import com.bill.model.constant.RedisCatchConstant;
+import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.enums.ResultEnum;
 import com.bill.model.exception.ServiceException;
 import com.bill.model.po.auto.Coupon;
@@ -33,6 +38,9 @@ public class CouponServiceImpl implements CouponService {
 
     @Autowired
     private OrderService orderService;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
     /**
      * 生成券码
@@ -110,18 +118,29 @@ public class CouponServiceImpl implements CouponService {
      */
     @Override
     public void useCoupon(UseCouponVO useCouponVO) {
-        Coupon coupon = this.getCouponByCode(useCouponVO.getCouponCode());
-        if (null != coupon) {
-            if (NumberConstant.BYTE_ZERO.equals(coupon.getCouponStatus())) {
-                Coupon couponUpdate = new Coupon();
-                couponUpdate.setCouponId(coupon.getCouponId());
-                couponUpdate.setCouponStatus(NumberConstant.BYTE_ONE);
-                couponExtMapper.updateByPrimaryKeySelective(couponUpdate);
-            } else {
-                throw new ServiceException(ResultEnum.COUPON_UNUSE_ERROR);
+        boolean getLock = redisUtils.lock(RedisKeyConstant.USE_COUPON_LOCK_KEY + useCouponVO.getCouponCode(), RedisCatchConstant.USE_COUPON_LOCK_CATCH, RedisCatchConstant.USE_COUPON_LOCK_SLEEP);
+        if (getLock) {
+            try {
+                Coupon coupon = this.getCouponByCode(useCouponVO.getCouponCode());
+                if (null != coupon) {
+                    if (NumberConstant.BYTE_ZERO.equals(coupon.getCouponStatus())) {
+                        Coupon couponUpdate = new Coupon();
+                        couponUpdate.setCouponId(coupon.getCouponId());
+                        couponUpdate.setCouponStatus(NumberConstant.BYTE_ONE);
+                        couponExtMapper.updateByPrimaryKeySelective(couponUpdate);
+                    } else {
+                        throw new ServiceException(ResultEnum.COUPON_UNUSE_ERROR);
+                    }
+                } else {
+                    throw new ServiceException(ResultEnum.COUPON_NONE_ERROR);
+                }
+            } catch (Exception e) {
+                LogBackUtils.error("useCoupon异常：useCouponVO=" + JSON.toJSONString(useCouponVO), e);
+            } finally {
+                redisUtils.releaseLock(RedisKeyConstant.USE_COUPON_LOCK_KEY);
             }
         } else {
-            throw new ServiceException(ResultEnum.COUPON_NONE_ERROR);
+            throw new ServiceException(ResultEnum.LOCK_TIME_OUT_ERROR);
         }
     }
 
