@@ -1,5 +1,6 @@
 package com.bill.model.conversion;
 
+import com.bill.model.dto.ProductBillDto;
 import com.bill.model.po.auto.ProductBill;
 import com.bill.model.vo.view.QueryProductBillVO;
 import org.mapstruct.Mapper;
@@ -37,4 +38,21 @@ public interface ProductBillConversion {
      * @return
      */
     List<QueryProductBillVO> entityToVmo(List<ProductBill> productBills);
+
+    /**
+     * 账单dto
+     *
+     * @param queryProductBillVO
+     * @return
+     */
+    ProductBillDto voToDto(QueryProductBillVO queryProductBillVO);
+
+    /**
+     * 账单dto
+     *
+     * @param queryProductBillVOs
+     * @return
+     */
+    List<ProductBillDto> voToDto(List<QueryProductBillVO> queryProductBillVOs);
+
 }

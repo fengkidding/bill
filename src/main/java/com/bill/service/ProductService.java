@@ -2,6 +2,7 @@ package com.bill.service;
 
 import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.param.SaveProductForExcelVO;
 import com.bill.model.vo.view.QueryProductVO;
 
 import java.time.LocalDateTime;
@@ -76,4 +77,11 @@ public interface ProductService {
      * @return
      */
     QueryProductVO getQueryProductVO(Integer id);
+
+    /**
+     * 根据excel导入产品
+     *
+     * @param saveProductForExcelVO
+     */
+    void saveProductForExcel(SaveProductForExcelVO saveProductForExcelVO);
 }

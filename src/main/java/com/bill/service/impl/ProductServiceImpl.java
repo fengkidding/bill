@@ -1,6 +1,8 @@
 package com.bill.service.impl;
 
 
+import com.alibaba.excel.EasyExcel;
+import com.bill.common.listener.ProductExcelListener;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductExtMapper;
 import com.bill.dao.redis.ProductDao;
@@ -8,8 +10,10 @@ import com.bill.dao.redis.RedisUtils;
 import com.bill.model.constant.RedisCatchConstant;
 import com.bill.model.constant.RedisKeyConstant;
 import com.bill.model.conversion.ProductConversion;
+import com.bill.model.dto.ProductSaveDto;
 import com.bill.model.po.auto.Product;
 import com.bill.model.vo.common.PageVO;
+import com.bill.model.vo.param.SaveProductForExcelVO;
 import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import com.github.pagehelper.Page;
@@ -180,6 +184,16 @@ public class ProductServiceImpl implements ProductService {
         QueryProductVO queryProductVO = ProductConversion.PRODUCT_CONVERSION.entityToVmo(product);
         queryProductVO.setPrice(ComputeUtils.getYuan(product.getPrice()));
         return queryProductVO;
+    }
+
+    /**
+     * 根据excel导入产品
+     *
+     * @param saveProductForExcelVO
+     */
+    @Override
+    public void saveProductForExcel(SaveProductForExcelVO saveProductForExcelVO) {
+        EasyExcel.read(saveProductForExcelVO.getFileName(), ProductSaveDto.class, new ProductExcelListener()).sheet().doRead();
     }
 
 }

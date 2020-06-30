@@ -7,7 +7,6 @@ import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.BillParamVO;
 import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 import com.bill.service.ProductBillService;
@@ -75,4 +74,16 @@ public class ProductBillController extends BaseController {
         return super.resultSuccess();
     }
 
+    /**
+     * 生成excel，分页查询商品账单列表
+     *
+     * @param queryBillParamVO
+     * @return
+     */
+    @ApiOperation(value = "生成excel，分页查询商品账单列表")
+    @PostMapping(value = "/excel-list-product-bill")
+    public ResultVO excelListProductBill(@RequestBody @Valid QueryBillParamVO queryBillParamVO) {
+        productBillService.excelListProductBill(queryBillParamVO);
+        return super.resultSuccess();
+    }
 }

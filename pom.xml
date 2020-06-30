@@ -58,6 +58,7 @@
         <logback.encoder.version>4.11</logback.encoder.version>
         <elasticsearch.version>7.4.0</elasticsearch.version>
         <elasticsearch.high.version>7.4.1</elasticsearch.high.version>
+        <easyexcel.version>2.2.5</easyexcel.version>
     </properties>
 
     <dependencies>
@@ -291,6 +292,13 @@
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>
             <version>${elasticsearch.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel.version}</version>
         </dependency>
 
     </dependencies>

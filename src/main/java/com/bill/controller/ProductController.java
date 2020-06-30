@@ -11,6 +11,7 @@ import com.bill.model.vo.common.PageParamVO;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.ProductSaveParamVO;
+import com.bill.model.vo.param.SaveProductForExcelVO;
 import com.bill.model.vo.view.QueryProductVO;
 import com.bill.service.ProductService;
 import io.swagger.annotations.Api;
@@ -18,7 +19,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -44,7 +44,7 @@ public class ProductController extends BaseController {
      */
     @ApiOperation(value = "保存商品")
     @PostMapping(value = "/save-product")
-    public ResultVO saveProduct(@RequestBody @Valid ProductSaveParamVO productSaveParamVmo, HttpServletRequest request) {
+    public ResultVO saveProduct(@RequestBody @Valid ProductSaveParamVO productSaveParamVmo) {
         LogBackUtils.info("保存商品: productSaveParamVmo=" + JSON.toJSONString(productSaveParamVmo));
         Product product = new Product();
         ProductConversion.PRODUCT_CONVERSION.vmoToEntity(productSaveParamVmo, product);
@@ -94,5 +94,19 @@ public class ProductController extends BaseController {
     @GetMapping(value = "/get-product/{id}")
     public ResultVO<QueryProductVO> getProduct(@PathVariable(value = "id") Integer id) {
         return super.resultSuccess(productService.getQueryProductVO(id));
+    }
+
+    /**
+     * 根据excel导入产品
+     *
+     * @param saveProductForExcelVO
+     * @return
+     */
+    @ApiOperation(value = "根据excel导入产品")
+    @PostMapping(value = "/save-product-for-excel")
+    public ResultVO saveProductForExcel(@RequestBody @Valid SaveProductForExcelVO saveProductForExcelVO) {
+        LogBackUtils.info("根据excel导入产品: saveProductForExcelVO=" + JSON.toJSONString(saveProductForExcelVO));
+        productService.saveProductForExcel(saveProductForExcelVO);
+        return super.resultSuccess();
     }
 }

@@ -5,7 +5,6 @@ import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.BillParamVO;
 import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 
@@ -49,4 +48,10 @@ public interface ProductBillService {
      */
     List<StatisticsBillVO> statisticsBill(StatisticsBillParamVO statisticsBillParamVmo);
 
+    /**
+     * 生成excel，分页查询商品账单列表
+     *
+     * @param queryBillParamVO
+     */
+    void excelListProductBill(QueryBillParamVO queryBillParamVO);
 }
