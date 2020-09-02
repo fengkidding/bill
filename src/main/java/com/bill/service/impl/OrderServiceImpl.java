@@ -62,7 +62,7 @@ public class OrderServiceImpl implements OrderService {
      *
      * @param orderParamVmo
      */
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class, transactionManager = "dbTransactionManager")
     @Override
     public Integer createOrder(OrderParamVO orderParamVmo) {
         Integer memberId = AuthContextUtils.getLoginMemberId();
