@@ -1,4 +1,4 @@
-package com.bill.manager.download.factory;
+package com.bill.manager.factory;
 
 import com.alibaba.fastjson.JSON;
 import com.bill.common.log.LogBackUtils;

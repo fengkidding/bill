@@ -36,9 +36,9 @@ public class ProductImpl extends DownloadAdapter {
         List<List<String>> data = new LinkedList<>();
         list.forEach(item -> {
             List<String> list1 = new LinkedList<>();
-            list1.add(item.get("productName") == null ? "-" : item.get("productName").toString());
+            list1.add(item.get("product_name") == null ? "-" : item.get("product_name").toString());
             list1.add(item.get("total") == null ? "-" : item.get("total").toString());
-            list1.add(item.get("totalSold") == null ? "-" : item.get("totalSold").toString());
+            list1.add(item.get("total_sold") == null ? "-" : item.get("total_sold").toString());
             list1.add(item.get("price") == null ? "-" : item.get("price").toString());
             data.add(list1);
         });

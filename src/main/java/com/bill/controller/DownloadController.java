@@ -19,7 +19,7 @@ import javax.validation.Valid;
  * @author f
  * @date 2091-04-03
  */
-@Api(description = "下载接口")
+@Api(tags = "下载接口")
 @RestController
 @RequestMapping(value = "/download")
 public class DownloadController extends BaseController {

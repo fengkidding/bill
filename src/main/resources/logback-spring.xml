@@ -40,35 +40,35 @@
 		</encoder>
 	</appender>
 
-	<appender name="logStash" class="org.springframework.amqp.rabbit.logback.AmqpAppender">
-		<layout>
-			<pattern>%msg</pattern>
-		</layout>
-		<host>${logback-logstash-host}</host>
-		<port>${logback-logstash-port}</port>
-		<username>${logback-logstash-username}</username>
-		<password>${logback-logstash-password}</password>
-		<declareExchange>${logback-logstash-declareExchange}</declareExchange>
-		<exchangeType>${logback-logstash-exchangeType}</exchangeType>
-		<exchangeName>${logback-logstash-exchangeName}</exchangeName>
-		<routingKeyPattern>${logback-logstash-routingKeyPattern}</routingKeyPattern>
-		<generateId>${logback-logstash-generateId}</generateId>
-		<charset>${logback-logstash-charset}</charset>
-		<durable>${logback-logstash-durable}</durable>
-		<deliveryMode>${logback-logstash-deliveryMode}</deliveryMode>
-		<autoDelete>${logback-logstash-autoDelete}</autoDelete>
-	</appender>
+	<!--<appender name="logStash" class="org.springframework.amqp.rabbit.logback.AmqpAppender">-->
+		<!--<layout>-->
+			<!--<pattern>%msg</pattern>-->
+		<!--</layout>-->
+		<!--<host>${logback-logstash-host}</host>-->
+		<!--<port>${logback-logstash-port}</port>-->
+		<!--<username>${logback-logstash-username}</username>-->
+		<!--<password>${logback-logstash-password}</password>-->
+		<!--<declareExchange>${logback-logstash-declareExchange}</declareExchange>-->
+		<!--<exchangeType>${logback-logstash-exchangeType}</exchangeType>-->
+		<!--<exchangeName>${logback-logstash-exchangeName}</exchangeName>-->
+		<!--<routingKeyPattern>${logback-logstash-routingKeyPattern}</routingKeyPattern>-->
+		<!--<generateId>${logback-logstash-generateId}</generateId>-->
+		<!--<charset>${logback-logstash-charset}</charset>-->
+		<!--<durable>${logback-logstash-durable}</durable>-->
+		<!--<deliveryMode>${logback-logstash-deliveryMode}</deliveryMode>-->
+		<!--<autoDelete>${logback-logstash-autoDelete}</autoDelete>-->
+	<!--</appender>-->
 
 	<!-- 将appender 关联到我们的项目 -->
 	<logger name="application" level="INFO" additivity="false">
 		<appender-ref ref="CONSOLE"/>
 		<appender-ref ref="applicationFileAppender"/>
-		<appender-ref ref="logStash"/>
+		<!--<appender-ref ref="logStash"/>-->
 	</logger>
 	<logger name="performance" level="INFO" additivity="false">
 		<appender-ref ref="CONSOLE"/>
 		<appender-ref ref="performanceFileAppender"/>
-		<appender-ref ref="logStash"/>
+		<!--<appender-ref ref="logStash"/>-->
 	</logger>
 
 	<springProfile name="dev">

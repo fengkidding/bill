@@ -1,4 +1,4 @@
-package com.bill.manager.download.utils;
+package com.bill.common.util;
 
 import com.alibaba.fastjson.JSON;
 import com.bill.common.log.LogBackUtils;
