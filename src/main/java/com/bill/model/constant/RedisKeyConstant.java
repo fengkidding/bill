@@ -28,6 +28,11 @@ public class RedisKeyConstant {
      */
     public static final String USE_COUPON_LOCK_KEY = "useCouponLockKey_";
 
+    /**
+     * 下载key
+     */
+    public static final String DOWNLOAD_KEY = "DOWNLOAD_";
+
     private RedisKeyConstant() {
 
     }

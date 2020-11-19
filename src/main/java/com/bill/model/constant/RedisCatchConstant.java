@@ -38,6 +38,11 @@ public class RedisCatchConstant {
      */
     public static final long USE_COUPON_LOCK_SLEEP = 300;
 
+    /**
+     * 下载key过期时间
+     */
+    public static final Integer DOWNLOAD_KEY_EXPIRE_SECOND = 600;
+
     private RedisCatchConstant() {
 
     }

@@ -33,7 +33,7 @@ eureka:
     instance-id: ${spring.cloud.inetutils.default-ip-address}:${server.port}
 
 # 日志配置dev
-logback-logstash-host: 10.128.41.7
+logback-logstash-host: 127.0.0.1
 logback-logstash-port: 5672
 logback-logstash-username: admin
 logback-logstash-password: rabbit1

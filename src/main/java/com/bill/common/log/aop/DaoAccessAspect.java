@@ -50,6 +50,6 @@ public class DaoAccessAspect {
 //            throwing = "ex"
 //    )
 //    public void doAfterEx(JoinPoint joinPoint, Throwable ex) {
-//        LogUtil.logPerformanceAfterEx(joinPoint, ex);
+//        LogBackUtils.logPerformanceAfterEx(joinPoint, ex);
 //    }
 }
