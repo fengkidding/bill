@@ -1,0 +1,51 @@
+# 配置中心
+spring:
+  application:
+    name: bill
+  profiles:
+    # 测试dev
+    active: dev
+    # 生产prod
+    # active: prod
+  cloud:
+    inetutils:
+      default-ip-address: 127.0.0.1
+    config:
+      name: eureka,db,redis,mq,es,bill
+      label: master
+      # 测试dev
+      profile: dev
+      # 生产prod
+      # profile: prod
+      discovery:
+        enabled: true
+        service-id: config-server
+
+# 微服务注册dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:root@127.0.0.1:10000/eureka/
+  instance:
+    hostname: ${spring.cloud.inetutils.default-ip-address}
+    ip-address: ${spring.cloud.inetutils.default-ip-address}
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.inetutils.default-ip-address}:${server.port}
+
+# 日志配置dev
+logback-logstash-host: 127.0.0.1
+logback-logstash-port: 5672
+logback-logstash-username: admin
+logback-logstash-password: rabbit1
+logback-logstash-declareExchange: true
+logback-logstash-exchangeType: topic
+logback-logstash-exchangeName: exchange_logstash
+logback-logstash-routingKeyPattern: logstash
+logback-logstash-generateId: true
+logback-logstash-charset: UTF-8
+logback-logstash-durable: true
+logback-logstash-deliveryMode: NON_PERSISTENT
+logback-logstash-autoDelete: false
+logback-application-path: applicationLog/
+logback-performance-path: performanceLog/
+logback-max-history: 7

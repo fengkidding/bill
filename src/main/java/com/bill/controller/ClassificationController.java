@@ -19,7 +19,7 @@ import javax.validation.Valid;
  * @author f
  * @date 2019-10-10
  */
-@Api(description = "商品分类api")
+@Api(tags = {"商品分类api"})
 @RestController
 @RequestMapping(value = "/classification")
 public class ClassificationController extends BaseController {
@@ -34,7 +34,7 @@ public class ClassificationController extends BaseController {
      * @return
      */
     @ApiOperation(value = "保存商品分类接口")
-    @PostMapping(value = "/save_classification")
+    @PostMapping(value = "/save-classification")
     public ResultVO saveClassification(@Valid @RequestBody ClassificationVO classificationVo) {
         Classification classification = ClassificationConversion.CLASSIFICATION_CONVERSION.voToDo(classificationVo);
         classification.setId(null);
@@ -49,7 +49,7 @@ public class ClassificationController extends BaseController {
      * @return
      */
     @ApiOperation(value = "分页查询商品分类接口")
-    @GetMapping(value = "/listClassification")
+    @GetMapping(value = "/list-classification")
     public ResultVO<ClassificationVO> listClassification(@Valid PageParamVO pageParamVmo) {
         return super.resultSuccess(classificationSerrvice.listClassification(pageParamVmo));
     }

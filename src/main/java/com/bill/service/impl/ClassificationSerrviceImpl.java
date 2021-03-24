@@ -1,6 +1,7 @@
 package com.bill.service.impl;
 
 import com.bill.dao.db.ext.ClassificationExtMapper;
+import com.bill.model.constant.CommonConstant;
 import com.bill.model.conversion.ClassificationConversion;
 import com.bill.model.po.auto.Classification;
 import com.bill.model.vo.common.PageParamVO;
@@ -66,7 +67,7 @@ public class ClassificationSerrviceImpl implements ClassificationSerrvice {
     @Override
     public List<Classification> listClassificationByIds(List<Integer> ids) {
         if (CollectionUtils.isEmpty(ids)) {
-            return null;
+            return CommonConstant.EMPTY_LIST;
         } else {
             return classificationExtMapper.listClassificationByIds(ids);
         }

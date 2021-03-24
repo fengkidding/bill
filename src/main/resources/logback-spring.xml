@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+	<property resource="bootstrap.yml"></property>
 
 	<!-- 控制台 -->
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -13,11 +14,11 @@
 
 	<!-- 记录到文件 (每天一个文件) -->
 	<appender name="applicationFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>applicationLog/application.log</File>
+		<File>${logback-application-path}application.log</File>
 		<!-- 最新的log文件名 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>applicationLog/application%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
-			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
+			<FileNamePattern>${logback-application-path}application%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
+			<maxHistory>${logback-max-history}</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
 			<Pattern>%msg %n</Pattern>
@@ -27,11 +28,11 @@
 
 	<!-- 性能日志记录到文件 (每天一个文件) -->
 	<appender name="performanceFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>performanceLog/performance.log</File>
+		<File>${logback-performance-path}performance.log</File>
 		<!-- 最新的log文件名 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>performanceLog/performance%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
-			<maxHistory>30</maxHistory> <!-- 保留 30 天的日志 -->
+			<FileNamePattern>${logback-performance-path}performance%d{yyyy-MM-dd}.log</FileNamePattern>  <!-- 历史文件名 -->
+			<maxHistory>${logback-max-history}</maxHistory> <!-- 保留 30 天的日志 -->
 		</rollingPolicy>
 		<encoder>
 			<Pattern>%msg %n</Pattern>
@@ -39,14 +40,35 @@
 		</encoder>
 	</appender>
 
+	<!--<appender name="logStash" class="org.springframework.amqp.rabbit.logback.AmqpAppender">-->
+		<!--<layout>-->
+			<!--<pattern>%msg</pattern>-->
+		<!--</layout>-->
+		<!--<host>${logback-logstash-host}</host>-->
+		<!--<port>${logback-logstash-port}</port>-->
+		<!--<username>${logback-logstash-username}</username>-->
+		<!--<password>${logback-logstash-password}</password>-->
+		<!--<declareExchange>${logback-logstash-declareExchange}</declareExchange>-->
+		<!--<exchangeType>${logback-logstash-exchangeType}</exchangeType>-->
+		<!--<exchangeName>${logback-logstash-exchangeName}</exchangeName>-->
+		<!--<routingKeyPattern>${logback-logstash-routingKeyPattern}</routingKeyPattern>-->
+		<!--<generateId>${logback-logstash-generateId}</generateId>-->
+		<!--<charset>${logback-logstash-charset}</charset>-->
+		<!--<durable>${logback-logstash-durable}</durable>-->
+		<!--<deliveryMode>${logback-logstash-deliveryMode}</deliveryMode>-->
+		<!--<autoDelete>${logback-logstash-autoDelete}</autoDelete>-->
+	<!--</appender>-->
+
 	<!-- 将appender 关联到我们的项目 -->
 	<logger name="application" level="INFO" additivity="false">
 		<appender-ref ref="CONSOLE"/>
 		<appender-ref ref="applicationFileAppender"/>
+		<!--<appender-ref ref="logStash"/>-->
 	</logger>
 	<logger name="performance" level="INFO" additivity="false">
 		<appender-ref ref="CONSOLE"/>
 		<appender-ref ref="performanceFileAppender"/>
+		<!--<appender-ref ref="logStash"/>-->
 	</logger>
 
 	<springProfile name="dev">
@@ -54,8 +76,8 @@
 		<logger name="performance" level="DEBUG" />
 	</springProfile>
 	<springProfile name="prod">
-		<logger name="application" level="DEBUG" />
-		<logger name="performance" level="DEBUG" />
+		<logger name="application" level="INFO" />
+		<logger name="performance" level="INFO" />
 	</springProfile>
 
 </configuration>

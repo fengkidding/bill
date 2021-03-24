@@ -9,9 +9,9 @@ package com.bill.model.constant;
 public class RabbitExchangeConstant {
 
     /**
-     * 用户余额交换机
+     * 支付订单交换机
      */
-    public static final String MEMBER_REMAINING_SUM = "MEMBER_REMAINING_SUM_EXCHANGE";
+    public static final String PAY_ORDER_EXCHANGE = "PAY_ORDER_EXCHANGE";
 
     private RabbitExchangeConstant() {
 

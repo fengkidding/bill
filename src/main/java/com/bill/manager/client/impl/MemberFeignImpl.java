@@ -2,7 +2,7 @@ package com.bill.manager.client.impl;
 
 import com.bill.pattern.factory.ResultVOFactory;
 import com.bill.manager.client.MemberFeign;
-import com.bill.model.dto.ConsumerUserSumBO;
+import com.bill.model.dto.ConsumerUserSumDto;
 import com.bill.model.vo.common.ResultVO;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +22,7 @@ public class MemberFeignImpl implements MemberFeign {
      * @return
      */
     @Override
-    public ResultVO updateRemainingSum(ConsumerUserSumBO consumerUserSumBO) {
+    public ResultVO updateRemainingSum(ConsumerUserSumDto consumerUserSumBO) {
         return ResultVOFactory.getFallBackResult();
     }
 }

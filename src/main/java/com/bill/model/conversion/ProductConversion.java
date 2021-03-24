@@ -1,5 +1,6 @@
 package com.bill.model.conversion;
 
+import com.bill.model.dto.ProductSaveDto;
 import com.bill.model.po.auto.Product;
 import com.bill.model.vo.param.ProductSaveParamVO;
 import com.bill.model.vo.view.QueryProductVO;
@@ -46,4 +47,12 @@ public interface ProductConversion {
      * @return
      */
     List<QueryProductVO> entityToVmo(List<Product> products);
+
+    /**
+     * excel
+     *
+     * @param productSaveDto
+     * @return
+     */
+    Product dtoToPo(ProductSaveDto productSaveDto);
 }

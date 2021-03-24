@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.auto.CouponMapper">
+  <resultMap id="BaseResultMap" type="com.bill.model.po.auto.Coupon">
+    <id column="coupon_id" jdbcType="INTEGER" property="couponId" />
+    <result column="coupon_code" jdbcType="CHAR" property="couponCode" />
+    <result column="coupon_status" jdbcType="TINYINT" property="couponStatus" />
+    <result column="order_id" jdbcType="INTEGER" property="orderId" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    coupon_id, coupon_code, coupon_status, order_id, product_id, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from coupon
+    where coupon_id = #{couponId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from coupon
+    where coupon_id = #{couponId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bill.model.po.auto.Coupon">
+    insert into coupon (coupon_id, coupon_code, coupon_status, 
+      order_id, product_id, create_time, 
+      update_time)
+    values (#{couponId,jdbcType=INTEGER}, #{couponCode,jdbcType=CHAR}, #{couponStatus,jdbcType=TINYINT}, 
+      #{orderId,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bill.model.po.auto.Coupon">
+    insert into coupon
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="couponId != null">
+        coupon_id,
+      </if>
+      <if test="couponCode != null">
+        coupon_code,
+      </if>
+      <if test="couponStatus != null">
+        coupon_status,
+      </if>
+      <if test="orderId != null">
+        order_id,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="couponId != null">
+        #{couponId,jdbcType=INTEGER},
+      </if>
+      <if test="couponCode != null">
+        #{couponCode,jdbcType=CHAR},
+      </if>
+      <if test="couponStatus != null">
+        #{couponStatus,jdbcType=TINYINT},
+      </if>
+      <if test="orderId != null">
+        #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.po.auto.Coupon">
+    update coupon
+    <set>
+      <if test="couponCode != null">
+        coupon_code = #{couponCode,jdbcType=CHAR},
+      </if>
+      <if test="couponStatus != null">
+        coupon_status = #{couponStatus,jdbcType=TINYINT},
+      </if>
+      <if test="orderId != null">
+        order_id = #{orderId,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where coupon_id = #{couponId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bill.model.po.auto.Coupon">
+    update coupon
+    set coupon_code = #{couponCode,jdbcType=CHAR},
+      coupon_status = #{couponStatus,jdbcType=TINYINT},
+      order_id = #{orderId,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where coupon_id = #{couponId,jdbcType=INTEGER}
+  </update>
+</mapper>

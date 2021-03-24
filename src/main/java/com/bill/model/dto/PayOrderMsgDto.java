@@ -1,26 +1,27 @@
 package com.bill.model.dto;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-import javax.validation.constraints.NotNull;
-
 /**
- * 用户余额参数vmo
+ * 支付订单mq
  *
  * @author f
  * @date 2019-03-03
  */
-@ApiModel(value = "用户余额参数vmo")
-public class ConsumerUserSumBO {
+public class PayOrderMsgDto {
 
-    @ApiModelProperty(value = "用户id")
-    @NotNull(message = "用户id不能为null！")
+    /**
+     * 收钱用户id
+     */
     private Integer memberId;
 
-    @ApiModelProperty(value = "用户余额")
-    @NotNull(message = "用户余额不能为null！")
+    /**
+     * 用户余额
+     */
     private Long remainingSum;
+
+    /**
+     * 订单id
+     */
+    private Integer orderId;
 
     public Integer getMemberId() {
         return memberId;
@@ -36,5 +37,13 @@ public class ConsumerUserSumBO {
 
     public void setRemainingSum(Long remainingSum) {
         this.remainingSum = remainingSum;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 }

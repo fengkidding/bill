@@ -7,7 +7,6 @@ import com.bill.model.vo.common.ResultVO;
 import com.bill.model.vo.param.BillParamVO;
 import com.bill.model.vo.param.QueryBillParamVO;
 import com.bill.model.vo.param.StatisticsBillParamVO;
-import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryProductBillVO;
 import com.bill.model.vo.view.StatisticsBillVO;
 import com.bill.service.ProductBillService;
@@ -28,9 +27,9 @@ import java.util.List;
  * @author f
  * @date 2018-04-22
  */
-@Api(description = "商品账单接口")
+@Api(tags = {"商品账单接口"})
 @RestController
-@RequestMapping(value = "/product_bill")
+@RequestMapping(value = "/product-bill")
 public class ProductBillController extends BaseController {
 
     @Autowired
@@ -43,7 +42,7 @@ public class ProductBillController extends BaseController {
      * @return
      */
     @ApiOperation(value = "分页查询商品账单列表")
-    @PostMapping(value = "/list_product_bill")
+    @PostMapping(value = "/list-product-bill")
     public ResultVO<PageVO<List<QueryProductBillVO>>> listProductBill(@RequestBody @Valid QueryBillParamVO queryBillParamVO) {
         PageVO<List<QueryProductBillVO>> pageVmo = productBillService.listProductBill(queryBillParamVO);
         return super.resultSuccess(pageVmo);
@@ -56,7 +55,7 @@ public class ProductBillController extends BaseController {
      * @return
      */
     @ApiOperation(value = "统计账单")
-    @PostMapping(value = "/statistics_bill")
+    @PostMapping(value = "/statistics-bill")
     public ResultVO<List<StatisticsBillVO>> statisticsBill(@RequestBody @Valid StatisticsBillParamVO statisticsBillParamVmo) {
         return super.resultSuccess(productBillService.statisticsBill(statisticsBillParamVmo));
     }
@@ -68,11 +67,23 @@ public class ProductBillController extends BaseController {
      * @return
      */
     @ApiOperation(value = "保存入账信息")
-    @PostMapping(value = "/save_product_bill")
+    @PostMapping(value = "/save-product-bill")
     public ResultVO saveProductBill(@RequestBody @Valid BillParamVO billParamVmo) {
         LogBackUtils.info("saveProductBill-保存入账信息:billParamVmo=" + JSON.toJSONString(billParamVmo));
         productBillService.saveProductBill(billParamVmo);
         return super.resultSuccess();
     }
 
+    /**
+     * 生成excel，分页查询商品账单列表
+     *
+     * @param queryBillParamVO
+     * @return
+     */
+    @ApiOperation(value = "生成excel，分页查询商品账单列表")
+    @PostMapping(value = "/excel-list-product-bill")
+    public ResultVO excelListProductBill(@RequestBody @Valid QueryBillParamVO queryBillParamVO) {
+        productBillService.excelListProductBill(queryBillParamVO);
+        return super.resultSuccess();
+    }
 }

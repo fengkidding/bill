@@ -9,11 +9,11 @@ package com.bill.model.constant;
 public class RabbitQueueConstant {
 
     /**
-     * 用户余额队列
+     * 支付订单队列
      */
-    public static final String MEMBER_REMAINING_SUM="MEMBER_REMAINING_SUM_QUEUE";
+    public static final String PAY_ORDER_QUEUE = "PAY_ORDER_QUEUE";
 
-    private RabbitQueueConstant(){
+    private RabbitQueueConstant() {
 
     }
 }

@@ -1,0 +1,20 @@
+#====================================================
+# spring boot配置
+#
+# 已废弃，改用配置中心
+#====================================================
+
+spring:
+  profiles:
+    # 测试dev
+    active: dev
+    # 生产prod
+  # active: prod
+  application:
+    name: bill
+
+# 日志配置dev
+logback-logstash-tcp: localhost:9700
+logback-application-path: applicationLog/
+logback-performance-path: performanceLog/
+logback-max-history: 30

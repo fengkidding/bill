@@ -27,6 +27,8 @@ public class ProductOrder {
 
     private Integer classificationId;
 
+    private Long payPrice;
+
     public Integer getId() {
         return id;
     }
@@ -121,5 +123,13 @@ public class ProductOrder {
 
     public void setClassificationId(Integer classificationId) {
         this.classificationId = classificationId;
+    }
+
+    public Long getPayPrice() {
+        return payPrice;
+    }
+
+    public void setPayPrice(Long payPrice) {
+        this.payPrice = payPrice;
     }
 }

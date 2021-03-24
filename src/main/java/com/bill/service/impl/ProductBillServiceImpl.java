@@ -1,11 +1,14 @@
 package com.bill.service.impl;
 
+import com.alibaba.excel.EasyExcel;
 import com.bill.common.util.AuthContextUtils;
 import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductBillExtMapper;
 import com.bill.model.constant.BillConstant;
+import com.bill.model.constant.ExcelConstant;
 import com.bill.model.conversion.ProductBillConversion;
+import com.bill.model.dto.ProductBillDto;
 import com.bill.model.enums.TypeEnum;
 import com.bill.model.po.auto.Classification;
 import com.bill.model.po.auto.ProductBill;
@@ -154,6 +157,18 @@ public class ProductBillServiceImpl implements ProductBillService {
         }
 
         return result;
+    }
+
+    /**
+     * 生成excel，分页查询商品账单列表
+     *
+     * @param queryBillParamVO
+     */
+    @Override
+    public void excelListProductBill(QueryBillParamVO queryBillParamVO) {
+        PageVO<List<QueryProductBillVO>> pageVO = this.listProductBill(queryBillParamVO);
+        List<ProductBillDto> list = ProductBillConversion.PRODUCT_BILL_CONVERSION.voToDto(pageVO.getData());
+        EasyExcel.write(ExcelConstant.PRODUCTBILLDTO + queryBillParamVO.getClassificationId() + ExcelConstant.XLSX, ProductBillDto.class).sheet(ExcelConstant.SHEET).doWrite(list);
     }
 
 }

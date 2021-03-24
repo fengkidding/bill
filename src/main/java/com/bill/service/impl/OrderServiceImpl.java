@@ -6,14 +6,18 @@ import com.bill.common.util.CheckBeanUtils;
 import com.bill.common.util.ComputeUtils;
 import com.bill.dao.db.ext.ProductOrderExtMapper;
 import com.bill.manager.MemberManager;
+import com.bill.model.constant.NumberConstant;
 import com.bill.model.constant.RabbitExchangeConstant;
 import com.bill.model.constant.RabbitRoutingKeyConstant;
 import com.bill.model.conversion.ProductOrderConversion;
-import com.bill.model.dto.ConsumerUserSumBO;
+import com.bill.model.dto.PayOrderMsgDto;
+import com.bill.model.enums.ResultEnum;
+import com.bill.model.exception.ServiceException;
 import com.bill.model.po.auto.Product;
 import com.bill.model.po.auto.ProductOrder;
 import com.bill.model.vo.common.PageVO;
 import com.bill.model.vo.param.OrderParamVO;
+import com.bill.model.vo.param.PayOrderParamVO;
 import com.bill.model.vo.param.QueryOrderParamVO;
 import com.bill.model.vo.view.QueryOrderVO;
 import com.bill.service.OrderService;
@@ -58,14 +62,14 @@ public class OrderServiceImpl implements OrderService {
      *
      * @param orderParamVmo
      */
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class, transactionManager = "dbTransactionManager")
     @Override
     public Integer createOrder(OrderParamVO orderParamVmo) {
         Integer memberId = AuthContextUtils.getLoginMemberId();
-
-        //更新商品
         Product product = productService.getProduct(orderParamVmo.getProductId());
-        productService.soldProduct(orderParamVmo.getProductId(), orderParamVmo.getTotal());
+        if (null == product) {
+            throw new ServiceException(ResultEnum.PRODUCT_NONE_ERROR);
+        }
 
         //保存订单信息
         ProductOrder productOrder = new ProductOrder();
@@ -74,26 +78,13 @@ public class OrderServiceImpl implements OrderService {
         productOrder.setRemark(orderParamVmo.getRemark());
         productOrder.setProductName(product.getProductName());
         productOrder.setTotal(orderParamVmo.getTotal());
-        productOrder.setStatus((byte) 1);
         Long price = orderParamVmo.getTotal() * product.getPrice();
         productOrder.setPrice(price);
         productOrder.setClassificationId(product.getClassificationId());
         productOrderExtMapper.saveSelective(productOrder);
 
-        //扣除用户余额
-        boolean result = memberManager.updateRemainingSum(memberId, -price);
-        if (!result) {
-            throw new RuntimeException("扣除用户余额失败");
-        }
-
-        //用户收钱
-        ConsumerUserSumBO consumerUserSumBO = new ConsumerUserSumBO();
-        consumerUserSumBO.setMemberId(product.getMemberId());
-        consumerUserSumBO.setRemainingSum(price);
-        Message message = MessageBuilder.withBody(JSONObject.toJSONString(consumerUserSumBO).getBytes())
-                .setContentType(MessageProperties.CONTENT_TYPE_JSON)
-                .setMessageId(productOrder.getId().toString()).build();
-        rabbitTemplate.send(RabbitExchangeConstant.MEMBER_REMAINING_SUM, RabbitRoutingKeyConstant.MEMBER_REMAINING_SUM, message);
+        //更新库存
+        productService.soldProduct(orderParamVmo.getProductId(), orderParamVmo.getTotal());
 
         return productOrder.getId();
     }
@@ -111,7 +102,7 @@ public class OrderServiceImpl implements OrderService {
             orderPageParamVmo.setClassificationId(null);
         }
         Page page = PageHelper.startPage(orderPageParamVmo.getPageNum(), orderPageParamVmo.getPageSize());
-        List<ProductOrder> list = productOrderExtMapper.listOrder(memberId,orderPageParamVmo.getClassificationId());
+        List<ProductOrder> list = productOrderExtMapper.listOrder(memberId, orderPageParamVmo.getClassificationId());
         pageVmo.setTotal(page.getTotal());
         if (!CollectionUtils.isEmpty(list)) {
             List<QueryOrderVO> vmoList = ProductOrderConversion.PRODUCT_ORDER_CONVERSION.entityToVmo(list);
@@ -143,6 +134,54 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public ProductOrder getProductOrder(Integer orderId) {
         return productOrderExtMapper.getProductOrder(orderId);
+    }
+
+    /**
+     * 更新订单
+     *
+     * @param productOrder
+     */
+    @Override
+    public void updateOrder(ProductOrder productOrder) {
+        productOrderExtMapper.updateByPrimaryKeySelective(productOrder);
+    }
+
+    /**
+     * 支付订单
+     *
+     * @param payOrderParamVO
+     */
+    @Override
+    public void payOrder(PayOrderParamVO payOrderParamVO) {
+        ProductOrder productOrder = this.getProductOrder(payOrderParamVO.getOrderId());
+        if (null == productOrder) {
+            throw new ServiceException(ResultEnum.ORDER_NONE_ERROR);
+        }
+        Long amount = ComputeUtils.getFen(payOrderParamVO.getAmount());
+
+        //扣除用户余额
+        boolean result = memberManager.updateRemainingSum(productOrder.getMemberId(), -amount);
+        if (!result) {
+            throw new ServiceException(ResultEnum.DEDUCT_REMAININGSUM_ERROR);
+        }
+
+        //更新订单
+        ProductOrder productOrderStatus = new ProductOrder();
+        productOrderStatus.setId(productOrder.getId());
+        productOrderStatus.setStatus(NumberConstant.BYTE_ONE);
+        productOrderStatus.setPayPrice(amount);
+        this.updateOrder(productOrderStatus);
+
+        //用户收钱
+        Product product = productService.getProduct(productOrder.getProductId());
+        PayOrderMsgDto payOrderMsgDto = new PayOrderMsgDto();
+        payOrderMsgDto.setMemberId(product.getMemberId());
+        payOrderMsgDto.setRemainingSum(productOrder.getPrice());
+        payOrderMsgDto.setOrderId(payOrderParamVO.getOrderId());
+        Message message = MessageBuilder.withBody(JSONObject.toJSONString(payOrderMsgDto).getBytes())
+                .setContentType(MessageProperties.CONTENT_TYPE_JSON)
+                .setMessageId(productOrder.getId().toString()).build();
+        rabbitTemplate.send(RabbitExchangeConstant.PAY_ORDER_EXCHANGE, RabbitRoutingKeyConstant.PAY_ORDER_EXCHANGE_ROUTING, message);
     }
 
 }

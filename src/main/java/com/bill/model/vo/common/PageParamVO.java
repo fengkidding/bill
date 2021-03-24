@@ -18,7 +18,7 @@ public class PageParamVO {
     private Integer pageNum = 1;
 
     @ApiModelProperty(value = "每页条数", example = "10")
-    @Max(value = 50, message = "每页条数超出上线！")
+    @Max(value = 200, message = "每页条数过多！")
     private Integer pageSize = 10;
 
     public Integer getPageNum() {

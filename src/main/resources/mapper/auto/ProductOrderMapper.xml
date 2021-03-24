@@ -14,10 +14,11 @@
     <result column="product_name" jdbcType="CHAR" property="productName" />
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="classification_id" jdbcType="INTEGER" property="classificationId" />
+    <result column="pay_price" jdbcType="BIGINT" property="payPrice" />
   </resultMap>
   <sql id="Base_Column_List">
     id, member_id, product_id, total, price, is_delete, status, create_time, update_time, 
-    product_name, remark, classification_id
+    product_name, remark, classification_id, pay_price
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -33,13 +34,13 @@
     insert into product_order (id, member_id, product_id, 
       total, price, is_delete, 
       status, create_time, update_time, 
-      product_name, remark, classification_id
-      )
+      product_name, remark, classification_id, 
+      pay_price)
     values (#{id,jdbcType=INTEGER}, #{memberId,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, 
       #{total,jdbcType=INTEGER}, #{price,jdbcType=BIGINT}, #{isDelete,jdbcType=BIT}, 
       #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{productName,jdbcType=CHAR}, #{remark,jdbcType=VARCHAR}, #{classificationId,jdbcType=INTEGER}
-      )
+      #{productName,jdbcType=CHAR}, #{remark,jdbcType=VARCHAR}, #{classificationId,jdbcType=INTEGER}, 
+      #{payPrice,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.bill.model.po.auto.ProductOrder">
     insert into product_order
@@ -80,6 +81,9 @@
       <if test="classificationId != null">
         classification_id,
       </if>
+      <if test="payPrice != null">
+        pay_price,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -117,6 +121,9 @@
       </if>
       <if test="classificationId != null">
         #{classificationId,jdbcType=INTEGER},
+      </if>
+      <if test="payPrice != null">
+        #{payPrice,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -156,6 +163,9 @@
       <if test="classificationId != null">
         classification_id = #{classificationId,jdbcType=INTEGER},
       </if>
+      <if test="payPrice != null">
+        pay_price = #{payPrice,jdbcType=BIGINT},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -171,7 +181,8 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       product_name = #{productName,jdbcType=CHAR},
       remark = #{remark,jdbcType=VARCHAR},
-      classification_id = #{classificationId,jdbcType=INTEGER}
+      classification_id = #{classificationId,jdbcType=INTEGER},
+      pay_price = #{payPrice,jdbcType=BIGINT}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

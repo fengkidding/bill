@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bill.dao.db.auto.MoneyMemoMapper">
+  <resultMap id="BaseResultMap" type="com.bill.model.po.auto.MoneyMemo">
+    <id column="money_memo_id" jdbcType="INTEGER" property="moneyMemoId" />
+    <result column="member_id" jdbcType="INTEGER" property="memberId" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="money_type" jdbcType="TINYINT" property="moneyType" />
+    <result column="description" jdbcType="CHAR" property="description" />
+    <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    money_memo_id, member_id, amount, money_type, description, is_delete, create_time, 
+    update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from money_memo
+    where money_memo_id = #{moneyMemoId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from money_memo
+    where money_memo_id = #{moneyMemoId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.bill.model.po.auto.MoneyMemo">
+    insert into money_memo (money_memo_id, member_id, amount, 
+      money_type, description, is_delete, 
+      create_time, update_time)
+    values (#{moneyMemoId,jdbcType=INTEGER}, #{memberId,jdbcType=INTEGER}, #{amount,jdbcType=DECIMAL}, 
+      #{moneyType,jdbcType=TINYINT}, #{description,jdbcType=CHAR}, #{isDelete,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bill.model.po.auto.MoneyMemo">
+    insert into money_memo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="moneyMemoId != null">
+        money_memo_id,
+      </if>
+      <if test="memberId != null">
+        member_id,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="moneyType != null">
+        money_type,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="moneyMemoId != null">
+        #{moneyMemoId,jdbcType=INTEGER},
+      </if>
+      <if test="memberId != null">
+        #{memberId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="moneyType != null">
+        #{moneyType,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=CHAR},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bill.model.po.auto.MoneyMemo">
+    update money_memo
+    <set>
+      <if test="memberId != null">
+        member_id = #{memberId,jdbcType=INTEGER},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="moneyType != null">
+        money_type = #{moneyType,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=CHAR},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where money_memo_id = #{moneyMemoId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bill.model.po.auto.MoneyMemo">
+    update money_memo
+    set member_id = #{memberId,jdbcType=INTEGER},
+      amount = #{amount,jdbcType=DECIMAL},
+      money_type = #{moneyType,jdbcType=TINYINT},
+      description = #{description,jdbcType=CHAR},
+      is_delete = #{isDelete,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where money_memo_id = #{moneyMemoId,jdbcType=INTEGER}
+  </update>
+</mapper>
