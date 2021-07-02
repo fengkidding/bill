@@ -54,7 +54,7 @@
         <mapper.version>3.5.0</mapper.version>
         <netty.version>4.1.43.Final</netty.version>
         <logback.encoder.version>4.11</logback.encoder.version>
-        <elasticsearch.version>7.4.0</elasticsearch.version>
+        <elasticsearch.version>7.11.2</elasticsearch.version>
         <elasticsearch.high.version>7.4.1</elasticsearch.high.version>
         <easyexcel.version>2.2.5</easyexcel.version>
         <commons-lang.version>2.6</commons-lang.version>
