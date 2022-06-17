@@ -39,7 +39,7 @@
         <!-- 版本管理 -->
         <druid.version>1.1.20</druid.version>
         <druid.spring.version>1.1.20</druid.spring.version>
-        <fastjson.version>1.2.72</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <jackson.datatype.version>2.9.8</jackson.datatype.version>
         <mybatis.spring.version>2.0.0</mybatis.spring.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
