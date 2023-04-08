@@ -1,5 +1,6 @@
 package com.bill.controller;
 
+import com.bill.annotation.Metric;
 import com.bill.common.util.AuthContextUtils;
 import com.bill.model.conversion.CouponConversion;
 import com.bill.model.po.auto.Coupon;
@@ -37,6 +38,7 @@ public class CouponController extends BaseController {
      * @return
      */
     @ApiOperation(value = "根据订单id查询券码列表接口")
+    @Metric(type = "Controller",name="listCoupon")
     @GetMapping(value = "/list-coupon/{orderId}")
     public ResultVO<List<ListCouponVO>> listCoupon(@PathVariable("orderId") Integer orderId) {
         List<Coupon> list = couponService.listCoupon(orderId);
