@@ -2,7 +2,11 @@ package com.bill.common.util;
 
 import com.bill.model.constant.CommonConstant;
 import com.bill.model.constant.NumberConstant;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.LoadingCache;
 import org.apache.commons.lang.StringUtils;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * 检查对象工具类
@@ -11,6 +15,19 @@ import org.apache.commons.lang.StringUtils;
  * @date 2019-02-19
  */
 public class CheckBeanUtils {
+
+    /**
+     * 本地缓存
+     */
+    private LoadingCache<String, String> tokenCache =
+            Caffeine.newBuilder()
+            .expireAfterWrite(25, TimeUnit.MINUTES)
+        .build(this::getToken);
+
+    public String getToken(String id){
+        // 服务器本地缓存token，用于短时间token都一样的场景，超时自动过期
+        return "token";
+    }
 
     /**
      * 校验integer是否为null，是否为0
